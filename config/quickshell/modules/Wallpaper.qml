@@ -22,7 +22,7 @@ PanelWindow {
 	property string wallpaperPath: ""
 	Process {
 		id: listProc
-		command: ["bash", "-c", "ls " + bg.wallpaperDir + "*.{jpg,jpeg,png} 2>/dev/null"]
+		command: ["bash", "-c", "ls " + bg.wallpaperDir + "*.{jpg,jpeg,png,webp} 2>/dev/null"]
 		stdout: StdioCollector {
 			onStreamFinished: {
 				let files = text.trim().split("\n").filter(f => f.length > 0)

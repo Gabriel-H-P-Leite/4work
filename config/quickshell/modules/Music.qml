@@ -5,7 +5,7 @@ import Quickshell.Services.Mpris
 Rectangle {
 	id: musicModule
 	property color textColor: "white"
-	property var fontFamily: "mono"
+	property var fontFamily: "Noto Sans"
 	property int fontSize: 15
 	property int barH: 33
 	property int iconSize: 10
