@@ -39,7 +39,6 @@ hl.bind("ALT + T", hl.dsp.exec_cmd(menu .." 8"))
 hl.bind( mainMod .." + W", hl.dsp.exec_cmd(menu .." 9 $wallpaper"))
 --ocr
 hl.bind( mainMod .." + SHIFT + R", hl.dsp.exec_cmd(menu .." 10"))
-hl.bind( mainMod .." + SHIFT + M", hl.dsp.exec_cmd("$menu 11"))
 
 -----------
 --UTILITY--

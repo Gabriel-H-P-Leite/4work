@@ -43,12 +43,12 @@ PanelWindow {
 		onTriggered: {
 			if (bg.wallpaperList.length === 0) return
 			// Sequencial:
-			//bg.currentIndex = (bg.currentIndex + 1) % bg.wallpaperList.length
-			//bg.wallpaperPath = bg.wallpaperList[bg.currentIndex]
+			bg.currentIndex = (bg.currentIndex + 1) % bg.wallpaperList.length
+			bg.wallpaperPath = bg.wallpaperList[bg.currentIndex]
 
 			// Aleatório 
-			bg.currentIndex = Math.floor(Math.random() * bg.wallpaperList.length)
-			bg.wallpaperPath = bg.wallpaperList[bg.currentIndex]
+			//bg.currentIndex = Math.floor(Math.random() * bg.wallpaperList.length)
+			//bg.wallpaperPath = bg.wallpaperList[bg.currentIndex]
 		}
 	}
 	Image {

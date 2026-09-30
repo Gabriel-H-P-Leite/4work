@@ -46,7 +46,7 @@ PanelWindow {
 					}
 					MouseArea {
 						anchors.fill: parent
-						onClicked: Hyprland.dispatch("workspace " + modelData.id)
+						onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + modelData.id + " })")
 					}
 				}
 			}
