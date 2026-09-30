@@ -1,0 +1,5 @@
+[Added Associations]
+text/x-lua=org.xfce.mousepad.desktop;
+application/yaml=org.xfce.mousepad.desktop;
+text/markdown=org.xfce.mousepad.desktop;
+text/x-qml=org.xfce.mousepad.desktop;

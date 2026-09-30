@@ -25,7 +25,7 @@ Rectangle {
 		Text {
 			text: " "
 			color: menuModule.textColor
-			font.family: clockModule.fontFamily
+			font.family: root.fontFamily
 			font.pixelSize: menuModule.fontSize
 		}
 	}

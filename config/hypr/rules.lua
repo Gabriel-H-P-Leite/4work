@@ -1,9 +1,6 @@
 
 --BLUR
-hl.layer_rule({match={namespace="wofi"},blur=true,ignore_alpha= 0,})
-hl.layer_rule({match={namespace="waybar"},blur=true,ignore_alpha= 0,})
-hl.layer_rule({match={namespace="swaync-control-center"},blur=true,ignore_alpha= 0,})
-hl.layer_rule({match={namespace="swaync-notification-window"},blur=true,ignore_alpha= 0,})
+hl.layer_rule({match={namespace="^qs-.*$"},blur=true,ignore_alpha= 0.1,})
 --WORKSPACE
 hl.workspace_rule({ workspace = "special:audio", on_created_empty = "pavucontrol" })
 hl.workspace_rule({ workspace = "special:musica", on_created_empty = "kitty rmpc " })

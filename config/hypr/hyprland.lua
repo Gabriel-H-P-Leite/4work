@@ -3,14 +3,19 @@ require("rules")
 require("style")
 require("binds")
 require("display")
+hl.env("QT_STYLE_OVERRIDE", "kvantum")
 --ON START
 hl.on("hyprland.start", function()
-	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1 & waybar & wpaperd -d & swaync & wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store")
-	hl.exec_cmd("hyprctl setcursor Manopla 24 & hyprsunset")
+	hl.exec_cmd("cp /home/gabriel/Imagens/Wallpapers/ARCH7.jpg /tmp/fundo.png && hyprlock")
+	--clipboard
+	hl.exec_cmd("wl-paste --type text --watch cliphist store")
+	hl.exec_cmd("wl-paste --type image --watch cliphist store")
+	--auth
+	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+	--others
+	hl.exec_cmd("hyprsunset")
 	hl.exec_cmd("sleep 20 ; mpd-mpris")
 	hl.exec_cmd("mpc repeat on && mpc random on && mpc consume on")
-	hl.exec_cmd("cp /home/gabriel/Imagens/Wallpapers/ARCH7.jpg /tmp/fundo.png ; hyprlock")
-	hl.exec_cmd("export QT_STYLE_OVERRIDE=kvantum")
 end)
 --CURSOR
 hl.env("XCURSOR_SIZE", "24")

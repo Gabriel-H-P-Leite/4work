@@ -20,7 +20,7 @@ hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica
 --MENUS--
 ---------
 
-hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("pkill wofi || wofi -S drun"), { release = true })
+hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("quickshell ipc call toggleLauncher onTriggered"), { release = true })
 --all
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(menu))
 --logout
