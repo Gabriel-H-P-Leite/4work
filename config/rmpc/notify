@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+#play count
+sticker=$(rmpc sticker get "$FILE" "playCount" | jq -r '.value')
+if [ -z "$sticker" ]; then
+    rmpc sticker set "$FILE" "playCount" "1"
+else
+    rmpc sticker set "$FILE" "playCount" "$((sticker + 1))"
+fi
+#notificacao
+TMP_DIR="/tmp/rmpc"
+mkdir -p "$TMP_DIR"
+ALBUM_ART_PATH="$TMP_DIR/notification_cover"
+DEFAULT_ALBUM_ART_PATH="$HOME/Músicas/.default.jpg"
+
+#padrao se nao tem
+if ! rmpc albumart --output "$ALBUM_ART_PATH"; then
+    ALBUM_ART_PATH="${DEFAULT_ALBUM_ART_PATH}"
+fi
+
+notify-send -i "${ALBUM_ART_PATH}" -e "$TITLE" "$ARTIST\n$ALBUM" -h string:x-canonical-private-synchronous:musica -t 2000 -h string:transient:true 

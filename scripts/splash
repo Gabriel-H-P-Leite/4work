@@ -1,0 +1,37 @@
+#!/bin/bash
+indice=13
+
+frases=( \
+"Casas e riquezas herdam-se dos pais,\nmas a esposa prudente vem do Senhor.\n-Provérbios 19:14" \
+"O preço da grandiosidade é a responsabilidade\n-Winston Churchill" \
+"O pecado parece liberdade até você tentar parar" \
+"A verdadeira viagem de descoberta não consiste em procurar nova paisagens, mas ter novos olhos\n-Proverbio Chinês" \
+"Antes da morte qualquer derrota é psicológica" \
+"Nas grandes batalhas da vida, o primeiro passo para a vitória é sempre o desejo de vencer\n-Mahatma Gandhi" \
+"Those who don't start today don't deserve a tommorow" \
+"Eis que o temor do senhor é a sabedoria, e apartar-se do mal é a inteligência\n-Jó 28:28" \
+"Those who cannot conceive friendship\nas a substantive love but only as a disguise\nor elaboration of eros betray the fact that\nthey have never had a friend." \
+"Qualquer coisa que fizer será insignificante , mas é importante que faça, pois ninguem o fará por você\n-Mahatma Gandhi" \
+"When freedom is outlawed, only outlaws will be free!" \
+"Todo trabalho árduo traz proveito, mas o só falar leva à pobreza\n-Provérbios 14:23" \
+"Seja caloroso ao demonstrar reconhecimento e pródigo nos elogios" \
+"Detesto quem me rouda a solidão sem em troca me oferecer a verddeira companhia\n-Nietzsche" \
+"tudo que você escolhe não mudar você aceita ter" \
+"A massa mantem a marca, a marca mantem a mídia e a mídia controla a massa\n-George Orwell" \
+"The society that separates its scholars from its warriors will\nhave its thinking done by cowards and its fighting by fools -Thucydides" \
+"Na muita sabedoria, há muito enfado; e o que aumenta em ciência aumenta em trabalho\n-Eclesiaste 1:18" \
+"Pois Deus amou tanto o mundo, que entregou o seu filho único,\npara que todo o que nele crê não pereça, mas tenha vida eterna.\n-João 3:16" \
+"Quem tem um porquê enfrenta qualquer como\n-Friedrich Nietzsche" \
+"A paciência é a força dos fracos e a impaciência, a fragilidade dos fortes\n-Immanuel Kant" 
+"Três regras para a felicidade: algo para fazer, alguém para amar, algo para esperar\n-Immanuel Kant" 
+)
+max="${#frases[@]}" 
+text=${frases[$indice]} 
+printf "{ \"text\": \"%s\", \"tooltip\": \"%s\",}\n" \
+       "$text" "$indice"
+((indice++))
+if [[ $indice -gt $max-1 ]]; then
+	sed -i "2s/.*/indice=0/" "$0"
+else
+	sed -i "2s/.*/indice=$indice/" "$0"
+fi

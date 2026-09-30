@@ -1,0 +1,158 @@
+#!/bin/bash
+config=$HOME/.config/
+temas="$config/dotConfig/temas"
+opcoes="1: 󰵆 Apps\n2: 󰚰 Atualizar\n3: 󰍃 Sair\n4:  Temas\n5:  Baixar\n6:  Area de transferência\n7: 󰩉 Achar janela\n8: 󰐃 Fixar janela\n9:  Wallpapers\n10:   Ler imagem"
+#se wofi estiver abrido só mata ele
+if [ -n "$(pgrep wofi)" ]; then
+	killall wofi
+	exit 0
+fi
+#se $1 estiver vazio
+if [ -z "$1" ]; then
+	escolha=$(echo -e $opcoes | wofi -d | cut -d ':' -f 1)
+	if [ -z "$escolha" ]; then
+		exit 0
+	else	
+		menus $escolha
+	fi
+fi
+case "$1" in
+	1)#apps
+		wofi -S drun	
+	;;
+	2)#atualizar
+		#se tty estiver vazio
+		if [ -z $(tty | grep "tty")]; then
+			BLU='\033[0;34m'
+			RED='\033[0;31m'
+			YEL='\033[0;33m'
+			NC='\033[0m' 
+			flags="--noconfirm  --needed"
+			echo -e "${BLU}███╗░░░███╗░█████╗░███╗░░██╗██╗░░░██╗████████╗███████╗███╗░░██╗░█████╗░░█████╗░░█████╗░\n████╗░████║██╔══██╗████╗░██║██║░░░██║╚══██╔══╝██╔════╝████╗░██║██╔══██╗██╔══██╗██╔══██╗\n██╔████╔██║███████║██╔██╗██║██║░░░██║░░░██║░░░█████╗░░██╔██╗██║██║░░╚═╝███████║██║░░██║\n██║╚██╔╝██║██╔══██║██║╚████║██║░░░██║░░░██║░░░██╔══╝░░██║╚████║██║░░██╗██╔══██║██║░░██║\n██║░╚═╝░██║██║░░██║██║░╚███║╚██████╔╝░░░██║░░░███████╗██║░╚███║╚█████╔╝██║░░██║╚█████╔╝\n╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝░╚════╝░╗░${NC}"
+
+			echo -e "${YEL}Atualizando sistema${NC}"
+			paru -Syu $flags
+
+			echo -e "${YEL}Removendo pacotes orfãos${NC}"
+			paru -Rns $(paru -Qdtq) 
+
+			echo -e "${YEL}Limpando cache${NC}"
+			paru -Scc
+			sudo pacman -Scc
+
+			homeCache="$(sudo du -sh ~/.cache/)"
+			varCache="$(sudo du -sh /var/cache/)"
+			echo -e "${YEL}Cache limpo:${NC}\n$homeCache\n$varCache"
+
+			echo -e "${YEL}Apagando logs${NC}"
+			sudo journalctl --vacuum-time=7d
+		else
+			kitty menus 2
+		fi
+	;;
+	3)#sair
+		choice=$(echo -e "1: 󰐥 Desligar \n2: 󰜉 Reiniciar \n3: 󰍃 Sair" | wofi -d --width=200 --height=150 | cut -d ':' -f 1)
+		case "$choice" in
+		  1) hyprctl dispatch exit & systemctl poweroff ;;
+		  2) hyprctl dispatch exit & systemctl reboot ;;
+		  3) echo $(echo -e "1: TTY \n2: KDE \n3: NIX" | wofi -d --width=200 --height=150 | cut -d ':' -f 1) > /tmp/sai ; hyprctl dispatch exit ;;
+		esac
+	;;
+	4)#temas
+		#se não tem algo em $2
+		if [ -z "$2" ]; then
+			cd $temas
+			tema=$(ls -d */ | sed 's/\///g' | wofi -d --width=200 --height=200)
+			#se não escolher tema
+			if [ -z "$tema" ]; then
+				exit 0
+			fi
+			menus $1 "$tema"
+		fi
+		#se tem algo em $2
+		if [ -n "$2" ]; then
+			cd $temas/$2
+			ln -rsf * $config
+			cp hypr/style.lua $config/hypr/
+			killall waybar ; killall wpaperd ; killall swaync
+			waybar & wpaperd -d & swaync
+		fi
+	;;
+	5)#baixar
+		if [ -z "$2" ]; then
+		tipo=$(echo -e "audio\nvideo" | wofi -d --width=200 --height=150 ) 
+		else
+		tipo=$2
+		fi
+		if [ -z "$3" ]; then
+		url=$(cliphist list | wofi -d | cliphist decode)
+		else
+		url=$3
+		fi
+		if [ "$tipo" = "audio" ]; then
+			cd ~/Músicas/
+			yt-dlp -f 'bestaudio' --extract-audio --audio-format mp3 --embed-metadata "$url"
+		fi
+		if [ "$tipo" = "video" ]; then
+			cd ~/Videos/
+			yt-dlp -f 'bestvideo+bestaudio/bestvideo+bestaudio' --merge-output-format mp4 --embed-metadata "$url"
+		fi
+	;;
+	6)#area de transferencia
+		cliphist list | wofi -d --sort=default| cliphist decode | wl-copy
+	;;
+	7)#alt tab
+		titulo=$(hyprctl clients -j | jq '.[]' | jq -r '.title'| wofi -d)
+		id=$(hyprctl clients -j | jq -r --arg titulo "$titulo" '.[] | select(.title | contains($titulo)) | .address')
+		if [ -n "$id" ]; then
+			out=$(hyprctl dispatch focuswindow "address:$id")
+		fi
+		notify-send -e "$(echo -e " Título:'$titulo'\nID:$id\n$out")" -h string:x-canonical-private-synchronous:pin -t 2000 -h string:transient:true 
+	;;
+	8)#fixar janela
+		titulo=$(hyprctl clients -j | jq '.[]' | jq -r '.title'| wofi -d)
+		id=$(hyprctl clients -j | jq -r --arg titulo "$titulo" '.[] | select(.title | contains($titulo)) | .address')
+		if [ -n "$id" ]; then
+			hyprctl dispatch setfloating "address:$id"
+			out=$(hyprctl dispatch pin "address:$id")
+		fi
+		notify-send -e "$(echo -e " Título:'$titulo'\nID:$id\n$out")" -h string:x-canonical-private-synchronous:pin -t 2000 -h string:transient:true 
+	;;
+	9)#wallpapers
+		wallpapers=$HOME/Imagens/Wallpapers/
+		monitor="[any]"
+		cd $wallpapers
+
+		sele=$(echo -e "1: 󰋩 Escolher um Wallpaper \n2: 󰉏 Escolher uma pasta\n3: 󰋹 Todos" | wofi -d | cut -d ':' -f 1)
+		case "$sele" in		
+			1) foto="$(find . -type f | cut -d '/' -f 2,3,4,5 | wofi -d)";;
+			2) foto="$(ls -h | wofi -d)";;
+			3) foto="todos";;
+		esac
+		if [ -d "$foto" ];then #se $foto é diretorio
+			escolha="$monitor\npath = \"$wallpapers$foto\"\nduration=\"5m\"\nmode=\"stretch\""
+		else	#se não é diretório
+			escolha="$monitor\npath = \"$wallpapers$foto\"\nmode=\"stretch\""
+		fi
+		if [ "$sele" = "3" ]; then #se escolhi todos
+			escolha="$monitor\npath = \"$wallpapers\"\nduration=\"5m\"\nmode=\"stretch\""
+		fi
+
+		#se $foto não estiver vazio
+		if [ -n "$foto" ]; then
+			echo -e "$escolha" > ~/.config/wpaperd/config.toml
+			killall wpaperd 
+			sleep 1
+			wpaperd
+			exit 0
+		else
+			exit 0
+		fi
+	;;
+	10)#ler
+		foto="OCR"
+		slurp | grim -g - /tmp/$foto.png
+		tesseract /tmp/$foto.png /tmp/$foto txt
+		cat /tmp/$foto.txt | wl-copy
+	;;
+esac

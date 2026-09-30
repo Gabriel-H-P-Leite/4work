@@ -1,0 +1,83 @@
+#!/bin/bash
+player="mpd.instance1375"
+player_cmd="playerctl --player=$player"
+
+infos () {
+	case "$($player_cmd status)" in
+		"Playing") ico="󰏤" ;;
+		"Paused") ico="󰐊" ;;
+		*) ico="" ;;
+	esac
+	foto=$($player_cmd metadata mpris:artUrl)
+	artista=$($player_cmd metadata --format "{{ artist }}")
+	titulo=$($player_cmd metadata --format "{{ title }}")
+	album=$($player_cmd metadata --format "{{ album }}")
+	volume=$($player_cmd metadata --format "{{ volume * 100 }}" | cut -d "." -f 1)
+	duracao=$($player_cmd metadata --format '{{duration(position)}}/{{duration(mpris:length)}}')  
+}
+#se $1 está vazio
+if [ -z "$1" ]; then
+	infos
+	text="$titulo\n$artista"
+	if [ -z "$titulo" ]; then #se $titulo está vazio
+	text=""
+	fi
+	printf "{ \"text\": \"%s\", \"tooltip\": \"%s\",}\n" \
+	       "$text" "$player | 󰕾 $volume%"
+	exit 0
+fi
+case "$1" in
+	"player")  
+		player=$(playerctl --list-all | wofi -d)
+		sed -i "s|^player=.*|player=\"$player\"|" "$HOME/.config/dotConfig/scripts/musica"
+	;;
+	"tocando")  
+		infos
+		echo -e "$ico"
+		exit 0
+	;;
+	"mais")  
+		infos
+		text="$titulo\n$artista\n$album"
+		printf "{ \"text\": \"%s\", \"tooltip\": \"%s\",}\n" \
+		       "$text" "󰕾 $volume%"
+		exit 0
+	;;
+	"cava")  
+		layer=$(hyprctl layers | grep kitty | cut -d ":" -f 5)
+		if [ -z "$layer" ]; then
+			kitty +kitten panel -o font_size=1 -o background_opacity=0.0 --edge background cava
+			exit 0
+		else
+			kill $layer
+			exit 0
+		fi
+	;;
+	"foto")
+		infos &> /dev/null
+		if [ "$foto" == "No player could handle this command" ] || [ -z "$foto" ] ; then
+			echo "$HOME/Músicas/.default.jpg"
+		else
+			echo $foto
+		fi
+	;;
+	"notificacao")  
+		infos
+		if [ "$foto" == "No player could handle this command" ] || [ -z "$foto" ] ; then
+			foto="$HOME/Músicas/.default.jpg"
+		fi
+		notify-send -i $foto -e "$titulo" "$artista\n󰕾 $volume%" -h string:x-canonical-private-synchronous:musica -t 2000 -h string:transient:true 
+		exit 0
+	;;
+	"atual")  
+		infos
+		text="$titulo\n$artista"
+		echo -e "$text"
+		exit 0
+	;;
+	*)
+		$player_cmd $1 $2
+		exit 0
+	;;
+		
+esac

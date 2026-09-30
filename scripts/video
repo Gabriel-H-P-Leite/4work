@@ -1,0 +1,59 @@
+#!/bin/bash
+#se wofi estiver rodando
+if pgrep -x "wofi" > /dev/null
+then
+	killall wofi
+	exit 0
+fi
+#se $1 estiver vazio
+if [ -z "$1" ]; then
+	escolha=$(echo -e $opcoes | wofi -d --width=200 --height=150)
+	if [ -z "$escolha" ]; then
+		exit 0
+	else	
+		menus $escolha
+	fi
+fi
+#se $1 igual a crop
+if [ "$1" = "crop" ]; then
+	infos=$(slurp)
+	dh=$(echo $infos | cut -d "," -f 1)
+	dv=$(echo $infos | cut -d "," -f 2 | cut -d " " -f 1)
+	th=$(echo $infos | cut -d "x" -f 1 | cut -d " " -f 2)
+	tv=$(echo $infos | cut -d "x" -f 2 )
+	video="video"
+	echo -e "distancia horizontal=$dh\ndistancia vertical=$dv\ntamanho horizontal=$th\ntamanho vertical=$tv  "
+	printf "ffmpeg -i \"%s\" -vf \"crop=%s:%s:%s:%s\" -c:a copy cortado.mp4"\
+		       "$video" "$th" "$tv" "$dh" "$dv"
+fi
+#se $1 igual a filtro
+if [ "$1" = "filtro" ]; then
+	temperatura=$(hyprctl hyprsunset temperature)
+	if [ "$temperatura" = 3000 ]; then
+		hyprctl hyprsunset temperature 6000
+	fi
+	if [ "$temperatura" = 6000 ]; then
+		hyprctl hyprsunset temperature 3000
+	fi
+fi
+#se $1 igual a brilho
+if [ "$1" = "brilho" ]; then
+	brilho=$(hyprctl hyprsunset gamma)
+	if [ "$brilho" = 100 ]; then
+		hyprctl hyprsunset gamma 50
+	fi
+	if [ "$brilho" = 50 ]; then
+		hyprctl hyprsunset gamma 100
+	fi
+fi
+#Cut (without re-encoding)
+# ffmpeg -i input.mp4 -ss 00:00:12 -to 00:02:30 -c copy output.mp4
+
+#Rotate by 180°
+#ffmpeg -display_rotation 180 -i input.mp4 -codec copy output.mp4
+
+#Scale resolution of a video to 1920 pixels (keep aspect ratio)
+#ffmpeg -i input.mp4 -vf "scale=1920:-2" output.mp4
+
+#Fade first 5 seconds of a video
+#ffmpeg -i input.mp4 -vf "fade=t=in:st=0:d=5" out.mp4

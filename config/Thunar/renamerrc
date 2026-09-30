@@ -1,0 +1,16 @@
+[Configuration]
+LastActiveMode=THUNAR_RENAMER_MODE_NAME
+LastActiveRenamer=TagRenamer
+
+[ThunarSbrDateRenamer]
+Offset=0
+Mode=THUNAR_SBR_DATE_MODE_NOW
+Format=%Y%m%d
+OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+
+[TagRenamer]
+Lowercase=FALSE
+ReplaceSpaces=FALSE
+Text=
+Format=TAG_RENAMER_FORMAT_ARTIST_TITLE
+

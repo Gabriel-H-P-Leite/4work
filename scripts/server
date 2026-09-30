@@ -1,0 +1,28 @@
+#!/bin/bash
+#se $1 estiver vazio
+if [ -z "$1" ]; then
+	echo -e '1-iniciar docker\n2-permissoes\n3-ftp\n4-syncthing'
+fi
+case "$1" in
+	1)#iniciar docker
+		docker-compose up  --no-recreate
+	;;
+	2)#permissoes
+		sudo chown -R 1000:1000 * 
+		sudo chmod -R 775 *
+		sudo chmod +x * 
+	;;
+	3)#ftp
+		local="/run/media/gabriel/server/"
+		#read -p "Caminho: " local
+		copyparty -v $local/:/:A:rw --ftp 3921 >/run/media/gabriel/server/logs/ftp.log & /bin/bash
+	;;
+	4)
+		if [ -n "$(pgrep syncthing)" ]; then
+			echo "Já ta rodando zé"
+		else
+			syncthing --gui-address=0.0.0.0:8384 >/run/media/gabriel/server/logs/syncthing.log & /bin/bash
+		fi
+	;;
+esac
+
