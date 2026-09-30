@@ -52,6 +52,8 @@ PanelWindow {
 		}
 	}
 	Image {
+		sourceSize.width: screen.width
+		sourceSize.height: screen.height
 		anchors.fill: parent
 		source: bg.wallpaperPath !== "" ? "file://" + bg.wallpaperPath : ""
 		fillMode: Image.PreserveAspectCrop
