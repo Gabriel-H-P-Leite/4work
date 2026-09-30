@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 local menu = "/bin/menus"
 local terminal = "kitty"
 local explorer = "Thunar"
-local browser = "zen-browser"
+local browser = "firefox"
 
 ----------
 --MUSIC--
@@ -44,7 +44,7 @@ hl.bind( mainMod .." + SHIFT + R", hl.dsp.exec_cmd(menu .." 10"))
 --UTILITY--
 -----------
 --notification
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("quickshell ipc call notifications toggle"))
 --screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("slurp | grim -g - ~/Imagens/$(date +'ArchLinux_%Y-%m-%d_%H:%M:%S.png')"))
 --filter

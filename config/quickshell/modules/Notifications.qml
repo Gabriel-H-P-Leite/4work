@@ -8,7 +8,6 @@ import Quickshell.Services.Notifications
 Scope {
 	id: notifs
 
-	property bool dnd: false          // não perturbe
 	property int popupTimeout: 5000   // ms, quando o app não define tempo
 	property int cardWidth: 380
 	property var arrivals: ({})       // ids que ainda devem aparecer como popup
@@ -24,12 +23,11 @@ Scope {
 		persistenceSupported: true
 		onNotification: n => {
 			// no modo não perturbe só os críticos viram popup; o resto vai direto pro histórico
-			if (!notifs.dnd || n.urgency === NotificationUrgency.Critical)
+			if (!root.notifDnd || n.urgency === NotificationUrgency.Critical)
 				notifs.arrivals[n.id] = true
 			n.tracked = true
 		}
 	}
-
 	// Mais novas primeiro (ScriptModel reaproveita os delegates, então timers não reiniciam)
 	ScriptModel {
 		id: newestFirst
@@ -53,9 +51,16 @@ Scope {
 	// ---------- IPC: quickshell ipc call notifications <função> ----------
 	IpcHandler {
 		target: "notifications"
-		function toggle(): void { center.visible = !center.visible }
-		function clear(): void { notifs.clearAll() }
-		function toggleDnd(): void { notifs.dnd = !notifs.dnd }
+		function toggle(): string { root.notifCenterOpen = !root.notifCenterOpen; return "" }
+		function clear(): string { notifs.clearAll(); return "" }
+		function toggleDnd(): string { root.notifDnd = !root.notifDnd; return "" }
+	}
+
+	// Número de notificações no histórico, pro botão da barra
+	Binding {
+		target: root
+		property: "notifCount"
+		value: server.trackedNotifications.values.length
 	}
 
 	// ---------- Cartão de notificação (usado no popup e na central) ----------
@@ -255,7 +260,7 @@ Scope {
 	// ---------- Central de notificações (histórico) ----------
 	PanelWindow {
 		id: center
-		visible: false
+		visible: root.notifCenterOpen
 		WlrLayershell.namespace: "qs-notifcenter"
 		WlrLayershell.layer: WlrLayer.Overlay
 		exclusiveZone: -1
@@ -288,12 +293,12 @@ Scope {
 						font.bold: true
 					}
 					Text {
-						text: notifs.dnd ? "󰂛" : "󰂚"
+						text: root.notifDnd ? "󰂛" : "󰂚"
 						color: dndHover.hovered ? root.text : Qt.rgba(1, 1, 1, 0.7)
 						font.pixelSize: 18
 						padding: 4
 						HoverHandler { id: dndHover; cursorShape: Qt.PointingHandCursor }
-						MouseArea { anchors.fill: parent; onClicked: notifs.dnd = !notifs.dnd }
+						MouseArea { anchors.fill: parent; onClicked: root.notifDnd = !root.notifDnd }
 					}
 					Text {
 						text: "󰩺"

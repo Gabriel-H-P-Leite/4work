@@ -14,6 +14,11 @@ ShellRoot {
 	property int fontSize: 15
 	property int barH: 33
 
+	// estado das notificações, compartilhado entre Notifications e NotifButton
+	property bool notifDnd: false
+	property bool notifCenterOpen: false
+	property int notifCount: 0
+
 	IpcHandler {
 		target: "toggleLauncher"
 		function onTriggered(): string {

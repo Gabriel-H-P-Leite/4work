@@ -80,7 +80,6 @@ Rectangle {
 				onClicked: musicModule.player.next()
 			}
 		}
-
 		Text {
 			id: txt
 			anchors.verticalCenter: parent.verticalCenter
@@ -92,8 +91,6 @@ Rectangle {
 				: ""
 		}
 	}
-
-	// Hover no módulo inteiro, pra não piscar quando os controles empurram o texto
 	HoverHandler {
 		id: hover
 		cursorShape: Qt.PointingHandCursor

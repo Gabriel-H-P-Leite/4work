@@ -29,6 +29,12 @@ PanelWindow {
 			id: row
 			anchors.centerIn: parent
 			spacing: 2
+			NotifButton {
+				textColor: root.text
+				fontFamily: root.fontFamily
+				fontSize: root.fontSize
+				barH: root.barH
+			}
 			Network {
 				textColor: root.text
 				fontSize: root.fontSize
