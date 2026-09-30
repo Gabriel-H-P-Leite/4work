@@ -29,6 +29,10 @@ PanelWindow {
 			id: row
 			anchors.centerIn: parent
 			spacing: 2
+			Tray {
+				iconSize: root.fontSize + 3
+				barH: root.barH
+			}
 			NotifButton {
 				textColor: root.text
 				fontFamily: root.fontFamily
@@ -46,6 +50,7 @@ PanelWindow {
 				fontSize: root.fontSize
 				barH: root.barH
 			}
+
 			Clock {
 				textColor: root.text
 				fontFamily: root.fontFamily

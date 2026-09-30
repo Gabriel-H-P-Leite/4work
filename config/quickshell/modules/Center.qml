@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Wayland
+import Quickshell.Widgets
 import Quickshell.Hyprland
 
 PanelWindow {
@@ -11,7 +12,17 @@ PanelWindow {
 	anchors {
 		top: true
 	}
-	width: cback.width
+	// Largura fixa (mesma ideia do Left.qml): só o fundo muda de tamanho, sem jitter
+	width: 900
+	mask: Region { item: cback }
+
+	// Ícone do app a partir do appId da janela (ex: "firefox", "kitty")
+	function appIcon(toplevel) {
+		const id = toplevel.wayland?.appId || toplevel.lastIpcObject?.class || ""
+		const entry = DesktopEntries.heuristicLookup(id)
+		return Quickshell.iconPath(entry?.icon || id, "application-x-executable")
+	}
+
 	Rectangle {
 		id: cback
 		color: root.back
@@ -21,7 +32,9 @@ PanelWindow {
 		bottomLeftRadius: 20
 		bottomRightRadius: 20
 		y: -1
-		width: works.implicitWidth + 20
+		anchors.horizontalCenter: parent.horizontalCenter
+		width: Math.round(works.implicitWidth + 20)
+
 		Row {
 			id: works
 			anchors.centerIn: parent
@@ -30,23 +43,61 @@ PanelWindow {
 			property var workspaces: Hyprland.workspaces.values
 				.filter(w => w.id > 0)
 				.sort((a, b) => a.id - b.id)
+
 			Repeater {
 				model: works.workspaces
+
 				Rectangle {
+					id: ws
 					required property var modelData
-					property bool isFocused: Hyprland.focusedWorkspace?.id === modelData.id
-					width: 24
+					property bool isFocused: modelData.focused
+					property bool hasWindows: modelData.toplevels.values.length > 0
+
 					height: 24
-					radius: 20
-					color: isFocused ? Qt.rgba(0, 0, 0, 0.1) : "transparent"
+					width: hasWindows ? icons.implicitWidth + 18 : 24
+					radius: 12
+					color: isFocused ? Qt.rgba(0, 0, 0, 0.15)
+						: wsHover.hovered ? Qt.rgba(1, 1, 1, 0.06) : "transparent"
+					border.width: modelData.urgent ? 1 : 0
+					border.color: "#e06c75"
+					Behavior on width { NumberAnimation { duration: 150; easing.type: Easing.OutCubic } }
+
+					// Número: pequeno no canto superior esquerdo quando tem janelas,
+					// normal e centralizado quando a workspace está vazia
 					Text {
-						anchors.centerIn: parent
-						text: modelData.id
-						color: parent.isFocused ? "white" : Qt.rgba(1, 1, 1, 0.5)
+						text: ws.modelData.id
+						color: ws.isFocused ? "white" : Qt.rgba(1, 1, 1, 0.5)
+						font.pixelSize: ws.hasWindows ? 8 : 12
+						font.bold: ws.hasWindows
+						x: ws.hasWindows ? 5 : (ws.width - width) / 2
+						y: ws.hasWindows ? 1 : (ws.height - height) / 2
 					}
+
+					Row {
+						id: icons
+						anchors.verticalCenter: parent.verticalCenter
+						anchors.verticalCenterOffset: 1
+						anchors.left: parent.left
+						anchors.leftMargin: 12
+						spacing: 3
+						visible: ws.hasWindows
+
+						Repeater {
+							model: ws.modelData.toplevels
+							IconImage {
+								required property var modelData
+								implicitSize: 15
+								source: center.appIcon(modelData)
+								// janela focada mais forte que as outras
+								opacity: modelData.activated ? 1 : (ws.isFocused ? 0.75 : 0.5)
+							}
+						}
+					}
+
+					HoverHandler { id: wsHover; cursorShape: Qt.PointingHandCursor }
 					MouseArea {
 						anchors.fill: parent
-						onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + modelData.id + " })")
+						onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + ws.modelData.id + " })")
 					}
 				}
 			}
