@@ -3,7 +3,7 @@ require("rules")
 require("style")
 require("binds")
 require("display")
-hl.env("QT_STYLE_OVERRIDE", "kvantum")
+hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 --ON START
 hl.on("hyprland.start", function()
 	hl.exec_cmd("cp /home/gabriel/Imagens/Wallpapers/ARCH7.jpg /tmp/fundo.png && hyprlock")
