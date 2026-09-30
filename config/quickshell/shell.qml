@@ -24,6 +24,7 @@ ShellRoot {
 	LazyLoader { active: true; component: Left {} }
 	LazyLoader { active: true; component: Center {} }
 	LazyLoader { active: true; component: Right {} }
+	LazyLoader { active: true; component: Notifications {} }
 	LazyLoader { active: true; component: Wallpaper {} }
 	LazyLoader { id: launcherLoader; active: false; component: Launcher {} }
 	function toggleLauncher() { launcherLoader.active = !launcherLoader.active }
