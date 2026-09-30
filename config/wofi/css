@@ -1,0 +1,41 @@
+/*WOFI SIMPLES*/
+@define-color none rgba(0, 0, 0, 0);
+@define-color text-unfocused rgba(255,255,255,0.5);
+@define-color text white;
+@define-color border rgba(128,128,128,0.4);
+@define-color background rgba(0,0,0, 0.3);
+*{
+font-family:"Segoe";
+font-size:15px;
+box-shadow: none;
+}
+window{
+width:10px;
+border-radius:20px;
+border:1px solid @border;
+background:@background;
+}
+
+#input,#entry,#entry:selected,#expander-box{
+color:@text;
+border:1px solid @border;
+border-radius:20px;
+background:@background;
+padding:5px;
+margin:5px;
+}
+#entry{
+color:@text-unfocused;
+background:none;
+border:1px solid @none;
+}
+img,#img{
+margin:0px 10px;
+height: 5px;
+max-width: 10%;
+max-height: 10%
+}
+/*#input{
+display: none;
+margin: -1000px 5px; 
+}*/

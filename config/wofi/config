@@ -1,0 +1,9 @@
+#simples
+prompt=󰒠
+stylesheet=css
+width=400
+term=kitty
+insensitive=true
+hide_scroll=true
+allow_images=true
+single_click=true
