@@ -4,15 +4,17 @@ BLU='\033[0;34m'
 RED='\033[0;31m'
 YEL='\033[0;33m'
 NC='\033[0m' 
-if [ "$(pwd)" = "/home/$(whoami)/.config/4work" ]; then
+set -euo pipefail
+if [ "$(pwd)" != "$HOME/.config/4work" ]; then
+    echo "move essa pasta pra ~/.config/4work"
+    exit 1
+else
 	echo -e "${BLU}\n░░░░█████╗░░█████╗░███╗░░██╗███████╗██╗░██████╗░"
 	echo -e "${BLU}░░░██╔══██╗██╔══██╗████╗░██║██╔════╝██║██╔════╝░"
 	echo -e "${BlU}░░░██║░░╚═╝██║░░██║██╔██╗██║█████╗░░██║██║░░██╗░"
 	echo -e "${BLU}░░░██║░░██╗██║░░██║██║╚████║██╔══╝░░██║██║░░╚██╗"
 	echo -e "${BLU}██╗╚█████╔╝╚█████╔╝██║░╚███║██║░░░░░██║╚██████╔╝"
 	echo -e "${BLU}╚═╝░╚════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░░░░╚═╝░╚═════╝░"
-else
-	echo "move essa pasta pra ~/.config"
 fi
 
 echo -e "${YEL}\nConfigs\n${NC}"
@@ -21,7 +23,7 @@ apagar="$(ls -h config/)"
 cd ../
 sudo rm -rf $apagar
 cd 4work/
-cp -rf config/* ../
+ln -rsf config/* ../
 #links em bin
 sudo ln -rsf scripts/menus /bin/
 #links em home
@@ -35,7 +37,7 @@ else
 	sudo pacman -Syu $flags base-devel  
 	echo -e "${YEL}\nBaixando Apps...\n${NC}"
 	#Interface
-	sudo pacman -S $flags hyprland wofi qt5ct nwg-look polkit-kde-agent xdg-desktop-portal-gtk xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-hyprland hyprsunset hyprlock
+	sudo pacman -S $flags hyprland wofi qt6ct nwg-look polkit-kde-agent xdg-desktop-portal-gtk xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-hyprland hyprsunset hyprlock
 	#Audio
 	sudo pacman -S $flags gst-plugin-pipewire lib32-libpipewire libpipewire pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
 	#Apps

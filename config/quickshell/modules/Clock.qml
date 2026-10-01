@@ -17,7 +17,7 @@ Rectangle {
 
 	SystemClock {
 		id: clock
-		precision: SystemClock.Seconds
+		precision: SystemClock.Minutes
 	}
 	Text {
 		id: time

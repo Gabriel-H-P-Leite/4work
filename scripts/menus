@@ -17,9 +17,6 @@ if [ -z "$1" ]; then
 	fi
 fi
 case "$1" in
-	1)#apps
-		wofi -S drun	
-	;;
 	2)#atualizar
 		#se tty estiver vazio
 		if [ -z $(tty | grep "tty")]; then
@@ -48,34 +45,6 @@ case "$1" in
 			sudo journalctl --vacuum-time=7d
 		else
 			kitty menus 2
-		fi
-	;;
-	3)#sair
-		choice=$(echo -e "1: 󰐥 Desligar \n2: 󰜉 Reiniciar \n3: 󰍃 Sair" | wofi -d --width=200 --height=150 | cut -d ':' -f 1)
-		case "$choice" in
-		  1) hyprctl dispatch exit & systemctl poweroff ;;
-		  2) hyprctl dispatch exit & systemctl reboot ;;
-		  3) echo $(echo -e "1: TTY \n2: KDE \n3: NIX" | wofi -d --width=200 --height=150 | cut -d ':' -f 1) > /tmp/sai ; hyprctl dispatch exit ;;
-		esac
-	;;
-	4)#temas
-		#se não tem algo em $2
-		if [ -z "$2" ]; then
-			cd $temas
-			tema=$(ls -d */ | sed 's/\///g' | wofi -d --width=200 --height=200)
-			#se não escolher tema
-			if [ -z "$tema" ]; then
-				exit 0
-			fi
-			menus $1 "$tema"
-		fi
-		#se tem algo em $2
-		if [ -n "$2" ]; then
-			cd $temas/$2
-			ln -rsf * $config
-			cp hypr/style.lua $config/hypr/
-			killall waybar ; killall wpaperd ; killall swaync
-			waybar & wpaperd -d & swaync
 		fi
 	;;
 	5)#baixar
@@ -117,37 +86,6 @@ case "$1" in
 			out=$(hyprctl dispatch pin "address:$id")
 		fi
 		notify-send -e "$(echo -e " Título:'$titulo'\nID:$id\n$out")" -h string:x-canonical-private-synchronous:pin -t 2000 -h string:transient:true 
-	;;
-	9)#wallpapers
-		wallpapers=$HOME/Imagens/Wallpapers/
-		monitor="[any]"
-		cd $wallpapers
-
-		sele=$(echo -e "1: 󰋩 Escolher um Wallpaper \n2: 󰉏 Escolher uma pasta\n3: 󰋹 Todos" | wofi -d | cut -d ':' -f 1)
-		case "$sele" in		
-			1) foto="$(find . -type f | cut -d '/' -f 2,3,4,5 | wofi -d)";;
-			2) foto="$(ls -h | wofi -d)";;
-			3) foto="todos";;
-		esac
-		if [ -d "$foto" ];then #se $foto é diretorio
-			escolha="$monitor\npath = \"$wallpapers$foto\"\nduration=\"5m\"\nmode=\"stretch\""
-		else	#se não é diretório
-			escolha="$monitor\npath = \"$wallpapers$foto\"\nmode=\"stretch\""
-		fi
-		if [ "$sele" = "3" ]; then #se escolhi todos
-			escolha="$monitor\npath = \"$wallpapers\"\nduration=\"5m\"\nmode=\"stretch\""
-		fi
-
-		#se $foto não estiver vazio
-		if [ -n "$foto" ]; then
-			echo -e "$escolha" > ~/.config/wpaperd/config.toml
-			killall wpaperd 
-			sleep 1
-			wpaperd
-			exit 0
-		else
-			exit 0
-		fi
 	;;
 	10)#ler
 		foto="OCR"
