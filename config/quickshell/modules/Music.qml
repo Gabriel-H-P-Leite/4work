@@ -84,6 +84,7 @@ Rectangle {
 			id: txt
 			anchors.verticalCenter: parent.verticalCenter
 			color: musicModule.textColor
+			rightPadding: 5
 			font.family: musicModule.fontFamily
 			font.pixelSize: musicModule.fontSize
 			text: musicModule.hasTrack
