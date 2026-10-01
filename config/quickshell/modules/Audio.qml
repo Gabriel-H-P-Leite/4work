@@ -5,9 +5,8 @@ import Quickshell.Services.Pipewire
 
 Rectangle {
 	id: audioModule
-
 	property color textColor: "white"
-	property string fontFamily: "monospace"
+	property string fontFamily: root.fontFamily
 	property int fontSize: 15
 	property int barH: 33
 	height: barH

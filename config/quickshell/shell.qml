@@ -10,7 +10,8 @@ ShellRoot {
 	property color text: "#ffffff"
 	property color back: Qt.rgba(0, 0, 0, 0.3)
 	property color border: Qt.rgba(1, 1, 1, 0.3)
-	property var fontFamily: "Noto Sans"
+	property string fontFamily: "Noto Sans"
+	property string iconFont: "Symbols Nerd Font Mono"
 	property int fontSize: 15
 	property int barH: 33
 

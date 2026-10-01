@@ -7,7 +7,7 @@ import Quickshell.Wayland
 Rectangle {
 	id: clockModule
 	property color textColor: "white"
-	property string fontFamily: "monospace"
+	property string fontFamily: root.fontFamily
 	property int fontSize: 15
 	property int barH: 33
 

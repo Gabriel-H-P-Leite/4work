@@ -1,14 +1,31 @@
 import QtQuick
 import Quickshell
+import Quickshell.Io
 import Quickshell.Services.Mpris
 
 Rectangle {
 	id: musicModule
 	property color textColor: "white"
-	property var fontFamily: "Noto Sans"
+	property string fontFamily: root.fontFamily
 	property int fontSize: 15
 	property int barH: 33
 	property int iconSize: 15
+
+	IpcHandler {
+		target: "music"
+		function playPause(): string { musicModule.player?.togglePlaying(); return "" }
+		function next(): string { musicModule.player?.next(); return "" }
+		function previous(): string { musicModule.player?.previous(); return "" }
+		function volumeUp(): string { musicModule.changeVolume(0.05); return "" }
+		function volumeDown(): string { musicModule.changeVolume(-0.05); return "" }
+		function setVolume(percent: int): string { musicModule.changeVolume(percent / 100, true); return "" }
+	}
+
+	function changeVolume(value, absolute) {
+		const p = musicModule.player
+		if (!p || !p.volumeSupported) return
+		p.volume = Math.max(0, Math.min(1, absolute ? value : p.volume + value))
+	}
 
 	property var player: {
 		for (let p of Mpris.players.values) {

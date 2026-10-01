@@ -4,7 +4,7 @@ import Quickshell
 Rectangle {
 	id: notifButton
 	property color textColor: "white"
-	property var fontFamily: "Noto Sans"
+	property string fontFamily: root.fontFamily
 	property int fontSize: 15
 	property int barH: 33
 

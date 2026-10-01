@@ -8,13 +8,12 @@ local browser = "firefox"
 --MUSIC--
 ----------
 
-hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica play-pause ;  sh ~/.config/dotConfig/scripts/musica notificacao"))
-hl.bind("CTRL + SHIFT + E", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica player"))
 hl.bind("CTRL + ALT + E", hl.dsp.workspace.toggle_special("musica"))
-hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica previous"))
-hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica next"))
-hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica volume 0.1+ ;  sh ~/.config/dotConfig/scripts/musica notificacao"))
-hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/musica volume 0.1- ;  sh ~/.config/dotConfig/scripts/musica notificacao"))
+hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
+hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("quickshell ipc call music previous"))
+hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("quickshell ipc call music next"))
+hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"))
+hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"))
 
 ---------
 --MENUS--
