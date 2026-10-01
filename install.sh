@@ -27,11 +27,11 @@ ln -rsf config/* ../
 #links em bin
 sudo ln -rsf scripts/menus /bin/
 #links em home
-sudo rm ~/.bashrc ;  sudo rm ~/.profile 
-sudo ln -rsf home/.* ~/ 
+rm -f ~/.bashrc ~/.profile
+ln -rsf home/.bashrc home/.profile ~/
 
-if [ "$1" = "-n" ]; then
-	echo "-n pra não baixar nada"
+if [ "${1:-}" = "-n" ]; then
+	echo "Flag -n usada então não vai baixar nada"
 else
 	echo -e "${YEL}\nAtualizando...\n${NC}"
 	sudo pacman -Syu $flags base-devel  
