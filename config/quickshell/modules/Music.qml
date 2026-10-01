@@ -64,6 +64,7 @@ Rectangle {
 	MouseArea {
 		anchors.fill: parent
 		onClicked: if (musicModule.player) musicModule.player.togglePlaying()
+		onWheel: wheel => musicModule.changeVolume(wheel.angleDelta.y > 0 ? 0.05 : -0.05)
 	}
 
 	Row {

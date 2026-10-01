@@ -35,7 +35,8 @@ hl.bind("ALT + F", hl.dsp.exec_cmd(menu .." 7"))
 --pin
 hl.bind("ALT + T", hl.dsp.exec_cmd(menu .." 8"))
 --wallpaper
-hl.bind( mainMod .." + W", hl.dsp.exec_cmd(menu .." 9 $wallpaper"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper next"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper random"))
 --ocr
 hl.bind( mainMod .." + SHIFT + R", hl.dsp.exec_cmd(menu .." 10"))
 
