@@ -22,6 +22,7 @@ Rectangle {
 		id: volRow
 		anchors.centerIn: parent
 		spacing: 4
+		rightPadding: 7
 		Text {
 			text: " "
 			color: menuModule.textColor

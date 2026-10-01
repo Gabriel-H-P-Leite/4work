@@ -8,7 +8,7 @@ Rectangle {
 	property var fontFamily: "Noto Sans"
 	property int fontSize: 15
 	property int barH: 33
-	property int iconSize: 10
+	property int iconSize: 15
 
 	property var player: {
 		for (let p of Mpris.players.values) {

@@ -53,9 +53,9 @@ PanelWindow {
 					property bool isFocused: modelData.focused
 					property bool hasWindows: modelData.toplevels.values.length > 0
 
-					height: 24
+					height: 20
 					width: hasWindows ? icons.implicitWidth + 18 : 24
-					radius: 12
+					radius: 10
 					color: isFocused ? Qt.rgba(0, 0, 0, 0.15)
 						: wsHover.hovered ? Qt.rgba(1, 1, 1, 0.06) : "transparent"
 					border.width: modelData.urgent ? 1 : 0
