@@ -10,9 +10,10 @@ Rectangle {
 	property string fontFamily: root.fontFamily
 	property int fontSize: 15
 	property int barH: 33
+	property bool showDate: false
 
 	height: barH
-	width: time.implicitWidth + 12
+	width: time.implicitWidth + 4
 	color: "transparent"
 
 	SystemClock {
@@ -21,10 +22,17 @@ Rectangle {
 	}
 	Text {
 		id: time
-		text: Qt.formatDateTime(clock.date,"󰥔 hh:mm")
+		text: clockModule.showDate
+			? Qt.formatDateTime(clock.date, "󰃭 dd/MM/yyyy")
+			: Qt.formatDateTime(clock.date, "󰥔 hh:mm")
 		color: clockModule.textColor
 		font.family: clockModule.fontFamily
 		font.pixelSize: clockModule.fontSize
 		anchors.centerIn: parent
+	}
+	MouseArea {
+		anchors.fill: parent
+		cursorShape: Qt.PointingHandCursor
+		onClicked: clockModule.showDate = !clockModule.showDate
 	}
 }

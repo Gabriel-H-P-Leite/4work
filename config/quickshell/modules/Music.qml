@@ -7,9 +7,9 @@ Rectangle {
 	id: musicModule
 	property color textColor: "white"
 	property string fontFamily: root.fontFamily
-	property int fontSize: 15
+	property int fontSize: 10
 	property int barH: 33
-	property int iconSize: 15
+	property int iconSize: 20
 
 	IpcHandler {
 		target: "music"

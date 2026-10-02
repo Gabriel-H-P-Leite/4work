@@ -24,8 +24,8 @@ Rectangle {
 	function volumeIcon() {
 		let v = volume * 100
 		if (muted) return ""
-		if (v < 33) return ""
-		if (v < 66) return ""
+		if (v < 10) return ""
+		if (v < 50) return ""
 		return ""
 	}
 
@@ -42,12 +42,6 @@ Rectangle {
 
 		Text {
 			text: audioModule.volumeIcon()
-			color: audioModule.textColor
-			font.family: audioModule.fontFamily
-			font.pixelSize: audioModule.fontSize
-		}
-		Text {
-			text: Math.round(audioModule.volume * 100) + "%"
 			color: audioModule.textColor
 			font.family: audioModule.fontFamily
 			font.pixelSize: audioModule.fontSize
