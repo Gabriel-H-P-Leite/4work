@@ -8,12 +8,12 @@ PanelWindow {
 	id: center
 	WlrLayershell.namespace: "qs-modulescenter"
 	height: root.barH
+	width: 800
+	mask: Region { item: cback }
 	color: "transparent"
 	anchors {
 		top: true
 	}
-	width: 800
-	mask: Region { item: cback }
 
 	function appIcon(toplevel) {
 		const id = toplevel.wayland?.appId || toplevel.lastIpcObject?.class || ""

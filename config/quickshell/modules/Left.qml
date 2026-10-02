@@ -8,19 +8,17 @@ PanelWindow {
 	WlrLayershell.namespace: "qs-modulesleft"
 	exclusiveZone: -1
 	height: root.barH
-	// Janela com largura fixa e folgada: quem muda de tamanho é só o fundo lá dentro.
-	// Redimensionar a janela a cada frame da animação é o que causa o jitter.
 	width: 800
 	color: "transparent"
+	mask: Region { item: background }
 	anchors {
 		top: true
 		left: true
 	}
 
-	// Só a área do fundo recebe mouse; o resto da janela transparente deixa o clique passar
-	mask: Region { item: background }
-
 	Rectangle {
+		clip: true
+		Behavior on width { NumberAnimation { duration: 200; easing.type: Easing.OutCubic } }
 		id: background
 		color: root.back
 		border.color: root.border
