@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Wayland
-import Quickshell.Wayland._WlrLayerShell
+import Quickshell.Widgets
 
 PanelWindow {
 	id: launcher
@@ -14,6 +14,12 @@ PanelWindow {
 	implicitWidth: 500
 	implicitHeight: 500
 	color:"transparent"
+
+	function appIcon(entry) {
+		const ic = entry?.icon || ""
+		if (ic.startsWith("/")) return "file://" + ic
+		return Quickshell.iconPath(ic, "application-x-executable")
+	}
 
 	function launchSelected() {
 		if (list.currentItem && list.currentItem.modelData) {
@@ -34,7 +40,13 @@ PanelWindow {
 			values: {
 				const q = input.text.trim().toLowerCase()
 				const all = [...DesktopEntries.applications.values]
-				return q === "" ? all : all.filter(d => d.name?.toLowerCase().includes(q))
+					.sort((a, b) => a.name.localeCompare(b.name))
+				if (q === "") return all
+				// busca no nome, no nome genérico ("Navegador") e nas palavras-chave
+				return all.filter(d =>
+					d.name?.toLowerCase().includes(q) ||
+					d.genericName?.toLowerCase().includes(q) ||
+					d.keywords?.some(k => k.toLowerCase().includes(q)))
 			}
 		}
 		ColumnLayout {
@@ -86,7 +98,7 @@ PanelWindow {
 				Layout.fillHeight: true
 				Layout.margins: 5
 				clip: true
-				model: filtered.values
+				model: filtered
 				currentIndex: filtered.values.length > 0 ? 0 : -1
 				keyNavigationWraps: true
 				highlightMoveDuration: 80
@@ -101,22 +113,31 @@ PanelWindow {
 					required property var modelData
 					required property int index
 					width: ListView.view.width
-					height: 36
+					height: 40
 					MouseArea {
 						anchors.fill: parent
 						onClicked: list.currentIndex = entry.index
 						onDoubleClicked: launcher.launchSelected()
 					}
-					Row {
+					RowLayout {
 						anchors.fill: parent
-						anchors.margins: 8
+						anchors.leftMargin: 10
+						anchors.rightMargin: 10
 						spacing: 10
+						IconImage {
+							Layout.alignment: Qt.AlignVCenter
+							implicitSize: 24
+							source: launcher.appIcon(entry.modelData)
+							asynchronous: true
+							opacity: entry.index === list.currentIndex ? 1 : 0.7
+						}
 						Text {
+							Layout.fillWidth: true
+							Layout.alignment: Qt.AlignVCenter
 							color: entry.index === list.currentIndex ? "white" : Qt.rgba(1,1,1, 0.5)
 							text: entry.modelData.name
 							font.pointSize: 13
 							elide: Text.ElideRight
-							verticalAlignment: Text.AlignVCenter
 						}
 					}
 				}
