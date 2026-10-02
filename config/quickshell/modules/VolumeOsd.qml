@@ -19,7 +19,7 @@ Scope {
 		let v = osd.volume * 100
 		if (osd.muted) return ""
 		if (v < 10) return ""
-		if (v < 50) return ""
+		if (v < 51) return ""
 		return ""
 	}
 	function trigger() {
@@ -47,13 +47,13 @@ Scope {
 		WlrLayershell.layer: WlrLayer.Overlay
 		exclusiveZone: -1
 		color: "transparent"
+		anchors.right: true
+		margins.right: 4
 		anchors.top: true
-		margins.top: 60
+		margins.top: root.barH + 4 
 		implicitWidth: 300
 		implicitHeight: 70
-		// some de verdade só depois que a animação de saída termina
 		visible: card.opacity > 0
-		// não recebe clique: o mouse passa direto pro que estiver embaixo
 		mask: Region {}
 
 		Rectangle {

@@ -25,7 +25,7 @@ Rectangle {
 		let v = volume * 100
 		if (muted) return ""
 		if (v < 10) return ""
-		if (v < 50) return ""
+		if (v < 51) return ""
 		return ""
 	}
 

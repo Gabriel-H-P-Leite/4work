@@ -19,3 +19,14 @@ hl.window_rule({
     },
     no_focus = true,
 })
+
+hl.window_rule({
+	name  = "fix-Chatgpt",
+	match = {class = "Chatgpt"},
+	no_focus = true,
+	float      = true,
+	border_size = 0,
+	no_blur     = true,
+	no_shadow   = true,
+	decorate    = false
+})

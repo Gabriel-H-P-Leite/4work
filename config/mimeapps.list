@@ -4,3 +4,6 @@ application/yaml=org.xfce.mousepad.desktop;
 text/markdown=org.xfce.mousepad.desktop;
 text/x-qml=org.xfce.mousepad.desktop;
 text/plain=org.xfce.mousepad.desktop;
+
+[Default Applications]
+x-scheme-handler/codex=chatgpt.desktop
