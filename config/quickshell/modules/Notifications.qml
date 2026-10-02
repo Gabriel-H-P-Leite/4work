@@ -217,9 +217,8 @@ Scope {
 		color: "transparent"
 		visible: !center.visible
 		anchors { top: true; right: true; bottom: true }
-		margins { top: root.barH + 8; right: 8 }
+		margins { top: root.barH + 5 ; right: 5 }
 		implicitWidth: notifs.cardWidth
-		// janela com tamanho fixo; só os cartões recebem mouse (mesma ideia do Left.qml)
 		mask: Region { item: popupColumn }
 
 		Column {
@@ -266,7 +265,7 @@ Scope {
 		exclusiveZone: -1
 		color: "transparent"
 		anchors { top: true; right: true; bottom: true }
-		margins { top: root.barH + 8; right: 8; bottom: 8 }
+		margins { top: root.barH + 5 ; right: 5 ; bottom: 5 }
 		implicitWidth: notifs.cardWidth + 20
 
 		Rectangle {

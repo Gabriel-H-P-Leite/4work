@@ -48,9 +48,9 @@ Scope {
 		exclusiveZone: -1
 		color: "transparent"
 		anchors.right: true
-		margins.right: 4
+		margins.right: 5
 		anchors.top: true
-		margins.top: root.barH + 4 
+		margins.top: root.barH + 5
 		implicitWidth: 300
 		implicitHeight: 70
 		visible: card.opacity > 0
@@ -60,7 +60,7 @@ Scope {
 			id: card
 			width: parent.width
 			height: 52
-			radius: height / 2
+			radius: 20
 			color: root.back
 			border.width: 1
 			border.color: root.border
