@@ -26,8 +26,8 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(menu))
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd(menu .." 3"))
 --lock
 hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("grim '/tmp/fundo.png' ; hyprlock"))
---themes
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(menu .." 4"))
+--restart quickshell
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("pkill quickshell || quickshell"), { release = true })
 --clipboard
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(menu .." 6"))
 --focus

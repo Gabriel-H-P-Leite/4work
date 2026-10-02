@@ -6,4 +6,12 @@ text/x-qml=org.xfce.mousepad.desktop;
 text/plain=org.xfce.mousepad.desktop;
 
 [Default Applications]
-x-scheme-handler/codex=chatgpt.desktop
+x-scheme-handler/codex=chatgpt.desktop;
+image/jpeg=imv-dir;
+image/png=imv-dir;
+image/gif=imv-dir;
+image/webp=imv-dir;
+image/svg+xml=imv-dir;
+image/bmp=imv-dir;
+image/tiff=imv-dir;
+image/avif=imv-dir;
