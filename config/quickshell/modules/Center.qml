@@ -12,11 +12,9 @@ PanelWindow {
 	anchors {
 		top: true
 	}
-	// Largura fixa (mesma ideia do Left.qml): só o fundo muda de tamanho, sem jitter
-	width: 900
+	width: 800
 	mask: Region { item: cback }
 
-	// Ícone do app a partir do appId da janela (ex: "firefox", "kitty")
 	function appIcon(toplevel) {
 		const id = toplevel.wayland?.appId || toplevel.lastIpcObject?.class || ""
 		const entry = DesktopEntries.heuristicLookup(id)
@@ -35,15 +33,18 @@ PanelWindow {
 		anchors.horizontalCenter: parent.horizontalCenter
 		width: Math.round(works.implicitWidth + 20)
 
+		clip: true
+		Behavior on width { NumberAnimation { duration: 200; easing.type: Easing.OutCubic } }
 		Row {
 			id: works
 			anchors.centerIn: parent
 			spacing: 3
-			// Workspaces normais (ids negativos são special workspaces), ordenados por id
 			property var workspaces: Hyprland.workspaces.values
 				.filter(w => w.id > 0)
 				.sort((a, b) => a.id - b.id)
-
+			move: Transition {
+				NumberAnimation { property: "x"; duration: 200; easing.type: Easing.OutCubic }
+			}
 			Repeater {
 				model: works.workspaces
 
