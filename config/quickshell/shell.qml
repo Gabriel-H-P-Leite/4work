@@ -34,5 +34,6 @@ ShellRoot {
 	LazyLoader { active: true; component: Wallpaper {} }
 	LazyLoader { id: launcherLoader; active: false; component: Launcher {} }
 	LazyLoader { active: true; component: VolumeOsd {} }
+	LazyLoader { active: true; component: MusicOsd {} }
 	function toggleLauncher() { launcherLoader.active = !launcherLoader.active }
 }
