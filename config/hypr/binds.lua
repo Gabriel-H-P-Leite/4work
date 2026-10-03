@@ -48,7 +48,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("quickshell ipc call notifications to
 --screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("slurp | grim -g - ~/Imagens/$(date +'ArchLinux_%Y-%m-%d_%H:%M:%S.png')"))
 --filter
-hl.bind(mainMod .." + SHIFT + F", hl.dsp.exec_cmd("sh ~/.config/dotConfig/scripts/video filtro"))
+hl.bind(mainMod .." + SHIFT + F", hl.dsp.exec_cmd("sh ~/.config/4work/scripts/video filtro"))
 --------
 --APPS--
 --------
