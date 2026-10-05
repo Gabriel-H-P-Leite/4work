@@ -39,15 +39,17 @@ PanelWindow {
 			id: works
 			anchors.centerIn: parent
 			spacing: 3
-			property var workspaces: Hyprland.workspaces.values
-				.filter(w => w.id > 0)
-				.sort((a, b) => a.id - b.id)
+			ScriptModel {
+				id: wsModel
+				values: Hyprland.workspaces.values
+					.filter(w => w.id > 0)
+					.sort((a, b) => a.id - b.id)
+			}
 			move: Transition {
 				NumberAnimation { property: "x"; duration: 200; easing.type: Easing.OutCubic }
 			}
 			Repeater {
-				model: works.workspaces
-
+				model: wsModel
 				Rectangle {
 					id: ws
 					required property var modelData

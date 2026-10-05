@@ -1,96 +1,89 @@
 #!/bin/bash
-config=$HOME/.config/
-temas="$config/dotConfig/temas"
-opcoes="1: 󰵆 Apps\n2: 󰚰 Atualizar\n3: 󰍃 Sair\n4:  Temas\n5:  Baixar\n6:  Area de transferência\n7: 󰩉 Achar janela\n8: 󰐃 Fixar janela\n9:  Wallpapers\n10:   Ler imagem"
-#se wofi estiver abrido só mata ele
-if [ -n "$(pgrep wofi)" ]; then
-	killall wofi
-	exit 0
-fi
-#se $1 estiver vazio
-if [ -z "$1" ]; then
-	escolha=$(echo -e $opcoes | wofi -d | cut -d ':' -f 1)
-	if [ -z "$escolha" ]; then
-		exit 0
-	else	
-		menus $escolha
-	fi
-fi
-case "$1" in
-	2)#atualizar
-		#se tty estiver vazio
-		if [ -z $(tty | grep "tty")]; then
-			BLU='\033[0;34m'
-			RED='\033[0;31m'
-			YEL='\033[0;33m'
-			NC='\033[0m' 
-			flags="--noconfirm  --needed"
-			echo -e "${BLU}███╗░░░███╗░█████╗░███╗░░██╗██╗░░░██╗████████╗███████╗███╗░░██╗░█████╗░░█████╗░░█████╗░\n████╗░████║██╔══██╗████╗░██║██║░░░██║╚══██╔══╝██╔════╝████╗░██║██╔══██╗██╔══██╗██╔══██╗\n██╔████╔██║███████║██╔██╗██║██║░░░██║░░░██║░░░█████╗░░██╔██╗██║██║░░╚═╝███████║██║░░██║\n██║╚██╔╝██║██╔══██║██║╚████║██║░░░██║░░░██║░░░██╔══╝░░██║╚████║██║░░██╗██╔══██║██║░░██║\n██║░╚═╝░██║██║░░██║██║░╚███║╚██████╔╝░░░██║░░░███████╗██║░╚███║╚█████╔╝██║░░██║╚█████╔╝\n╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝░╚════╝░╗░${NC}"
 
-			echo -e "${YEL}Atualizando sistema${NC}"
-			paru -Syu $flags
+# Escolhe uma janela aberta pelo título e imprime o endereço dela (vazio se cancelar)
+escolher_janela() {
+	local clientes titulo
+	clientes=$(hyprctl clients -j)
+	titulo=$(echo "$clientes" | jq -r '.[] | select(.title != "") | .title' | qsmenu "$1") || return 1
+	# comparação exata: "contains" pegava a janela errada quando um título contém outro
+	echo "$clientes" | jq -r --arg t "$titulo" '[.[] | select(.title == $t)][0].address // empty'
+}
 
-			echo -e "${YEL}Removendo pacotes orfãos${NC}"
-			paru -Rns $(paru -Qdtq) 
+case "${1:-}" in
+	1) #atualizar
+		# fora de um terminal (atalho do Hyprland): abre o kitty rodando esta mesma opção
+		if [ ! -t 1 ]; then
+			exec kitty menus 1
+		fi
 
-			echo -e "${YEL}Limpando cache${NC}"
-			paru -Scc
-			sudo pacman -Scc
+		BLU='\033[0;34m'
+		YEL='\033[0;33m'
+		NC='\033[0m'
+		flags="--noconfirm --needed"
+		echo -e "${BLU}███╗░░░███╗░█████╗░███╗░░██╗██╗░░░██╗████████╗███████╗███╗░░██╗░█████╗░░█████╗░░█████╗░\n████╗░████║██╔══██╗████╗░██║██║░░░██║╚══██╔══╝██╔════╝████╗░██║██╔══██╗██╔══██╗██╔══██╗\n██╔████╔██║███████║██╔██╗██║██║░░░██║░░░██║░░░█████╗░░██╔██╗██║██║░░╚═╝███████║██║░░██║\n██║╚██╔╝██║██╔══██║██║╚████║██║░░░██║░░░██║░░░██╔══╝░░██║╚████║██║░░██╗██╔══██║██║░░██║\n██║░╚═╝░██║██║░░██║██║░╚███║╚██████╔╝░░░██║░░░███████╗██║░╚███║╚█████╔╝██║░░██║╚█████╔╝\n╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝░╚════╝░╗░${NC}"
 
-			homeCache="$(sudo du -sh ~/.cache/)"
-			varCache="$(sudo du -sh /var/cache/)"
-			echo -e "${YEL}Cache limpo:${NC}\n$homeCache\n$varCache"
+		echo -e "${YEL}Atualizando sistema${NC}"
+		paru -Syu $flags
 
-			echo -e "${YEL}Apagando logs${NC}"
-			sudo journalctl --vacuum-time=7d
+		echo -e "${YEL}Removendo pacotes órfãos${NC}"
+		orfaos=$(paru -Qdtq || true)
+		if [ -n "$orfaos" ]; then
+			paru -Rns $orfaos
 		else
-			kitty menus 2
+			echo "Nenhum pacote órfão"
 		fi
+
+		echo -e "${YEL}Limpando cache${NC}"
+		# o paru -Scc já limpa o cache do pacman junto com o dos pacotes do AUR
+		paru -Scc
+		echo -e "${YEL}Cache restante:${NC}"
+		du -sh ~/.cache/
+		sudo du -sh /var/cache/
+
+		echo -e "${YEL}Apagando logs com mais de 7 dias${NC}"
+		sudo journalctl --vacuum-time=7d
+
+		read -rp $'\nPronto. Enter pra fechar...'
 	;;
-	5)#baixar
-		if [ -z "$2" ]; then
-		tipo=$(echo -e "audio\nvideo" | wofi -d --width=200 --height=150 ) 
+	2) #baixar
+		tipo=${2:-$(printf "audio\nvideo\n" | qsmenu "Tipo de download")} || exit 0
+		url=${3:-$(cliphist list | qsmenu "Link pra baixar" | cliphist decode)} || exit 0
+		[ -n "$tipo" ] && [ -n "$url" ] || exit 0
+
+		case "$tipo" in
+			audio)
+				pasta=$(xdg-user-dir MUSIC)
+				formato=(-f bestaudio --extract-audio --audio-format mp3)
+			;;
+			video)
+				pasta=$(xdg-user-dir VIDEOS)
+				formato=(-f 'bestvideo+bestaudio/best' --merge-output-format mp4)
+			;;
+			*) exit 1 ;;
+		esac
+
+		notify-send -e "Baixando $tipo" "$url"
+		if yt-dlp "${formato[@]}" --embed-metadata -P "$pasta" "$url"; then
+			notify-send -e "Download concluído" "Salvo em $pasta"
 		else
-		tipo=$2
-		fi
-		if [ -z "$3" ]; then
-		url=$(cliphist list | wofi -d | cliphist decode)
-		else
-		url=$3
-		fi
-		if [ "$tipo" = "audio" ]; then
-			cd ~/Músicas/
-			yt-dlp -f 'bestaudio' --extract-audio --audio-format mp3 --embed-metadata "$url"
-		fi
-		if [ "$tipo" = "video" ]; then
-			cd ~/Videos/
-			yt-dlp -f 'bestvideo+bestaudio/bestvideo+bestaudio' --merge-output-format mp4 --embed-metadata "$url"
+			notify-send -u critical "Falha no download" "$url"
 		fi
 	;;
-	6)#area de transferencia
-		cliphist list | wofi -d --sort=default| cliphist decode | wl-copy
+	3) #alt tab
+		id=$(escolher_janela "Ir pra janela") || exit 0
+		[ -n "$id" ] || exit 0
+		hyprctl dispatch "hl.dsp.focus({ window = \"address:$id\" })" > /dev/null
 	;;
-	7)#alt tab
-		titulo=$(hyprctl clients -j | jq '.[]' | jq -r '.title'| wofi -d)
-		id=$(hyprctl clients -j | jq -r --arg titulo "$titulo" '.[] | select(.title | contains($titulo)) | .address')
-		if [ -n "$id" ]; then
-			out=$(hyprctl dispatch focuswindow "address:$id")
-		fi
-		notify-send -e "$(echo -e " Título:'$titulo'\nID:$id\n$out")" -h string:x-canonical-private-synchronous:pin -t 2000 -h string:transient:true 
+	4) #fixar janela
+		id=$(escolher_janela "Fixar janela") || exit 0
+		[ -n "$id" ] || exit 0
+		# pin só funciona em janela flutuante
+		hyprctl dispatch "hl.dsp.window.float({ action = \"set\", window = \"address:$id\" })" > /dev/null
+		hyprctl dispatch "hl.dsp.window.pin({ window = \"address:$id\" })" > /dev/null
+		notify-send -e -t 2000 "Janela fixada"
 	;;
-	8)#fixar janela
-		titulo=$(hyprctl clients -j | jq '.[]' | jq -r '.title'| wofi -d)
-		id=$(hyprctl clients -j | jq -r --arg titulo "$titulo" '.[] | select(.title | contains($titulo)) | .address')
-		if [ -n "$id" ]; then
-			hyprctl dispatch setfloating "address:$id"
-			out=$(hyprctl dispatch pin "address:$id")
-		fi
-		notify-send -e "$(echo -e " Título:'$titulo'\nID:$id\n$out")" -h string:x-canonical-private-synchronous:pin -t 2000 -h string:transient:true 
-	;;
-	10)#ler
-		foto="OCR"
-		slurp | grim -g - /tmp/$foto.png
-		tesseract /tmp/$foto.png /tmp/$foto txt
-		cat /tmp/$foto.txt | wl-copy
+	*)
+		menus $(printf "1: atualizar o sistema\n2: baixar áudio/vídeo\n3: ir pra uma janela\n4: fixar uma janela" |  qsmenu "Opções" | cut -d ":" -f 1) 
+		exit 1
 	;;
 esac

@@ -39,7 +39,8 @@ PanelWindow {
 			anchors.verticalCenter: parent.verticalCenter
 			spacing: 2
 			Tray {
-				iconSize: root.fontSize + 3
+				textColor: root.text
+				fontSize: root.fontSize
 				barH: root.barH
 			}
 			NotifButton {

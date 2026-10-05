@@ -6,7 +6,7 @@ import Quickshell.Services.Pipewire
 Rectangle {
 	id: audioModule
 	property color textColor: "white"
-	property string fontFamily: root.fontFamily
+	property string fontFamily: root.iconFont
 	property int fontSize: 15
 	property int barH: 33
 	height: barH
@@ -28,18 +28,14 @@ Rectangle {
 		if (v < 51) return ""
 		return ""
 	}
-
-	    
 	Process {
 		id: pavucontrolProc
 		command: ["pavucontrol"]
 	}
-
 	Row {
 		id: volRow
 		anchors.centerIn: parent
 		spacing: 4
-
 		Text {
 			text: audioModule.volumeIcon()
 			color: audioModule.textColor
@@ -47,7 +43,6 @@ Rectangle {
 			font.pixelSize: audioModule.fontSize
 		}
 	}
-
 	MouseArea {
 		anchors.fill: parent
 		acceptedButtons: Qt.LeftButton | Qt.RightButton

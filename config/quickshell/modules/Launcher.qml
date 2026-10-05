@@ -22,10 +22,27 @@ PanelWindow {
 	}
 
 	function launchSelected() {
+		if (root.dmenuMode) {
+			// sem nenhum item filtrado, devolve o que foi digitado (igual ao dmenu)
+			const choice = list.currentItem ? list.currentItem.modelData : input.text
+			if (choice === "") return
+			root.dmenuFinish(choice)
+			root.toggleLauncher()
+			return
+		}
 		if (list.currentItem && list.currentItem.modelData) {
 			list.currentItem.modelData.execute()
 			root.toggleLauncher()
 		}
+	}
+
+	// fechou sem escolher (Esc, atalho de novo...): avisa o script pra ele não ficar esperando
+	Component.onDestruction: root.dmenuFinish("")
+
+	// se um dmenu chegar com o launcher já aberto, limpa a busca
+	Connections {
+		target: root
+		function onDmenuItemsChanged() { input.text = "" }
 	}
 	Rectangle{
 		color: root.back
@@ -39,6 +56,9 @@ PanelWindow {
 			id: filtered
 			values: {
 				const q = input.text.trim().toLowerCase()
+				// modo dmenu: itens na ordem que o script mandou
+				if (root.dmenuMode)
+					return q === "" ? root.dmenuItems : root.dmenuItems.filter(i => i.toLowerCase().includes(q))
 				const all = [...DesktopEntries.applications.values]
 					.sort((a, b) => a.name.localeCompare(b.name))
 				if (q === "") return all
@@ -60,7 +80,7 @@ PanelWindow {
 					id: input
 					color: root.text
 					Layout.fillWidth: true
-					placeholderText: "Run…"
+					placeholderText: root.dmenuMode ? (root.dmenuPrompt || "Escolha…") : "Run…"
 					placeholderTextColor: Qt.rgba(1,1,1, 0.5)
 					font.pixelSize: 18
 					focus: true
@@ -127,7 +147,8 @@ PanelWindow {
 						IconImage {
 							Layout.alignment: Qt.AlignVCenter
 							implicitSize: 24
-							source: launcher.appIcon(entry.modelData)
+							visible: !root.dmenuMode
+							source: root.dmenuMode ? "" : launcher.appIcon(entry.modelData)
 							asynchronous: true
 							opacity: entry.index === list.currentIndex ? 1 : 0.7
 						}
@@ -135,7 +156,7 @@ PanelWindow {
 							Layout.fillWidth: true
 							Layout.alignment: Qt.AlignVCenter
 							color: entry.index === list.currentIndex ? "white" : Qt.rgba(1,1,1, 0.5)
-							text: entry.modelData.name
+							text: root.dmenuMode ? entry.modelData : entry.modelData.name
 							font.pointSize: 13
 							elide: Text.ElideRight
 						}

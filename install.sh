@@ -25,7 +25,7 @@ sudo rm -rf $apagar
 cd 4work/
 ln -rsf config/* ../
 #links em bin
-sudo ln -rsf scripts/menus /bin/
+sudo ln -rsf scripts/qsmenu /bin/
 #links em home
 rm -f ~/.bashrc ~/.profile
 ln -rsf home/.bashrc home/.profile ~/
@@ -48,7 +48,7 @@ else
 	#Midia
 	sudo pacman -S $flags playerctl mpd mpc mpd-mpris rmpc mpv imv libheif libjpeg-turbo libpng libtiff dav1d ffmpeg openjpeg2 rav1e svt-av1
 	#CLI
-	sudo pacman -S $flags fastfetch btop awk less libnotify yt-dlp ffmpeg cliphist wl-clipboard unzip github-cli flatpak tesseract-data-eng jq
+	sudo pacman -S $flags fastfetch btop awk less libnotify yt-dlp ffmpeg cliphist wl-clipboard unzip github-cli flatpak tesseract-data-eng jq grim slurp
 	#Fontes
 	sudo pacman -S $flags ttf-nerd-fonts-symbols-mono ttf-terminus-nerd adobe-source-code-pro-fonts ttf-googlesanscode-nerd noto-fonts
 fi

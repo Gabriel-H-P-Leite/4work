@@ -6,7 +6,7 @@ import Quickshell.Services.Pipewire
 Rectangle {
 	id: menuModule
 	property color textColor: "white"
-	property string fontFamily: root.fontFamily
+	property string fontFamily: root.iconFont
 	property int fontSize: 15
 	property int barH: 33
 

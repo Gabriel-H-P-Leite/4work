@@ -73,5 +73,6 @@ Rectangle {
 		color: networkModule.textColor
 		font.pixelSize: networkModule.fontSize
 		text: networkModule.networkIcon()
+		font.family: root.iconFont
 	}
 }

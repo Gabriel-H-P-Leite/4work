@@ -12,29 +12,25 @@ hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"))
 hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"))
 
 ---------
---vars.menuS--
+--MENUS--
 ---------
 
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("quickshell ipc call toggleLauncher onTriggered"), { release = true })
---all
-hl.bind(vars.mainMod .. " + X", hl.dsp.exec_cmd(vars.menu))
---logout
-hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd(vars.menu .." 3"))
---lock
-hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("grim '/tmp/fundo.png' ; hyprlock"))
 --restart quickshell
 hl.bind(vars.mainMod .. " + T", hl.dsp.exec_cmd("pkill quickshell || quickshell"), { release = true })
 --clipboard
-hl.bind(vars.mainMod .. " + V", hl.dsp.exec_cmd(vars.menu .." 6"))
+hl.bind(vars.mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | qsmenu 'Área de transferência' | cliphist decode | wl-copy"))
 --focus
-hl.bind("ALT + F", hl.dsp.exec_cmd(vars.menu .." 7"))
+hl.bind("ALT + F", hl.dsp.exec_cmd(vars.menu .." 3"))
 --pin
-hl.bind("ALT + T", hl.dsp.exec_cmd(vars.menu .." 8"))
+hl.bind("ALT + T", hl.dsp.exec_cmd(vars.menu .." 4"))
+--menus
+hl.bind(vars.mainMod .. " + X", hl.dsp.exec_cmd(vars.menu))
 --wallpaper
 hl.bind(vars.mainMod .. " + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper next"))
 hl.bind(vars.mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper random"))
 --ocr
-hl.bind( vars.mainMod .." + SHIFT + R", hl.dsp.exec_cmd(vars.menu .." 10"))
+hl.bind(vars.mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("foto='OCR' ; slurp | grim -g - /tmp/$foto.png ; tesseract /tmp/$foto.png /tmp/$foto txt ; cat /tmp/$foto.txt | wl-copy"))
 
 -----------
 --UTILITY--
@@ -44,7 +40,15 @@ hl.bind(vars.mainMod .. " + N", hl.dsp.exec_cmd("quickshell ipc call notificatio
 --screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("slurp | grim -g - ~/Imagens/$(date +'ArchLinux_%Y-%m-%d_%H:%M:%S.png')"))
 --filter
-hl.bind(vars.mainMod .." + SHIFT + F", hl.dsp.exec_cmd("sh ~/.config/4work/scripts/video filtro"))
+hl.bind(vars.mainMod .. " + SHIFT + F", function()
+	local p = io.popen("hyprctl hyprsunset temperature")
+	local saida = p and p:read("*a") or ""
+	if p then p:close() end
+
+	local atual = tonumber(saida:match("%d+")) or 6000
+	local nova = atual <= 3000 and 6000 or 3000
+	hl.exec_cmd("hyprctl hyprsunset temperature " .. nova)
+end)
 --------
 --APPS--
 --------

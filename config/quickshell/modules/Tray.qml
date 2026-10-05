@@ -6,7 +6,8 @@ import Quickshell.Services.SystemTray
 
 Rectangle {
 	id: trayModule
-	property int iconSize: 18
+	property int textColor: "white"
+	property int fontSize: 18
 	property int barH: 33
 	property int menuWidth: 220
 

@@ -140,7 +140,7 @@ Scope {
 						elide: Text.ElideRight
 					}
 					Text {
-						text: "󰅖"
+						text: ""
 						color: closeHover.hovered ? root.text : Qt.rgba(1, 1, 1, 0.6)
 						font.pixelSize: 14
 						padding: 2
