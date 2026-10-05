@@ -12,7 +12,8 @@ hl.on("hyprland.start", function()
 	--auth
 	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
 	--others
-	hl.exec_cmd("sleep 20 ; mpd-mpris && sleep 20 ; mpc repeat on && mpc random on && mpc consume on")
+	hl.exec_cmd("mpd ; sleep 20 ; mpd-mpris")
+	hl.exec_cmd("sleep 20 ; mpc repeat on && mpc random on && mpc consume on")
 	hl.exec_cmd("hyprsunset")
 	hl.exec_cmd("quickshell")
 end)

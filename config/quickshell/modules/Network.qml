@@ -15,7 +15,7 @@ Rectangle {
 
 	function networkIcon() {
 		if (connectionType.includes("ethernet")) return ""
-		if (connectionType.includes("wireless") || connectionType.includes("wifi")) return ""
+		if (connectionType.includes("wireless") || connectionType.includes("wifi")) return "󰖩"
 		return ""
 	}
 	// Consulta a conexão ativa (roda uma vez no início e depois só quando algo muda)

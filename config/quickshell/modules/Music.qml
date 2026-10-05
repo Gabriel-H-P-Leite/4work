@@ -8,8 +8,8 @@ Rectangle {
 	property color textColor: "white"
 	property string fontFamily: root.fontFamily
 	property int fontSize: 10
+	property int iconSize: 12
 	property int barH: 33
-	property int iconSize: 20
 
 	IpcHandler {
 		target: "music"
@@ -86,16 +86,22 @@ Rectangle {
 			CtrlButton {
 				text: musicModule.playing ? "󰏤" : "󰐊"
 				onClicked: musicModule.player.togglePlaying()
+				font.family: root.iconFont
+				font.pixelSize: musicModule.iconSize			
 			}
 			CtrlButton {
 				text: "󰒮"
 				enabledBtn: musicModule.player ? musicModule.player.canGoPrevious : false
 				onClicked: musicModule.player.previous()
+				font.family: root.iconFont
+				font.pixelSize: musicModule.iconSize			
 			}
 			CtrlButton {
 				text: "󰒭"
 				enabledBtn: musicModule.player ? musicModule.player.canGoNext : false
 				onClicked: musicModule.player.next()
+				font.family: root.iconFont
+				font.pixelSize: musicModule.iconSize			
 			}
 		}
 		Text {

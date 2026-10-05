@@ -7,6 +7,9 @@ import Quickshell.Services.Notifications
 
 Scope {
 	id: notifs
+	property color textColor: "white"
+	property string fontFamily: root.iconFont
+	property int fontSize: 18
 
 	property int popupTimeout: 5000   // ms, quando o app não define tempo
 	property int cardWidth: 380
@@ -168,8 +171,8 @@ Scope {
 					textFormat: Text.StyledText
 					color: Qt.rgba(1, 1, 1, 0.85)
 					linkColor: "#8ab4f8"
-					font.family: root.fontFamily
-					font.pixelSize: 12
+					font.pixelSize: notifs.iconSize
+					font.family: notifs.iconFont						
 					wrapMode: Text.Wrap
 					maximumLineCount: card.compact ? 4 : 50
 					elide: Text.ElideRight
@@ -294,7 +297,8 @@ Scope {
 					Text {
 						text: root.notifDnd ? "󰂛" : "󰂚"
 						color: dndHover.hovered ? root.text : Qt.rgba(1, 1, 1, 0.7)
-						font.pixelSize: 18
+						font.pixelSize: notifs.iconSize
+						font.family: notifs.iconFont						
 						padding: 4
 						HoverHandler { id: dndHover; cursorShape: Qt.PointingHandCursor }
 						MouseArea { anchors.fill: parent; onClicked: root.notifDnd = !root.notifDnd }
@@ -302,7 +306,8 @@ Scope {
 					Text {
 						text: "󰩺"
 						color: clearHover.hovered ? root.text : Qt.rgba(1, 1, 1, 0.7)
-						font.pixelSize: 18
+						font.pixelSize: notifs.iconSize
+						font.family: notifs.iconFont						
 						padding: 4
 						HoverHandler { id: clearHover; cursorShape: Qt.PointingHandCursor }
 						MouseArea { anchors.fill: parent; onClicked: notifs.clearAll() }

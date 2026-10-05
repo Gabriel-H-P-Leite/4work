@@ -62,6 +62,8 @@ PanelWindow {
 		function random(): string { bg.random(); return "" }
 		function set(path: string): string {
 			bg.wallpaperPath = path
+			const i = bg.wallpaperList.indexOf(path)
+			if (i >= 0) bg.currentIndex = i
 			changeTimer.restart()
 			return ""
 		}
