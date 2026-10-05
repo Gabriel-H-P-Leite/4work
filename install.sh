@@ -38,7 +38,7 @@ else
 	sudo pacman -Syu $flags base-devel  
 	echo -e "${YEL}\nBaixando Apps...\n${NC}"
 	#Interface
-	sudo pacman -S $flags hyprland quickshell qt6ct nwg-look polkit-kde-agent xdg-desktop-portal-hyprland hyprsunset 
+	sudo pacman -S $flags hyprland quickshell qt6ct nwg-look polkit-kde-agent hyprsunset xdg-desktop-portal-hyprland xdg-desktop-portal xdg-desktop-portal-gtk
 	#Audio
 	sudo pacman -S $flags gst-plugin-pipewire libpipewire pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
 	#Apps
