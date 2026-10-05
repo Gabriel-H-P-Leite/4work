@@ -14,11 +14,10 @@ Rectangle {
 	color: "transparent"
 
 	function networkIcon() {
-		if (connectionType.includes("ethernet")) return " "
-		if (connectionType.includes("wireless") || connectionType.includes("wifi")) return " "
+		if (connectionType.includes("ethernet")) return ""
+		if (connectionType.includes("wireless") || connectionType.includes("wifi")) return ""
 		return ""
 	}
-
 	// Consulta a conexão ativa (roda uma vez no início e depois só quando algo muda)
 	Process {
 		id: netProc
@@ -41,7 +40,6 @@ Rectangle {
 			}
 		}
 	}
-
 	// Fica escutando o NetworkManager e avisa quando qualquer coisa muda
 	Process {
 		id: monitorProc
@@ -53,20 +51,17 @@ Rectangle {
 		// se o nmcli monitor morrer (ex: NetworkManager reiniciou), sobe de novo
 		onExited: restartTimer.start()
 	}
-
 	// nmcli monitor solta várias linhas por mudança; espera acalmar e consulta uma vez só
 	Timer {
 		id: debounce
 		interval: 500
 		onTriggered: netProc.running = true
 	}
-
 	Timer {
 		id: restartTimer
 		interval: 3000
 		onTriggered: monitorProc.running = true
 	}
-
 	Text {
 		id: txt
 		anchors.centerIn: parent

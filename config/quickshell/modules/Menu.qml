@@ -24,7 +24,7 @@ Rectangle {
 		spacing: 4
 		rightPadding: 7
 		Text {
-			text: " "
+			text: ""
 			color: menuModule.textColor
 			font.family: menuModule.fontFamily
 			font.pixelSize: menuModule.fontSize

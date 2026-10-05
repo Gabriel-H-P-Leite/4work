@@ -10,7 +10,7 @@ Rectangle {
 	property int fontSize: 15
 	property int barH: 33
 	height: barH
-	width: volRow.implicitWidth
+	width: volRow.implicitWidth + 12
 	color: "transparent"
 
 	PwObjectTracker {
@@ -23,10 +23,10 @@ Rectangle {
 
 	function volumeIcon() {
 		let v = volume * 100
-		if (muted) return ""
-		if (v < 10) return ""
-		if (v < 51) return ""
-		return ""
+		if (muted) return "󰖁"
+		if (v < 10) return "󰕿"
+		if (v < 51) return "󰖀"
+		return "󰕾"
 	}
 	Process {
 		id: pavucontrolProc
