@@ -1,0 +1,19 @@
+#!/bin/bash
+# Uso: comando | qsmenu [texto do campo de busca]
+# Funciona igual ao "wofi -d"/"dmenu": lê opções do stdin e imprime a escolhida.
+# Sai com código 1 se nada for escolhido.
+
+dir="${XDG_RUNTIME_DIR:-/tmp}"
+items=$(mktemp "$dir/qsmenu-items.XXXXXX")
+fifo=$(mktemp -u "$dir/qsmenu-fifo.XXXXXX")
+trap 'rm -f "$items" "$fifo"' EXIT
+
+cat > "$items"
+mkfifo "$fifo"
+
+# se o Quickshell não estiver rodando, sai em vez de ficar esperando pra sempre
+quickshell ipc call launcher dmenu "$items" "$fifo" "${1:-}" > /dev/null || exit 1
+
+IFS= read -r escolha < "$fifo"
+[ -n "$escolha" ] || exit 1
+printf '%s\n' "$escolha"
