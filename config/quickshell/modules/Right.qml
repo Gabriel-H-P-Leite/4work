@@ -15,7 +15,6 @@ PanelWindow {
 		top: true
 		right: true
 	}
-
 	Rectangle {
 		id: background
 		color: root.back
@@ -40,27 +39,27 @@ PanelWindow {
 			spacing: 2
 			Tray {
 				textColor: root.text
-				fontSize: root.fontSize
+				iconSize: 15
 				barH: root.barH
 			}
 			NotifButton {
 				textColor: root.text
-				fontSize: root.fontSize
+				fontSize: 15
 				barH: root.barH
 			}
 			Network {
 				textColor: root.text
-				fontSize: root.fontSize
+				fontSize: 15
 				barH: root.barH
 			}
 			Audio {
 				textColor: root.text
-				fontSize: root.fontSize
+				fontSize: 15
 				barH: root.barH
 			}
 			Clock {
 				textColor: root.text
-				fontSize: root.fontSize
+				fontSize: 15
 				barH: root.barH
 			}
 		}

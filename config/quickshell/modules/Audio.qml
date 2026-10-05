@@ -10,7 +10,7 @@ Rectangle {
 	property int fontSize: 15
 	property int barH: 33
 	height: barH
-	width: volRow.implicitWidth + 12
+	width: volRow.implicitWidth
 	color: "transparent"
 
 	PwObjectTracker {
