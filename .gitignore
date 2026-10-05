@@ -1,0 +1,11 @@
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+config/mpd/database
+config/mpd/log
+config/mpd/pid
+config/mpd/state
+config/mpd/sticker
