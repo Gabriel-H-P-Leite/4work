@@ -32,12 +32,13 @@ ln -rsf home/.bashrc home/.profile ~/
 
 if [ "${1:-}" = "-n" ]; then
 	echo "Flag -n usada então não vai baixar nada"
+	exit 1
 else
 	echo -e "${YEL}\nAtualizando...\n${NC}"
 	sudo pacman -Syu $flags base-devel  
 	echo -e "${YEL}\nBaixando Apps...\n${NC}"
 	#Interface
-	sudo pacman -S $flags hyprland quickshell wofi qt6ct nwg-look polkit-kde-agent xdg-desktop-portal-gtk xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-hyprland hyprsunset 
+	sudo pacman -S $flags hyprland quickshell qt6ct nwg-look polkit-kde-agent xdg-desktop-portal-hyprland hyprsunset 
 	#Audio
 	sudo pacman -S $flags gst-plugin-pipewire libpipewire pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
 	#Apps
@@ -45,9 +46,13 @@ else
 	#Texto
 	sudo pacman -S $flags neovim mousepad zathura zathura-pdf-mupdf 
 	#Midia
-	sudo pacman -S $flags playerctl mpd mpd-mpris rmpc mpv imv libheif libjpeg-turbo libpng libtiff dav1d ffmpeg openjpeg2 rav1e svt-av1
+	sudo pacman -S $flags playerctl mpd mpc mpd-mpris rmpc mpv imv libheif libjpeg-turbo libpng libtiff dav1d ffmpeg openjpeg2 rav1e svt-av1
 	#CLI
-	sudo pacman -S $flags fastfetch btop awk less libnotify yt-dlp ffmpeg cliphist wl-clipboard unzip github-cli flatpak tesseract-data-eng
+	sudo pacman -S $flags fastfetch btop awk less libnotify yt-dlp ffmpeg cliphist wl-clipboard unzip github-cli flatpak tesseract-data-eng jq
 	#Fontes
-	sudo pacman -S $flags ttf-nerd-fonts-symbols-mono ttf-terminus-nerd adobe-source-code-pro-fonts ttf-googlesanscode-nerd
+	sudo pacman -S $flags ttf-nerd-fonts-symbols-mono ttf-terminus-nerd adobe-source-code-pro-fonts ttf-googlesanscode-nerd noto-fonts
 fi
+#MPD
+mkdir -p ~/.local/state/mpd
+sudo systemctl --user enable mpd --now
+mpc update
