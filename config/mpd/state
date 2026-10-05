@@ -1,0 +1,1435 @@
+sw_volume: 50
+audio_device_state:1:MPD
+audio_device_state:1:Visualizer
+state: play
+current: 448
+time: 120.058
+random: 1
+repeat: 1
+single: 0
+consume: 1
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Clássica/Antonio Vivaldi - Concerto for violin No. 4 in F Minor, Op. 8, RV 297 'Winter' - I. Allegro non molto.mp3
+1:Clássica/Antonio Vivaldi - Concerto In G Minor for Violin, String Orchestra and Continuo, Op. 8, No. 2, RV 315, 'L'estate'.mp3
+2:Clássica/Claude Debussy - Claire De Lune.mp3
+3:Clássica/Dmitry Shostakovich - The Second Waltz, Op. 99a.mp3
+4:Clássica/Frédéric Chopin - Nocturne No. 2 in E flat Major, Op. 9.mp3
+5:Clássica/Ilich Tchaikovsky - Valse sentimentale, Op. 51, No. 6.mp3
+6:Clássica/Ilitch Tchaikovski - Dance of the Sugar Plum Fairy.mp3
+7:Clássica/Ilitch Tchaikovski - Nutcracker Suite, Op. 71a - 2a. March.mp3
+8:Clássica/Ilitch Tchaikovski - Waltz of the Flowers.mp3
+9:Clássica/Johann Sebastian Bach - Bach, Prelude in C minor, BWV 934.mp3
+10:Clássica/Johann Sebastian Bach - Orchestral Suite No. 3 in D Major, BWV 1068 - II. Air.mp3
+11:Clássica/Johann Sebastian Bach - Partita in A Minor, BWV 1013 - I. Allemande.mp3
+12:Clássica/Johannes Brahms - Hungarian Dance no. 5.mp3
+13:Clássica/Ludwig Van Beethoven - Für Elise.mp3
+14:Clássica/Ludwig Van Beethoven - Moonlight Sonata.mp3
+15:Clássica/Ludwig Van Beethoven - Symphony No 7 In A Major - 2nd Movement - Allegretto.mp3
+16:Clássica/Ludwig Van Beethoven - Symphony No. 5, Op. 67.mp3
+17:Clássica/Nikolai Rimsky-Korsakov - The Flight of the Bumble Bee.mp3
+18:Clássica/Paul de Senneville - Mariage d'Amour.mp3
+19:Clássica/Wolfgang Amadeus Mozart - Requiem Mass in D Minor, K. 626 - III. Lacrimosa.mp3
+20:Clássica/Wolfgang Amadeus Mozart - Rondo Alla Turca.mp3
+21:Clássica/Wolfgang Amadeus Mozart - Serenade No. 13 in G Major, K. 525, 'Eine Kleine Nachtmusik' - I. Allegro.mp3
+22:Clássica/Wolfgang Amadeus Mozart - Symphony No. 40 in G Minor, K. 550 - I. Molto allegro.mp3
+23:Clássica/Johann Strauss - An der schönen blauen Donau, Op. 314.mp3
+24:Clássica/Ilitch Tchaikovski - 1812 Overture, Op. 49.mp3
+25:Clássica/Pachelbel - Canon In D.mp3
+26:Country/Asleep at the Wheel - The Letter That Johnny Walker Read.mp3
+27:Country/Conway Twitty - Louisiana Woman Mississippi Man.mp3
+28:Country/John Denver - Take Me Home Country Roads.mp3
+29:Country/Statler Brothers - New York City.mp3
+30:Country/The Statler Brothers - Bed of Roses.mp3
+31:Country/Whitey Shafer - All My Ex’s Live in Texas.mp3
+32:Country/Buck Owens and The Buckaroos - Made in Japan.mp3
+33:Country/Juice Newton - Queen of Hearts.mp3
+34:Country/Lynyrd Skynyrd - Sweet Home Alabama.mp3
+35:Eletronica/009 Sound System - Dreamscape.mp3
+36:Eletronica/Avicii - Hey Brother.mp3
+37:Eletronica/Avicii - Wake me Up.mp3
+38:Eletronica/Calvin Harris - How Deep Is Your Love (feat. Disciples).mp3
+39:Eletronica/Calvin Harris - This Is What You Came For .mp3
+40:Eletronica/Carpenter Brut - Turbo Killer.mp3
+41:Eletronica/Cartoon - On & On.mp3
+42:Eletronica/Cat Dealers - Gravity.mp3
+43:Eletronica/David Guetta - Play Hard (feat. Ne-Yo & Akon).mp3
+44:Eletronica/David Guetta - Sexy Chick (feat. Akon).mp3
+45:Eletronica/David Guetta - Titanium (feat. Sia).mp3
+46:Eletronica/Duck Sauce  - Barbra Streisand (Radio Edit).mp3
+47:Eletronica/Guru Josh Project - Infinity.m4a
+48:Eletronica/Haddaway - What is Love Remix.mp3
+49:Eletronica/Janji - Heroes Tonight.mp3
+50:Eletronica/Lana Del Rey - Summertime Sadness.mp3
+51:Eletronica/LLow - The End.mp3
+52:Eletronica/Mario Judah - I Miss the Rage.mp3
+53:Eletronica/Marshmello - Alone.mp3
+54:Eletronica/Molchat Doma - Sudno.mp3
+55:Eletronica/Sarah Blasko - All I Want (BENY Remix).mp3
+56:Eletronica/Tevvez - Legend Ψ.mp3
+57:Eletronica/TheFatRat - Unity.mp3
+58:Eletronica/Tiësto - Welcome to Ibiza.mp3
+59:Eletronica/Tuesday (feat. Danelle Sandoval).mp3
+60:Eletronica/Turn down for what.mp3
+61:Eletronica/VØJ, Narvent - Memory Reboot.mp3
+62:Eletronica/Warriyo - Mortals (feat. Laura Brehm).mp3
+63:Eletronica/Young Squage - Transformer (Steerner Remix).mp3
+64:Eletronica/YourLocalSchizo - Vielleicht Vielleicht - Agartha Remix.mp3
+65:Eletronica/АДЛИН - Dead Inside.mp3
+66:Eletronica/ABBA - Gimme! Gimme! Gimme! (A Man After Midnight).mp3
+67:Eletronica/BENNETT - Vois sur ton chemin (Techno Mix).mp3
+68:Eletronica/GANGSTER LIFE - I Got Summer On My Mind (Still Dre Remix).mp3
+69:Eletronica/Groove Delight - Peter Pan feat. Samantha Machado.mp3
+70:Eletronica/Justice - D.A.N.C.E..mp3
+71:Eletronica/M83 - Outro.mp3
+72:Eletronica/Midge Ure - The Man Who Sold the World.mp3
+73:Eletronica/Stromae - Alors on danse.mp3
+74:Eletronica/The Chain Gang Of 1974 - Sleepwalking.mp3
+75:Eletronica/Crystal Castles - Kerosene.mp3
+76:Eletronica/Moony - I Don't Know Why.mp3
+77:Eletronica/TIA& Lê Thiện Hiếu - Ai Đưa Em Về (Cukak Remix).mp3
+78:Eletronica/Alok - Alive (It Feels Like).mp3
+79:Eletronica/GAULLIN - All The Things.mp3
+80:Eletronica/Martin Garrix - Animals.mp3
+81:Eletronica/A Touch Of Class - Around the World (La La La La La).mp3
+82:Eletronica/Stephan F - Astronomia 2K19.mp3
+83:Eletronica/AWOLNATION - Sail.mp3
+84:Eletronica/Ed Sheeran - Bad Habits.mp3
+85:Eletronica/Axel Thesleff - Bad Karma.mp3
+86:Eletronica/Dayvi - Baila Conmigo (part. Victor Cardenas y Kelly Ruiz).mp3
+87:Eletronica/Gutto011 - Be Together (Samba).mp3
+88:Eletronica/Home - We're Finally Landing.mp3
+89:Eletronica/Alice DeeJay - Better Off Alone.mp3
+90:Eletronica/Dirty Rush & Gregor Es - Brass.mp3
+91:Eletronica/plenka - Call Me (Slowed).mp3
+92:Eletronica/Robert Miles - Children (Dream version).mp3
+93:Eletronica/Lemaitre - Closer (feat. Jennie A.).mp3
+94:Eletronica/Noisestorm - Crab Rave.mp3
+95:Eletronica/Engelwood - Crystal Dolphin.mp3
+96:Eletronica/Archive - Bullets.mp3
+97:Eletronica/009 Sound System - With a Spirit.mp3
+98:Eletronica/ABBA - Gimme Gimme Gimme (a man after midnight) (remix).mp3
+99:Eletronica/Alessia Cara - Here (Lucian Remix).mp3
+100:Eletronica/Alex Gaudino - Destination Calabria (feat. Crystal Waters).mp3
+101:Eletronica/Avicii - Waiting For Love.mp3
+102:Eletronica/Bhaskar - Fuego (feat. Alok).mp3
+103:Eletronica/Black Coast - TRNDSTTR (Lucian Remix) (feat M. Magie).mp3
+104:Eletronica/Clean Bandit - Symphony (feat. Zara Larsson) (R3HAB Remix).mp3
+105:Eletronica/Daft Punk - Get Lucky (feat. Pharrel Williams And Nile Rodgers).mp3
+106:Eletronica/DJ Mangoo - Eurodancer.mp3
+107:Eletronica/Dynoro & Gigi D’Agostino - In My Mind.mp3
+108:Eletronica/Fitz and the Tantrums - HandClap.mp3
+109:Eletronica/Halogen - U Got That.mp3
+110:Eletronica/HVME - GOOSEBUMPS.mp3
+111:Eletronica/Infinity Ink - Infinity.mp3
+112:Eletronica/Jetta - I'd Love to Change the World (Matstubs Remix).mp3
+113:Eletronica/Kehlani - Undercover (DEVAULT Remix).mp3
+114:Eletronica/Kungs & Cookin' On 3 Burners - This Girl.mp3
+115:Eletronica/Legião Urbana - Tempo Perdido (ANICIO, DANNE & VIPP CODE Remix).mp3
+116:Eletronica/M83 - Midnight City.mp3
+117:Eletronica/Marshmello - Friends (feat. Anne-Marie) .mp3
+118:Eletronica/Marshmello - Happier (ft. Bastille).mp3
+119:Eletronica/Marshmello - Moving On.mp3
+120:Eletronica/Martin Garrix - Tremor.mp3
+121:Eletronica/Meduza - Lose Control (feat. Becky Hill & Goodboys).mp3
+122:Eletronica/NOMA - Brain Power.mp3
+123:Eletronica/Porter Robinson - Goodbye To A World.mp3
+124:Eletronica/TheFatRat - Infinite Power!.mp3
+125:Eletronica/TheFatRat - Jackpot (Jackpot EP Track 1).mp3
+126:Eletronica/TheFatRat - MAYDAY (feat. Laura Brehm).mp3
+127:Eletronica/TheFatRat - Monody (feat. Laura Brehm).mp3
+128:Eletronica/TheFatRat - The Calling (feat. Laura Brehm).mp3
+129:Eletronica/TheFatRat - Windfall.mp3
+130:Eletronica/TheFatRat - Xenogenesis.mp3
+131:Eletronica/Tiësto - The Business.mp3
+132:Eletronica/Tiko's Groove - I Don't Know What To Do.mp3
+133:Eletronica/Tristam - Truth.mp3
+134:Eletronica/Unlike Pluto - Everything Black (feat. Mike Taylor).mp3
+135:Eletronica/Vanessa da Mata - Ai Ai Ai (Felguk & Cat Dealers Remix).mp3
+136:Eletronica/Veorra & The Tech Thieves - Ghost Town.mp3
+137:Eletronica/Alok - Hear Me Now (feat. Bruno Martini & Zeeba).mp3
+138:Eletronica/Alok - All I Want (feat. Liu & Stonefox).mp3
+139:Eletronica/KAROL G - Don’t Be Shy (feat. Tiësto).mp3
+140:Eletronica/Swedish House Mafia - Don't You Worry Child.mp3
+141:Eletronica/Luude feat. Colin Hay - Down Under.mp3
+142:Eletronica/Cascada - Everytime We Touch.mp3
+143:Eletronica/Ina Wroldsen - Favela (feat. Alok).mp3
+144:Eletronica/NCS - Fell good.mp3
+145:Eletronica/Calvin Harris - Feel So Close.mp3
+146:Eletronica/Deorro - Five Hours .mp3
+147:Eletronica/TheFatRat - Fly Away (feat. Anjulie).mp3
+148:Eletronica/Gigi D’Agostino - L'amour toujours.mp3
+149:Eletronica/Miku Hatsune - Anamanaguchi (feat. Miku).mp3
+150:Eletronica/Yeah Yeah Yeahs - Heads Will Roll (A-Trak club mix).mp3
+151:Eletronica/Tenseoh - Heartburn (Slowed + Reverb).mp3
+152:Eletronica/Boom - How Do You Do (Nightcore).mp3
+153:Eletronica/Erika - I Don't Know.mp3
+154:Eletronica/Ian Carey feat. Michelle Shellers - Keep on Rising (radio mix).mp3
+155:Eletronica/Tame Impala - Let It Happen.mp3
+156:Eletronica/Hyper - Spoiler.mp3
+157:Eletronica/David Guetta - Memories (feat. Kid Cudi).mp3
+158:Eletronica/MOON - Crystals.mp3
+159:Eletronica/MOON - Hydrogen.mp3
+160:Eletronica/Anamaguchi - My Skateboard Will Go On.mp3
+161:Eletronica/HOME - Resonance.mp3
+162:Eletronica/Alok - On & On (feat. Dynoro).mp3
+163:Eletronica/paranoia - KENTENSHI.mp3
+164:Eletronica/Pháo - 2 Phút Hon (KAIZ Remix).mp3
+165:Eletronica/Project 46 - Reasons (feat. Andrew Allen).mp3
+166:Eletronica/Basshunter - DotA.mp3
+167:Eletronica/SAINt JHN - Roses (Imanbek Remix).mp3
+168:Eletronica/AWOLNATION - Run.mp3
+169:Eletronica/Porter Robinson - Sad Machine.mp3
+170:Eletronica/Scatman John - Scatman (Ski Ba Bop Ba Dop Bop).mp3
+171:Eletronica/will.i.am - Scream & Shout (feat. Britney Spears).mp3
+172:Eletronica/The White Stripes - Seven Nation Army (Glitch Mob Remix).mp3
+173:Eletronica/Porter Robinson - Shelter.mp3
+174:Eletronica/Spektrem - Shine.mp3
+175:Eletronica/Edward Maya - Stereo Love.MP3
+176:Eletronica/Twenty One Pilots - Stressed Out Remix (Tomsize Remix).mp3
+177:Eletronica/Prismo - Stronger (Raiko Remix).mp3
+178:Eletronica/Calvin Harris - Summer.mp3
+179:Eletronica/Kasino - Can't Get Over You .mp3
+180:Eletronica/Axwell Λ Ingrosso - Sun Is Shining.mp3
+181:Eletronica/Synapson, Holly - Hide Away (feat. Holly).mp3
+182:Eletronica/Caramella Girls - Caramelldansen (Swedish Original).mp3
+183:Eletronica/Flux Pavilion - Emotional.mp3
+184:Eletronica/Akcent - That's My Name.mp3
+185:Eletronica/Avicii - The Nights.mp3
+186:Eletronica/Mareux - The Perfect Girl.mp3
+187:Eletronica/Mr.Kitty - After Dark.mp3
+188:Eletronica/Mr. Kitty - Shadow Dancer.mp3
+189:Eletronica/TheFatRat - Time lapse.mp3
+190:Eletronica/Bag Raiders - Shooting Star.mp3
+191:Eletronica/Dazegxd, Kaiyko - emotion engine.mp3
+192:Hip Hop e Rap/Chamillionarie - Ridin.mp3
+193:Hip Hop e Rap/Dior - Положение (Polozhenie).mp3
+194:Hip Hop e Rap/GRITS - Ooh Ahh (My Life Be Like) (feat. tobyMac).mp3
+195:Hip Hop e Rap/Hungria Hip Hop - Beijo Com Trap.m4a
+196:Hip Hop e Rap/Hungria Hip Hop - Dubai.m4a
+197:Hip Hop e Rap/Ice Cube - You Know How We Do It.mp3
+198:Hip Hop e Rap/Lil Jon The East Side Boyz - Get Low.mp3
+199:Hip Hop e Rap/Pacificadores - Eu queria mudar.mp3
+200:Hip Hop e Rap/Racionais MC's - Diário de um Detento.mp3
+201:Hip Hop e Rap/Racionais MC's - Vida Loka (parte 2).mp3
+202:Hip Hop e Rap/Tribo da Periferia - Insônia (part. Hungria Hip Hop).m4a
+203:Hip Hop e Rap/XXXTENTACION - Jocelyn Flores (feat. Shiloh Dynasty).mp3
+204:Hip Hop e Rap/deko - PHANTASY STAR ONLINE [Instrumental].mp3
+205:Hip Hop e Rap/Fetty Wap - 679 (Kuromi ai cover).mp3
+206:Hip Hop e Rap/Fetty Wap - Trap Queen.mp3
+207:Hip Hop e Rap/Mustard - Ballin feat. Roddy Ricch.mp3
+208:Hip Hop e Rap/Roddy Ricch - Ricch Forever.mp3
+209:Hip Hop e Rap/YE - HH.mp3
+210:Hip Hop e Rap/Dr. Dre - Still D.R.E. (feat. Snoop Dogg).mp3
+211:Hip Hop e Rap/Lil Nas X - Rodeo ft. Cardi B.mp3
+212:Hip Hop e Rap/Ye - Heartless.mp3
+213:Hip Hop e Rap/Masked Wolf - Astronaut in the Ocean.mp3
+214:Hip Hop e Rap/Travis Scott - BUTTERFLY EFFECT.mp3
+215:Hip Hop e Rap/Hanumankind & Kalmi - Big Dawgs.mp3
+216:Hip Hop e Rap/Rae Sremmurd - Black Beatles.mp3
+217:Hip Hop e Rap/DaBaby, Roddy Ricch - ROCKSTAR.mp3
+218:Hip Hop e Rap/MC Marcinho - Rap Do Solitário.mp3
+219:Hip Hop e Rap/24kGoldn - Mood (feat. iann dior).mp3
+220:Hip Hop e Rap/bbno$ - Lalala (feat. Y2K).mp3
+221:Hip Hop e Rap/Busta Rhymes - I Know What You Want.mp3
+222:Hip Hop e Rap/Coolio - Gangsta's Paradise (feat. L.V.).mp3
+223:Hip Hop e Rap/Dr. Dre - The Next Episode.mp3
+224:Hip Hop e Rap/Future - Mask Off.mp3
+225:Hip Hop e Rap/Hungria Hip Hop - Lembranças.mp3
+226:Hip Hop e Rap/Hungria Hip Hop - Não Troco.mp3
+227:Hip Hop e Rap/Hungria Hip Hop - Provavelmente.mp3
+228:Hip Hop e Rap/Lil Nas X - Old Town Road (feat. Billy Ray Cyrus).mp3
+229:Hip Hop e Rap/MC Poze do Rodo - Vida Louca.mp3
+230:Hip Hop e Rap/Ren - Money Game, PT. 2.mp3
+231:Hip Hop e Rap/SoulChef - Write This Down ( Instrumental ).mp3
+232:Hip Hop e Rap/XXXTENTACION - whoa (mind in awe).mp3
+233:Hip Hop e Rap/Eminem - Mockingbird.mp3
+234:Hip Hop e Rap/SoulChef - Write This Down (feat. Nieve).mp3
+235:Hip Hop e Rap/Fetty Wap - 679.mp3
+236:Hip Hop e Rap/Don Toliver - TORE UP.mp3
+237:Hip Hop e Rap/Travis Scott - HIGHEST IN THE ROOM.mp3
+238:Hip Hop e Rap/Don Omar - Bandoleros (part. Tego Calderón).mp3
+239:Hip Hop e Rap/Wiz Khalifa - See You Again (feat. Charlie Puth).mp3
+240:Hip Hop e Rap/PSC - Do Ya Thang.mp3
+241:Hip Hop e Rap/Roddy Ricch -  The Box.mp3
+242:Hip Hop e Rap/Jurassic 5 - A Day At The Races.mp3
+243:Hip Hop e Rap/Post Malone - rockstar (feat. 21 Savage).mp3
+244:Hip Hop e Rap/Mannie Fresh - Real Big.mp3
+245:Hip Hop e Rap/Macklemore & Ryan Lewis - Thrift Shop (feat. Wanz).mp3
+246:Hip Hop e Rap/very cool tutorials - Trap Royalty (Extended Version).mp3
+247:Hip Hop e Rap/Travis Scott - FE!N ft. Playboi Carti.mp3
+248:Hip Hop e Rap/Jon Lajoie - Everyday Normal Guy 2.mp3
+249:Internacional/Bastille - Pompeii.mp3
+250:Internacional/Bill Medley & Jennifer Warnes - (I've Had) The Time Of My Life.mp3
+251:Internacional/BoyWithUke - Toxic.mp3
+252:Internacional/Bruno Mars - Just The Way You Are.mp3
+253:Internacional/Bruno Mars - Lazy Song.mp3
+254:Internacional/Buddy Holly - Everyday.mp3
+255:Internacional/Capital Cities - Safe And Sound.mp3
+256:Internacional/Different Strokes - Opening Theme.mp3
+257:Internacional/ERA - Divano.mp3
+258:Internacional/Eurythmics - Sweet Dreams (Are Made Of This).mp3
+259:Internacional/Fleetwood Mac - The Chain.mp3
+260:Internacional/Flo Rida - GDFR (feat. Sage Gemini and Lookas).mp3
+261:Internacional/Flo Rida - Good Feeling.mp3
+262:Internacional/Flo Rida - My House.mp3
+263:Internacional/Gary Jules - Mad World.mp3
+264:Internacional/German Soldier's Song - Erika.mp3
+265:Internacional/Glass Animals - Heat Waves.mp3
+266:Internacional/ILARI - Kapteeni käskee.mp3
+267:Internacional/Indila - Tourner Dans Le Vide.mp3
+268:Internacional/Jason Derulo - Wiggle (feat. Snoop Dogg).mp3
+269:Internacional/LOVELI LORI - love for you .mp3
+270:Internacional/Mark Ronson - Uptown Funk (feat. Bruno Mars).mp3
+271:Internacional/Maroon 5 - Sugar.mp3
+272:Internacional/Michael Jackson - We are the world.mp3
+273:Internacional/michael jackson will you be there (free willy).mp3
+274:Internacional/Mitski - Washing Machine Heart .mp3
+275:Internacional/Neil Diamond - Girl, You'll Be A Woman Soon.mp3
+276:Internacional/Outkast - Hey Ya!.mp3
+277:Internacional/Pitbull - Give Me Everything (Tonight) (feat. Ne-Yo).mp3
+278:Internacional/PSY - GANGNAM STYLE(강남스타일).mp3
+279:Internacional/The Black Eyed Peas - I Gotta Feeling.mp3
+280:Internacional/The Irrepressibles - In This Shirt.mp3
+281:Internacional/Two Door Cinema Club  - What You Know.mp3
+282:Internacional/USA for Africa - We are the World.mp3
+283:Internacional/Village People - YMCA.mp3
+284:Internacional/Whitney Houston - I Look To You.mp3
+285:Internacional/Zedd Alessia Cara - Stay.mp3
+286:Internacional/Almeida Garrett - Bela Infanta.mp3
+287:Internacional/Enya - Only Time.mp3
+288:Internacional/Ne-Yo - Miss Independent.mp3
+289:Internacional/Tears for Fears - Everybody Wants to Rule the World.mp3
+290:Internacional/Tears For Fears - Head Over Heels.mp3
+291:Internacional/The Beatles - Hey Jude.mp3
+292:Internacional/t.A.T.u. - All The Things She Said.mp3
+293:Internacional/Meiko Nakahara - Fantasy.mp3
+294:Internacional/Christina Perri - A Thousand Years.mp3
+295:Internacional/Carolina Deslandes - A Vida Toda.mp3
+296:Internacional/Yves LaRock - Rise Up.mp3
+297:Internacional/Toploader - Dancing in the moonlight.mp3
+298:Internacional/Boyce Avenue - Apologize.mp3
+299:Internacional/Coldplay - Adventure of a Lifetime.mp3
+300:Internacional/The Weeknd - Save Your Tears.mp3
+301:Internacional/B.o.B - Airplanes.mp3
+302:Internacional/ERA - ERA - Ameno.mp3
+303:Internacional/Bee Gees - Stayin' Alive.mp3
+304:Internacional/Breakbot  - Baby I'm Yours (feat. Irfane).mp3
+305:Internacional/Michael Jackson - Smooth Criminal.mp3
+306:Internacional/M.I.A. - Bad Girls.mp3
+307:Internacional/Imagine Dragons - Believer.mp3
+308:Internacional/Michael Jackson - Ben.mp3
+309:Internacional/Rex Orange County - Best Friend.mp3
+310:Internacional/Iggy Azalea - Fancy (feat. Charli XCX).mp3
+311:Internacional/The Verve - Bitter Sweet Symphony.mp3
+312:Internacional/Calvin Harris - Blame (feat. John Newman).mp3
+313:Internacional/The Weeknd - Blinding Lights.mp3
+314:Internacional/Whitney Houston - I will always love you.mp3
+315:Internacional/The Longest Johns - Bones in the Ocean.mp3
+316:Internacional/Men At Work - Down Under.mp3
+317:Internacional/The Mamas & the Papas - California Dreamin'.mp3
+318:Internacional/George Michael - Careless Whisper.mp3
+319:Internacional/OMI - Cheerleader.mp3
+320:Internacional/Twenty One Pilots - Chlorine.mp3
+321:Internacional/Maroon 5 - Cold ft. Future.mp3
+322:Internacional/Redbone - Come and get your Love.mp3
+323:Internacional/OneRepublic - Counting Stars.mp3
+324:Internacional/Sub Urban - Cradles.mp3
+325:Internacional/Masayuki Suzuki - Daddy ! Daddy ! Do !.mp3
+326:Internacional/a-ha - Take On Me.mp3
+327:Internacional/Adele - Someone Like you.mp3
+328:Internacional/Akon - Lonely.mp3
+329:Internacional/Alexander Rybak - Fairytale.mp3
+330:Internacional/B.o.B - Nothin' On You.mp3
+331:Internacional/Backstreet Boys - I Want It That Way.mp3
+332:Internacional/Beach Boys - Wouldn't It Be Nice.mp3
+333:Internacional/Blue Swede - Hooked On a Feeling.mp3
+334:Internacional/Bobby McFerrin - Don't Worry Be Happy.mp3
+335:Internacional/Bruno Mars - Locked Out Of Heaven.mp3
+336:Internacional/Bruno Mars - That’s What I Like.mp3
+337:Internacional/Bruno Mars - Treasure.mp3
+338:Internacional/Bruno Mars - When I Was Your Man.mp3
+339:Internacional/Camila Cabello - Havana (feat. Young Thug).mp3
+340:Internacional/Carl Douglas - Kung Fu Fighting.mp3
+341:Internacional/Charles Wright and The Watts - Express Yourself.mp3
+342:Internacional/Chordettes - Lollipop.mp3
+343:Internacional/Chordettes - Mr. Sandman.mp3
+344:Internacional/Coldplay - Hymn For The Weekend.mp3
+345:Internacional/Coldplay - Viva La Vida.mp3
+346:Internacional/Coldplay - Yellow.mp3
+347:Internacional/Ed Sheeran - Thinking Out Loud.mp3
+348:Internacional/Electric Light Orchestra - Mr Blue Sky.mp3
+349:Internacional/Fall Out Boy - Centuries.mp3
+350:Internacional/Feder - Lordly Instrumental.mp3
+351:Internacional/Flo Rida - Whistle.mp3
+352:Internacional/Foreigner - I Want To Know What Love Is.mp3
+353:Internacional/Frank Sinatra - The Girl From Ipanema.mp3
+354:Internacional/Fun. - We Are Young (feat. Janelle Monáe).mp3
+355:Internacional/Harry Styles - Watermelon Sugar.mp3
+356:Internacional/Jackson 5 - I Want You Back.mp3
+357:Internacional/Jason Derulo - Talk Dirty (feat. 2 Chainz).mp3
+358:Internacional/Jennifer Lopez - On The Floor (feat. Pitbull).mp3
+359:Internacional/John Lennon - Imagine .mp3
+360:Internacional/John Newman - Love Me Again.mp3
+361:Internacional/KC & The Sunshine Band - That's The Way (I Like It).mp3
+362:Internacional/Koll & The Gang - Hollywood Swinging.mp3
+363:Internacional/Lewis Capaldi - Someone You Loved.mp3
+364:Internacional/Louis Armstrong - What a Wonderful World.mp3
+365:Internacional/MAGIC! - No Way No.mp3
+366:Internacional/Maroon 5 - Don't Wanna Know.mp3
+367:Internacional/Maroon 5 - Girls Like You ft. Cardi B.mp3
+368:Internacional/Maroon 5 - Memories.mp3
+369:Internacional/Maroon 5 - Moves Like Jagger ft. Christina A.mp3
+370:Internacional/Maroon 5 - One More Night.mp3
+371:Internacional/Maroon 5 - This Love.mp3
+372:Internacional/Maroon 5 - What Lovers Do ft. SZA.mp3
+373:Internacional/Masayuki Suzuki - Love Dramatic (feat. Rikka Ihara).mp3
+374:Internacional/Modjo - Lady (Hear Me Tonight).mp3
+375:Internacional/Oliver Tree - Let Me Down.mp3
+376:Internacional/Oliver Tree - Life Goes On.mp3
+377:Internacional/Olivia Rodrigo - Traitor.mp3
+378:Internacional/Owl City - When Can I See You Again.mp3
+379:Internacional/P!nk - Just Give Me A Reason ft. Nate Ruess.mp3
+380:Internacional/Panic! At The Disco - High Hopes.mp3
+381:Internacional/Passenger - Let Her Go.mp3
+382:Internacional/Pharrell Williams - Happy.mp3
+383:Internacional/Powfu - Death bed (instrumental).mp3
+384:Internacional/PUBLIC - Make You Mine (Put Your Hand in Mine).mp3
+385:Internacional/Rag'n'Bone Man - Human.mp3
+386:Internacional/Rascal Flatts - Life is a Highway.mp3
+387:Internacional/Ray Charles - Hit the Road Jack.mp3
+388:Internacional/Robbie Williams and Kylie Minogue - Kids.mp3
+389:Internacional/Rod Stewart - Young Turks.mp3
+390:Internacional/Roy Orbison - Oh, Pretty Woman.mp3
+391:Internacional/Snoop Dogg  - Young, Wild and Free (feat. Wiz Khalifa & Bruno Mars).mp3
+392:Internacional/Street Corner Renaissance - Life Could Be a Dream.mp3
+393:Internacional/Surfing The Apocalypse - I Can See for Miles.mp3
+394:Internacional/Tame Impala - The Less I Know The Better.mp3
+395:Internacional/The Beatles - Here Comes The Sun.mp3
+396:Internacional/The Black Eyed Peas - Meet Me Halfway.mp3
+397:Internacional/The Chainsmokers - Something Just Like (feat. Coldplay).mp3
+398:Internacional/The Jolly Rogers - The Flying Dutchman.mp3
+399:Internacional/The Longest Johns - Wellerman.mp3
+400:Internacional/The Lumineers - Ho Hey.mp3
+401:Internacional/The Score - Legend.mp3
+402:Internacional/The Turtles - Happy Together.mp3
+403:Internacional/The War - Low Rider.mp3
+404:Internacional/The Weeknd - Starboy.mp3
+405:Internacional/The Weeknd - Take My Breath.mp3
+406:Internacional/Tove Lo - Habits (Stay High).mp3
+407:Internacional/Train - Hey, Soul Sister.mp3
+408:Internacional/Usher - DJ Got Us Fallin' In Love (feat. Pitbull).mp3
+409:Internacional/Jason Mraz - I'm Yours.mp3
+410:Internacional/Akon - Don't Matter .mp3
+411:Internacional/Madcon - Don’t Worry (feat. Ray Dalton).mp3
+412:Internacional/O-Zone - Dragostea Din Tei.mp3
+413:Internacional/Michael Jackson - I'll Be There.mp3
+414:Internacional/BTS - Dynamite.mp3
+415:Internacional/Jay-Z - Empire State of Mind Off (feat. Alicia Keys).mp3
+416:Internacional/Imagine Dragons - Enemy.mp3
+417:Internacional/Rupert Holmes - Escape (The Piña Colada Song).mp3
+418:Internacional/MØ - Final Song.mp3
+419:Internacional/Owl City - Fireflies.mp3
+420:Internacional/The Wanted - Glad You Came.mp3
+421:Internacional/Boney M. - Rasputin.mp3
+422:Internacional/Marty Robbins - Big Iron.mp3
+423:Internacional/Ace of Base - Happy Nation.mp3
+424:Internacional/Doja Cat - Say So.mp3
+425:Internacional/The Pointer Sisters - Hot Together.mp3
+426:Internacional/Sam Smith - I'm Not the Only One.mp3
+427:Internacional/Bonnie Tyler - It's A Heartache.mp3
+428:Internacional/Johnny River - Do You Want To Dance.mp3
+429:Internacional/José Feliciano - Feliz Navidad.mp3
+430:Internacional/Milky - Just The Way You Are.mp3
+431:Internacional/Modern Talking - Cheri Cheri Lady .mp3
+432:Internacional/Mariya Takeuchi - Plastic Love.mp3
+433:Internacional/Elton John - Nikita.mp3
+434:Internacional/Lukas Graham - 7 Years.mp3
+435:Internacional/Kingo Hamada - Machi No Dorufin.mp3
+436:Internacional/The Black Eyed Peas - Pump It.mp3
+437:Internacional/Frank Sinatra - My Way.mp3
+438:Internacional/Joji - Tick Tock.mp3
+439:Internacional/Nena - 99 Luftballons.mp3
+440:Internacional/Coldplay - Paradise.mp3
+441:Internacional/Simon & Garfunkel - Scarborough Fair.mp3
+442:Internacional/Maroon 5 - Payphone.mp3
+443:Internacional/Miki Matsubara - Stay With Me.mp3
+444:Internacional/Jessie J - Price Tag.mp3
+445:Internacional/Tones and I - Dance Monkey.mp3
+446:Internacional/Clean Bandit - Rather Be (feat. Jess Glynne).mp3
+447:Internacional/Eminem - Eminem - Love The Way You Lie ft. Rihanna.mp3
+448:Internacional/Twenty One Pilots - Ride.mp3
+449:Internacional/Boney M. - Rivers of Babylon.mp3
+450:Internacional/Clean Bandit - Rockabye (feat. Sean Paul & Anne-Marie).mp3
+451:Internacional/Adele - Rolling in the Deep.mp3
+452:Internacional/MAGIC! - Rude.mp3
+453:Internacional/Usher - Scream.mp3
+454:Internacional/Sean Kingston - Beautiful Girls.mp3
+455:Internacional/Rusted Root - Send Me On My Way.mp3
+456:Internacional/Taylor Swift - Shake It Off.mp3
+457:Internacional/Lady Gaga - Shallow (feat. Bradley Cooper).mp3
+458:Internacional/Ed Sheeran - Shape of You.mp3
+459:Internacional/Cyndi Lauper - Girls Just Want To Have Fun.mp3
+460:Internacional/Tennessee Ernie Ford - Sixteen Tons.mp3
+461:Internacional/JMSN - Love Me.mp3
+462:Internacional/Gotye - Somebody That I Used To Know (feat. Kimbra).mp3
+463:Internacional/LMFAO - Sexy and I Know It.mp3
+464:Internacional/Simon & Garfunkel - The Sounds of Silence.mp3
+465:Internacional/Glen Campbell - Southern Nights.mp3
+466:Internacional/The Strumbellas - Spirits.mp3
+467:Internacional/The Archies - Sugar Sugar.mp3
+468:Internacional/Post Malone - Sunflower (feat. Swae Lee).mp3
+469:Internacional/Earth, Wind & Fire - September.mp3
+470:Internacional/Toto - Africa.mp3
+471:Internacional/Coldplay - The Scientist.mp3
+472:Internacional/Bonnie Tyler - Total Eclipse Of The Heart.mp3
+473:Internacional/Taio Cruz - Dynamite.mp3
+474:Internacional/The Black Eyed Peas - The time.mp3
+475:Internacional/Michael Jackson - Beat It.mp3
+476:Internacional/Michael Jackson - Billie Jean.mp3
+477:Internacional/Berlin - Take My Breathe Away.mp3
+478:Internacional/Jamiroquai - Virtual Insanity.mp3
+479:Internacional/Danger Mouse - Black.mp3
+480:Internacional/Maroon 5 - Animals.mp3
+481:Internacional/Katrina And The Waves - Katrina And The Waves - Walking On Sunshine .mp3
+482:Internacional/Coldplay - Fix You.mp3
+483:Internacional/Jim Croce - Time in a Bottle.mp3
+484:MPB/Gian e Giovani - Mil corações.mp3
+485:MPB/Kaoma - Lambada.mp3
+486:MPB/Leandro & Leonardo - Não aprendi a dizer adeus.mp3
+487:MPB/Leandro & Leonardo - Pense em mim.mp3
+488:MPB/Raul Seixas - O dia em que a terra parou.mp3
+489:MPB/Tribalistas - Velha Infância.mp3
+490:MPB/Wilson Simonal - Pais Tropical.mp3
+491:MPB/Amado Batista - Serenata.mp3
+492:MPB/Rick & Renner - Filha.mp3
+493:MPB/Amado Batista - Seresteiro das Noites.mp3
+494:MPB/Amado Batista - Secretaria.mp3
+495:MPB/Charlie Brown Jr. - Como tudo deve ser.mp3
+496:MPB/Simone - Então é Natal.mp3
+497:MPB/Hermes Aquino - Nuvem Passageira.mp3
+498:MPB/Milionário & José Rico - Herói da Velocidade.mp3
+499:MPB/Amado Batista - Meu Ex-amor.mp3
+500:MPB/Amado Batista - Meninha Meu Amor.mp3
+501:MPB/Amado Batista - O Julgamento.mp3
+502:MPB/Amado Batista - Princesa.mp3
+503:MPB/Amado Batista - O Fruto do Nosso Amor (Amor Perfeito).mp3
+504:MPB/Amado Batista - Agora ou Nunca Mais.mp3
+505:MPB/Amado Batista -Não Quero Falar com Ela.mp3
+506:MPB/Amado Batista - O Acidente.mp3
+507:MPB/O Rappa - Anjos (Pra quem tem fé).mp3
+508:MPB/Charlie Brown Jr. - Só os Loucos Sabem.mp3
+509:MPB/Chico Buarque - A Banda.mp3
+510:MPB/Jorge Ben - Chove Chuva.mp3
+511:MPB/Milton Nascimento - Tudo que você podia ser.mp3
+512:MPB/Claudia - Deixa eu dizer.mp3
+513:MPB/1Kilo - Deixe-me Ir.mp3
+514:MPB/Alceu Valença  - La Belle de Jour.mp3
+515:MPB/Ana Vilela - Trem-Bala.mp3
+516:MPB/Charlie Brown Jr. - Dias De Luta, Dias De Glória.mp3
+517:MPB/Chico Buarque - João e Maria.mp3
+518:MPB/Fabio Lima - Brasileirinho.mp3
+519:MPB/Fabio Lima - Tico Tico no Fubá.mp3
+520:MPB/Melim - Meu Abrigo.mp3
+521:MPB/Melim - Ouvi Dizer.mp3
+522:MPB/Pollo - Vagalumes.mp3
+523:MPB/Raul Seixas - Metamorfose Ambulante.mp3
+524:MPB/Roberta Campos - Minha Felicidade.mp3
+525:MPB/Roupa Nova - Whisky a Go Go.mp3
+526:MPB/Tim Maia - Não Quero Dinheiro (Só Quero Amar).mp3
+527:MPB/Tim Maia - O Descobridor Dos Sete Mares.mp3
+528:MPB/Legião Urbana - Eduardo e Mônica.mp3
+529:MPB/Projota - Ela Só Quer Paz.mp3
+530:MPB/Celly Campello - Estúpido Cupido.mp3
+531:MPB/Gian e Giovani  - Convite de Casamento.mp3
+532:MPB/Raul Seixas - Eu Nasci Há 10 Mil Anos Atrás.mp3
+533:MPB/Charlie Brown Jr. - Ela vai voltar (Todos os defeitos de uma mulher perfeita).mp3
+534:MPB/Kell Smith - Era Uma Vez.mp3
+535:MPB/Charlie Brown Jr. - Meu novo mundo.mp3
+536:MPB/Leandro & Leonardo - É Por Você Que Canto.mp3
+537:MPB/Los Hermanos - Anna Júlia.mp3
+538:MPB/Charlie Brown Jr. - Céu Azul.mp3
+539:MPB/Rick & Renner - Ela é Demais.mp3
+540:MPB/Claudinho & Buchecha - Fico Assim Sem Você.mp3
+541:MPB/Claudinho & Buchecha - Quero Te Encontrar.mp3
+542:MPB/Banda Djavú, DJ Juninho Portugal - Rubi.mp3
+543:MPB/Paulo Sergio - Não Creio Em Mais Nada.mp3
+544:MPB/Paulo Sergio - Quero Ver Você Feliz.mp3
+545:MPB/Toquinho - Aquarela.mp3
+546:MPB/Legião Urbana - Faroeste Caboclo.mp3
+547:MPB/João Mineiro e Marciano - Ainda Ontem Chorei De Saudade.mp3
+548:MPB/Alceu Valença  - Anunciação.mp3
+549:MPB/Tim Maia - Ela Partiu.mp3
+550:Pagode - Samba/Adoniran Barbosa - Trem Das Onze.mp3
+551:Pagode - Samba/Os Originais do Samba - Reunião de Bacanas.mp3
+552:Pagode - Samba/Péricles - Se Eu Largar O Freio.mp3
+553:Pagode - Samba/Jorge Ben Jor - Carolina, Carol Bela.mp3
+554:Pagode - Samba/Seu Jorge - Burguesinha.mp3
+555:Pagode - Samba/Exaltasamba - Tá Vendo Aquela Lua.mp3
+556:Pagode - Samba/Martinho da Vila - Mulheres.mp3
+557:Pagode - Samba/Seu Jorge - Alma De Guerreiro.mp3
+558:Pagode - Samba/Seu Jorge - Mina Do Condomínio.mp3
+559:Pagode - Samba/Tchakabum - Olha a Onda.mp3
+560:Pagode - Samba/Turma do Pagode - Lancinho.mp3
+561:Pagode - Samba/Noriel Vilela - 16 Toneladas.mp3
+562:Pagode - Samba/Martinho Da Vila - Canta Canta, Minha Gente.mp3
+563:Pagode - Samba/Dudu Nobre - A Grande Família.mp3
+564:Pagode - Samba/Seu Jorge - Amiga Da Minha Mulher.mp3
+565:Pagode - Samba/Grupo Revelação - Deixa Acontecer.mp3
+566:Pagode - Samba/Raça Negra - Cheia de Manias (part. Thiaguinho).mp3
+567:Pagode - Samba/Raça Negra - Vida Cigana.mp3
+568:Phonk/g3ox_em - GigaChad Theme.mp3
+569:Phonk/INTERWORLD - METAMORPHOSIS.mp3
+570:Phonk/KORDHELL - KILLERS FROM THE NORTHSIDE.mp3
+571:Phonk/Kordhell - Murder In My Mind.mp3
+572:Phonk/KXLLYXU - PARANOID PLAYAS.mp3
+573:Phonk/Lumi Athena - ICEWHORE! [SLOWED + REVERB].mp3
+574:Phonk/MC ORSEN - WARNING (sped up).mp3
+575:Phonk/MoonDeity - NEON BLADE.mp3
+576:Phonk/Ghostface Playa - Why Not.mp3
+577:Phonk/UdieNnx, Mc Denny - ACIDO III (Super Slowed).mp3
+578:Phonk/Eternxlkz - BRODYAGA FUNK.mp3
+579:Phonk/DVRST - Close Eyes.mp3
+580:Phonk/KUTE & Kordhell - Dead on Arrival.mp3
+581:Phonk/SCXR SOUL & Sx1nxwy - DEMONS IN MY SOUL.mp3
+582:Phonk/Ogryzek - EMPIRE 2 (Slowed).mp3
+583:Phonk/Ogryzek - GLORY.mp3
+584:Phonk/Ariis - GOZALO - Slowed.mp3
+585:Phonk/SHADXWBXRN, ARCHEZ, KXNVRA - PRINCE OF DARKNESS.mp3
+586:Phonk/MVTRIIIX - CALMNESS.mp3
+587:Phonk/INTERWORLD - RAPTURE.mp3
+588:Phonk/Dxrk ダーク - RAVE.mp3
+589:Phonk/Hensonn - Sahara.mp3
+590:Phonk/Glichery - Sea Of Problems.mp3
+591:Phonk/NUEKI - SO TIRED.mp3
+592:Phonk/Glichery & NUEKI - TIRED OF PROBLEMS.mp3
+593:Religiosa/CCB - Guitarra Havaiana.mp3
+594:Religiosa/CCB - Harpa.mp3
+595:Religiosa/CCB - Tuba e Trompete.mp3
+596:Religiosa/HINO    349 e 357   CCB.mp3
+597:Religiosa/Voz da Verdade - Escudo.mp3
+598:Religiosa/CCB - Breve Voltará Jesus Cristo.mp3
+599:Religiosa/CCB - Cidadãos do céu.mp3
+600:Religiosa/CCB - Paz seja em voz.mp3
+601:Religiosa/CCB - h (8).mp3
+602:Religiosa/CCB -  (4).mp3
+603:Religiosa/clarinet.mp3
+604:Religiosa/cordeiro de deus.mp3
+605:Religiosa/CCB -  (7).mp3
+606:Religiosa/grandioso es tu.mp3
+607:Religiosa/CCB -  (9).mp3
+608:Religiosa/CCB -  (10).mp3
+609:Religiosa/CCB -  (11).mp3
+610:Religiosa/CCB -  (12).mp3
+611:Religiosa/CCB -  (1).mp3
+612:Religiosa/Guatupê & Guaratuba - O Soldadinho de Deus.mp3
+613:Religiosa/CCB -  (2).mp3
+614:Religiosa/CCB -  (3).mp3
+615:Religiosa/CCB -  (5).mp3
+616:Religiosa/CCB -  (6).mp3
+617:Religiosa/CCB -  (8).mp3
+618:Religiosa/CCB - h (2).mp3
+619:Religiosa/CCB - h (3).mp3
+620:Religiosa/CCB - h (4).mp3
+621:Religiosa/CCB - h (5).mp3
+622:Religiosa/CCB - h (6).mp3
+623:Religiosa/CCB - h (7).mp3
+624:Religiosa/CCB - h (9).mp3
+625:Religiosa/CCB - h (10).mp3
+626:Religiosa/CCB - h (11).mp3
+627:Religiosa/CCB - h (1).mp3
+628:Religiosa/Duduca & Dalvan - Rastros Na Areia.mp3
+629:Rock/celldweller - Shapeshifter (feat. Styles of Beyond).mp3
+630:Rock/Deep Purple - Highway Star.mp3
+631:Rock/Dropkick Murphys - Im Shipping Up To Boston.mp3
+632:Rock/Duster - Me and the Birds.mp3
+633:Rock/Kenshi Yonezu - KICK BACK.mp3
+634:Rock/KISS - I Was Made For Lovin' You.mp3
+635:Rock/MGMT - Kids.mp3
+636:Rock/Miraidempa 未来電波基地 - Sayonara Cross Teck Slowed.mp3
+637:Rock/Radiohead - Man Of War.mp3
+638:Rock/Rammstein - Sonne (Slowed).mp3
+639:Rock/The Heavy - Put It on the Line.mp3
+640:Rock/The Heavy - Short Change Hero.mp3
+641:Rock/The Heavy - What Makes A Good Man'.mp3
+642:Rock/The Orwells - Halloween All Year.mp3
+643:Rock/The Rare Occasions  - Notion.mp3
+644:Rock/TV On The Radio - DLZ.mp3
+645:Rock/Caesars Palace - Jerk It Out.mp3
+646:Rock/George Thorogood - Bad To The Bone.mp3
+647:Rock/Johnny Cash - Sixteen Tons.mp3
+648:Rock/Linkin Park - What I've Done.mp3
+649:Rock/Mötley Crüe - Kickstart My Heart.mp3
+650:Rock/Nirvana - The Man Who Sold The World.mp3
+651:Rock/Skillet - Monster.mp3
+652:Rock/Lynyrd Skynyrd - Simple Man.mp3
+653:Rock/Lynyrd Skynyrd - Free Bird.mp3
+654:Rock/America - Horse  With No Name.mp3
+655:Rock/KALEO - Way down We Go.mp3
+656:Rock/Aerosmith - Dream On.mp3
+657:Rock/Evanescence - Afterlife.mp3
+658:Rock/Blue Oyster Cult - (Don't Fear) The Reaper.mp3
+659:Rock/Smash Mouth - All Star.mp3
+660:Rock/Johnny Cash - I Won't Back Down.mp3
+661:Rock/The Offspring - The Kids Aren't Alright.mp3
+662:Rock/Guns N' Roses - Sweet Child O' Mine.mp3
+663:Rock/Audioslave - Like a Stone.mp3
+664:Rock/AC_DC - Back In Black.mp3
+665:Rock/Heart - Barracuda.mp3
+666:Rock/Blur - Song 2.mp3
+667:Rock/The Cure - Boys Don’t Cry.mp3
+668:Rock/Staind - It’s Been Awhile.mp3
+669:Rock/L7 - Pretend We're Dead.mp3
+670:Rock/Bullet for My Valentine - Hand of Blood.mp3
+671:Rock/Green Day - Boulevard Of Broken Dreams.mp3
+672:Rock/Red Hot Chili Peppers - Californication.mp3
+673:Rock/Avenged Sevenfold - Blinded in Chains.mp3
+674:Rock/Gerry Rafferty - Baker Street.mp3
+675:Rock/The Clash  - Should I Stay or Should I Go.mp3
+676:Rock/Stone Temple Pilots - Plush.mp3
+677:Rock/Radiohead - Creep.mp3
+678:Rock/Bon Jovi - It's My Life.mp3
+679:Rock/Danzig - Mother.mp3
+680:Rock/Guns N' Roses - Knockin' On Heaven's Door.mp3
+681:Rock/Tame Impala - Dracula.mp3
+682:Rock/Tame Impala - Loser.mp3
+683:Rock/Saxon - Princess of the Night.mp3
+684:Rock/4 Non Blondes - What's Up.mp3
+685:Rock/Artic Monkeys - Do I Wanna Know.mp3
+686:Rock/Babymetal - Gimme Chocolate.mp3
+687:Rock/Blondie - One Way Or Another.mp3
+688:Rock/Bon Jovi - Livin' on a Prayer.mp3
+689:Rock/Dire Straits - Walk Of Life.mp3
+690:Rock/Guns N' Roses - November Rain.mp3
+691:Rock/Guns N' Roses - Welcome To The Jungle.mp3
+692:Rock/Led Zeppelin - Stairway To Heaven.mp3
+693:Rock/Linkin Park - In The End.mp3
+694:Rock/MGMT - Little Dark Age.mp3
+695:Rock/Oasis - Wonderwall.mp3
+696:Rock/Queen - Don't Stop Me Now.mp3
+697:Rock/Queen - We Will Rock You.mp3
+698:Rock/Radiohead - Karma Police.mp3
+699:Rock/Ramones - Hey Ho Let's Go Blitzkrieg bop.mp3
+700:Rock/Red Hot Chili Peppers - Otherside.mp3
+701:Rock/SABATON - The Attack of the Dead Men .mp3
+702:Rock/Scorpions - Wind Of Change.mp3
+703:Rock/Smash Mouth - I'm A Believer.mp3
+704:Rock/Survivor - Eye Of The Tiger.mp3
+705:Rock/The White Buffalo - House of the Rising Sun.mp3
+706:Rock/The White Stripes - The Hardest Button to Button.mp3
+707:Rock/Toto - Hold The Line.mp3
+708:Rock/Van Halen - Jump.mp3
+709:Rock/Rammstein - Deutschland.mp3
+710:Rock/Dire Straits - Sultans Of Swing.mp3
+711:Rock/The Hollies - Long Cool Woman in a Black Dress.mp3
+712:Rock/Eric Carmen - All by Myself.mp3
+713:Rock/Evanescence - Bring Me To Life.mp3
+714:Rock/Gorillaz - Feel Good Inc..mp3
+715:Rock/Yes - Roundabout.mp3
+716:Rock/Tom Petty - Love Is a Long Road.mp3
+717:Rock/Tom Petty - Runnin’ Down a Dream.mp3
+718:Rock/Duran Duran - Invisible.mp3
+719:Rock/DragonForce - Through The Fire And Flames.mp3
+720:Rock/The Stranglers - Golden Brown.mp3
+721:Rock/Kansas - Carry On Wayward Son.mp3
+722:Rock/Rammstein - Sonne.mp3
+723:Rock/Linkin Park - Numb.mp3
+724:Rock/Linkin Park - Lost.mp3
+725:Rock/Nivana - Smells Like Teen Spirit.mp3
+726:Rock/Nirvana - Come As You Are.mp3
+727:Rock/Styles Of Beyond - Nine Thou (Supertars Remix).mp3
+728:Rock/David Hidalgo - Nunca.mp3
+729:Rock/Radiohead - No Surprises.mp3
+730:Rock/Three Days Grace - Animal I Have Become.mp3
+731:Rock/Audioslave - Be Yourself.mp3
+732:Rock/R.E.M. - Losing My Religion.mp3
+733:Rock/Bob Dylan - Knockin’ on Heaven’s Door.mp3
+734:Rock/Creedence Clearwater Revival - Have You Ever Seen the Rain.mp3
+735:Rock/The Outfield - Your Love.mp3
+736:Rock/Foster The People - Pumped Up Kicks.mp3
+737:Rock/Pearl Jam - Alive.mp3
+738:Rock/Red Hot Chili Peppers - Scar Tissue.mp3
+739:Rock/Bring Me The Horizon - Can You Feel My Heart.mp3
+740:Rock/Nickelback - How You Remind Me.mp3
+741:Rock/Linkin Park - Somewhere I Belong (radio version).mp3
+742:Rock/Billy Valentine - All Along the Watchtower.mp3
+743:Rock/Lions - Girl from the North Country.mp3
+744:Rock/Static‐X - Skinnyman.mp3
+745:Rock/Badfinger - Baby Blue.mp3
+746:Rock/wifiskeleton & i wanna be a jack-o-lantern - Nope your too late i already died.mp3
+747:Rock/Soundgarden - Black Hole Sun.mp3
+748:Rock/Pixies - Where Is My Mind.mp3
+749:Rock/Pearl Jam - Even Flow.mp3
+750:Rock/Pearl Jam - Black.mp3
+751:Rock/Pearl Jam - Jeremy.mp3
+752:Rock/Disturbed - Decadence.mp3
+753:Rock/Bring Me The Horizon - Throne.mp3
+754:Rock/Tame Impala - Borderline.mp3
+755:Rock/Pink Floyd - Another Brick In The Wall (Pt. 2).mp3
+756:Rock/Three Days Grace - I Hate Everything About You.mp3
+757:Rock/MGMT - Time to Pretend.mp3
+758:Rock/System Of A Down - Aerials.mp3
+759:Rock/bôa - Duvet.mp3
+760:Rock/Johnny Cash - The Man Comes Around.mp3
+761:Rock/Creed - One Last Breath.mp3
+762:Rock/Creed - My Sacrifice.mp3
+763:Sertaneja/Almir Sater - Travessia do Araguaia.mp3
+764:Sertaneja/Chitãozinho e Xororó - Sinônimos.mp3
+765:Sertaneja/Daniel - O menino da porteira.mp3
+766:Sertaneja/Dominguinhos - Eu Só Quero Um Xodó.mp3
+767:Sertaneja/Dominguinhos - Isso Aquí Tá Bom Demais.mp3
+768:Sertaneja/Dominguinhos - Numa Sala de Reboco.mp3
+769:Sertaneja/Durval e Davi - Zé Pedreiro.mp3
+770:Sertaneja/Edson e Hudson - Foi Deus.mp3
+771:Sertaneja/Gino & Geno - Morena Bonita.m4a
+772:Sertaneja/Gino & Geno - Nois Enverga Mais Não Quebra.mp3
+773:Sertaneja/Gino & Geno - Sistema Caipira.mp3
+774:Sertaneja/Gino & Geno - Vou Beber Veneno.mp3
+775:Sertaneja/Liu & Léu - Boiadeiro Errante.mp3
+776:Sertaneja/Lourenço & Lourival - Franguinho na Panela.mp3
+777:Sertaneja/Lourenço & Lourival - Menina da Aldeia.mp3
+778:Sertaneja/Lourenço & Lourival - Relógio Quebrado.mp3
+779:Sertaneja/Mato Grosso & Matias - Tentei Te Esquecer.mp3
+780:Sertaneja/Os Mirins - Roda de Chimarrão Disco.mp3
+781:Sertaneja/Palmeira e Biá - Couro de Boi.mp3
+782:Sertaneja/Sérgio Reis - Mágoa de Boiadeiro.mp3
+783:Sertaneja/Teixerinha - Tordilho Negro.mp3
+784:Sertaneja/Teixerinha - Velho casarão.mp3
+785:Sertaneja/Tião Carreiro & Pardinho - Filho de Araçatuba.mp3
+786:Sertaneja/Tião Carreiro e Pardinho - Adeus rio Piracicaba.mp3
+787:Sertaneja/Tião Carreiro e Pardinho - Amores perdidos.mp3
+788:Sertaneja/Tião Carreiro e Pardinho - Boi 'Sete Ouro '.mp3
+789:Sertaneja/Tião Carreiro e Pardinho - Boiadeiro Punho de Aço.mp3
+790:Sertaneja/Tião Carreiro e Pardinho - Caçador do Ivinhema.mp3
+791:Sertaneja/Tião Carreiro e Pardinho - Casa branca da serra.mp3
+792:Sertaneja/Tião Carreiro e Pardinho - Domador.mp3
+793:Sertaneja/Tião Carreiro e Pardinho - Eu, a Viola e Ela.mp3
+794:Sertaneja/Tião Carreiro e Pardinho - Faca Que Não Corta.mp3
+795:Sertaneja/Tião Carreiro e Pardinho - Homem até debaixo d'água.mp3
+796:Sertaneja/Tião Carreiro e Pardinho - Ladrao de terra.mp3
+797:Sertaneja/Tião Carreiro e Pardinho - Menino da porteira.mp3
+798:Sertaneja/Tião Carreiro e Pardinho - Minha Vida.mp3
+799:Sertaneja/Tião Carreiro e Pardinho - Na Barba do Leão.mp3
+800:Sertaneja/Tião Carreiro e Pardinho - O mundo no avesso.mp3
+801:Sertaneja/Tião Carreiro e Pardinho - O patrão e o empregado.mp3
+802:Sertaneja/Tião Carreiro e Pardinho - Padecimento.mp3
+803:Sertaneja/Tião Carreiro e Pardinho - Pagode em Brasília.mp3
+804:Sertaneja/Tião Carreiro e Pardinho - Pretinho aleijado.mp3
+805:Sertaneja/Tião Carreiro e Pardinho - Tem e Não Tem.mp3
+806:Sertaneja/Tião Carreiro e Pardinho - Três Cuiabanas.mp3
+807:Sertaneja/Tonico & Tinoco - Moda da mula preta.mp3
+808:Sertaneja/Tonico e Tinoco - Mourão da Porteira.mp3
+809:Sertaneja/Tonico e Tinoco - Velho Pai.mp3
+810:Sertaneja/Berenice Azambuja - É Disso que o Velho Gosta.mp3
+811:Sertaneja/José Mendes - Para Pedro!.mp3
+812:Sertaneja/Goiano & Paranaense - O Doutor e Caipira.mp3
+813:Sertaneja/Evaldo Silva - Rainha do Vaqueiro.mp3
+814:Sertaneja/Alcymar Monteiro - O Sertão que a Gente Mora.mp3
+815:Sertaneja/Tião Carreiro e Pardinho - Rolinha Cabocla.mp3
+816:Sertaneja/Sergio Reis - Boiadeiro Errante.mp3
+817:Sertaneja/Sérgio Reis - Saudades da Minha Terra.mp3
+818:Sertaneja/Luiz Gonzaga - Cintura Fina.mp3
+819:Sertaneja/Luiz Gonzaga - A Morte do Vaqueiro.mp3
+820:Sertaneja/Tião Carreiro & Praiano - Rio de Lágrimas.mp3
+821:Sertaneja/Tião Carreiro & Pardinho - A grande montanha.mp3
+822:Sertaneja/Chico Rey e Paraná - Canarinho Prisioneiro.mp3
+823:Sertaneja/Rick & Renner - Nos Bares da Cidade.mp3
+824:Sertaneja/Gino & Geno - Apaixonado por você.mp3
+825:Sertaneja/Gino & Geno - Jeito caipira.mp3
+826:Sertaneja/Gino & Geno - O Gavião.wma
+827:Sertaneja/José Mendes - Não Aperta Aparicio.mp3
+828:Sertaneja/José Mendes - O Roubo da Gaita Velha.mp3
+829:Sertaneja/Chitãozinho & Xororó - Fogão de Lenha.mp3
+830:Sertaneja/Irídio & Irineu - Cachorro Amigo.mp3
+831:Sertaneja/Teixeirinha - Querência Amada .mp3
+832:Sertaneja/Cesar & Paulinho - Soca Pilão.mp3
+833:Sertaneja/Almir Sater - Chalana.mp3
+834:Sertaneja/Di Paullo e Paulino - Amor de Primavera.mp3
+835:Sertaneja/Almir Sater - Tocando Em Frente.mp3
+836:Sertaneja/Gino & Geno - Ela chorou de amor.mp3
+837:Sertaneja/Gino & Geno - Coração cigano.mp3
+838:Sertaneja/Zé Ramalho - Admirável Gado Novo.mp3
+839:Sertaneja/Rionegro & Solimões - Vida Louca.wma
+840:Sertaneja/Rionegro & Solimões - Alô Meu Coração.wma
+841:Sertaneja/Rionegro & Solimões - Moído de Paixão.wma
+842:Sertaneja/Rionegro & Solimões - Saúde E Paz.wma
+843:Sertaneja/Rionegro & Solimões - Arrastão.wma
+844:Sertaneja/Rionegro & Solimões - Traz Mais Uma.wma
+845:Sertaneja/Rionegro & Solimões - Miserenta.wma
+846:Sertaneja/Rionegro & Solimões - Só Eu Sei.wma
+847:Sertaneja/Rionegro & Solimões - Vai E Vem.wma
+848:Sertaneja/Rionegro & Solimões - Chora Violão.wma
+849:Sertaneja/Rionegro & Solimões - Nosso Filme.wma
+850:Sertaneja/Rionegro & Solimões - Latinha No Bico.wma
+851:Sertaneja/Rionegro & Solimões - No Seu Coração.wma
+852:Sertaneja/Rionegro & Solimões - Tá Ficando Bom.wma
+853:Sertaneja/Rionegro & Solimões - A Fila Tá Andando.wma
+854:Sertaneja/Mastruz com Leite - Saga de um Vaqueiro.mp3
+855:Sertaneja/Trio Parada Dura - As Andorinhas.mp3
+856:Sertaneja/Trio Parada Dura - Blusa Vermelha.mp3
+857:Sertaneja/Trio Parada Dura - Telefone Mudo.mp3
+858:Sertaneja/Trio Parada Dura - Bobeou... A Gente Pimba.mp3
+859:Sertaneja/Trio Parada Dura - Me Mata De Uma Vez.mp3
+860:Sertaneja/Trio Parada Dura - Homem De Pedra.mp3
+861:Sertaneja/Trio Parada Dura - Barco De Papel.mp3
+862:Sertaneja/Milionário e José Rico - Solidão.mp3
+863:Sertaneja/Luiz Gonzaga, Gonzaguinha - A Vida do Viajante.mp3
+864:Sertaneja/Tião Carreiro e Pardinho - Boi soberano.mp3
+865:Sertaneja/Peão Carreiro & Zé Paulo - Porta do Mundo.mp3
+866:Sertaneja/Rick & Renner - Casa de Caboclo.mp3
+867:Sertaneja/Chitãozinho & Xororó - Saudade De Minha Terra.mp3
+868:Sertaneja/Tião Carreiro & Pardinho - O Prato do Dia.mp3
+869:Sertaneja/Zé Carreiro e Carreirinho - Peito Sadio.mp3
+870:Sertaneja/Baitaca - Do Fundo da Grota.mp3
+871:Sertaneja/Chitãozinho & Xororó - Evidências.mp3
+872:Sertaneja/Falamansa - Xote Dos Milagres.mp3
+873:Sertaneja/Gilberto & Gilmar - Tá Ruim Mas Tá Bom.mp3
+874:Sertaneja/Goiano & Paranaense - Meu Recanto, Meu Paraíso.mp3
+875:Sertaneja/Luis Gonzaga - O Xote das Meninas.mp3
+876:Sertaneja/Milionário e José Rico - Boate Azul.mp3
+877:Sertaneja/Nhô Belarmino e Nhâ Gabriela - Mocinhas da Cidade.mp3
+878:Sertaneja/Tião Carreiro e Pardinho - Neguinho Parafuso.mp3
+879:Sertaneja/Tião Carreiro e Pardinho - O  Mundo Velho Não Tem Jeito.mp3
+880:Sertaneja/Tonico e Tinoco - Moreninha Linda.mp3
+881:Sertaneja/Tião Carreiro & Pardinho - O Mineiro e o Italiano.mp3
+882:Sertaneja/Tião Carreiro & Pardinho - Porta Fechada.mp3
+883:Sertaneja/Tião Carreiro & Pardinho - Quem Ama Não Esquece.mp3
+884:Sertaneja/Tião Carreiro & Pardinho - Linha de Frente.mp3
+885:Sertaneja/Tião Carreiro & Pardinho - Cantar da Ciriema.mp3
+886:Sertaneja/Tião Carreiro & Pardinho - Ana Rosa.mp3
+887:Sertaneja/Tião Carreiro & Pardinho - Jerimu.mp3
+888:Sertaneja/Tião Carreiro & Pardinho - Minha Prece.mp3
+889:Sertaneja/Tião Carreiro & Pardinho - Geada do Paraná.mp3
+890:Sertaneja/Tião Carreiro & Pardinho - Catimbau.mp3
+891:Sertaneja/Tião Carreiro & Pardinho - Prece de Amor.mp3
+892:Sertaneja/Tião Carreiro & Pardinho - Ondas de Amor.mp3
+893:Sertaneja/Tião Carreiro & Pardinho - Fujo de Ti.mp3
+894:Sertaneja/Tião Carreiro & Pardinho - Mulher Amada.mp3
+895:Sertaneja/Tião Carreiro & Pardinho - Rio de Pranto.mp3
+896:Sertaneja/Tião Carreiro & Pardinho - A Saudade Continua.mp3
+897:Sertaneja/Tião Carreiro & Pardinho - Até Quinta-Feira.mp3
+898:Sertaneja/Tião Carreiro & Pardinho - O Cigano.mp3
+899:Sertaneja/Tião Carreiro & Pardinho - A Ferro e Fogo.mp3
+900:Sertaneja/Tião Carreiro & Pardinho - Viúva Rica.mp3
+901:Sertaneja/Tião Carreiro & Pardinho - Ato de Bravura.mp3
+902:Sertaneja/Tião Carreiro & Pardinho - Confiança.mp3
+903:Sertaneja/Tião Carreiro & Pardinho - Mentira tem Perna Curta.mp3
+904:Sertaneja/Tião Carreiro & Pardinho - Pé de Guerra.mp3
+905:Sertaneja/Tião Carreiro & Pardinho - Boiadeiro de Palavra.mp3
+906:Sertaneja/Tião Carreiro & Pardinho - Dever de um Médico.mp3
+907:Sertaneja/Tião Carreiro & Pardinho - Filhinho de Papai.mp3
+908:Sertaneja/Tião Carreiro & Pardinho - Caminho do céu.mp3
+909:Sertaneja/Tião Carreiro & Pardinho - O Preço da Glória.mp3
+910:Sertaneja/Tião Carreiro & Pardinho - Ara po.mp3
+911:Sertaneja/Tião Carreiro & Pardinho - Esta Vida é um Punhal.mp3
+912:Sertaneja/Tião Carreiro & Pardinho - Baiano no Côco.mp3
+913:Sertaneja/Tião Carreiro & Pardinho - Oswaldo Cintra.mp3
+914:Sertaneja/Tião Carreiro & Pardinho - Moreninha Côr de Jambo.mp3
+915:Sertaneja/Tião Carreiro & Pardinho - Novo Amor.mp3
+916:Sertaneja/Tião Carreiro & Pardinho - Ditado Sertanejo.mp3
+917:Sertaneja/Tião Carreiro & Pardinho - Pagode.mp3
+918:Sertaneja/Tião Carreiro & Pardinho - Jogador de Baralho.mp3
+919:Sertaneja/Tião Carreiro & Pardinho - Mariquinha.mp3
+920:Sertaneja/Tião Carreiro & Pardinho - Fundanga.mp3
+921:Sertaneja/Tião Carreiro & Pardinho - Começo do Fim.mp3
+922:Sertaneja/Tião Carreiro & Pardinho - Velho Marrudo.mp3
+923:Sertaneja/Tião Carreiro & Pardinho - Lá Onde Eu Moro.mp3
+924:Sertaneja/Tião Carreiro & Pardinho - Homem Sem Rumo.mp3
+925:Sertaneja/Tião Carreiro & Pardinho - Minha Mágoa.mp3
+926:Sertaneja/Tião Carreiro & Pardinho - João Bobo.mp3
+927:Sertaneja/Tião Carreiro & Pardinho - O Gavião e a Andorinha.mp3
+928:Sertaneja/Tião Carreiro & Pardinho - A Casa.mp3
+929:Sertaneja/Tião Carreiro & Pardinho - Nosso Romance.mp3
+930:Sertaneja/Tião Carreiro & Pardinho - A Força do Perdão.mp3
+931:Sertaneja/Tião Carreiro & Pardinho - A Beleza do Ponteio.mp3
+932:Sertaneja/Tião Carreiro & Pardinho - Quatro Rodas.mp3
+933:Sertaneja/Tião Carreiro & Pardinho - Feliz Casamento.mp3
+934:Sertaneja/Tião Carreiro & Pardinho - Companheiro do Ferreirinha.mp3
+935:Sertaneja/Tião Carreiro & Pardinho - Passagens do Sertão.mp3
+936:Sertaneja/Tião Carreiro & Pardinho - Canoeiro do Mar.mp3
+937:Sertaneja/Tião Carreiro & Pardinho - Em Tempo de Avanço.mp3
+938:Sertaneja/Tião Carreiro & Pardinho - A Vida de Um Policial.mp3
+939:Sertaneja/Tião Carreiro & Pardinho - O Justiceiro.mp3
+940:Sertaneja/Tião Carreiro & Pardinho - Minha Esposa Vale Ouro.mp3
+941:Sertaneja/Tião Carreiro & Pardinho - A Viola e o Violeiro.mp3
+942:Sertaneja/Tião Carreiro & Pardinho - Ultima Viagem.mp3
+943:Sertaneja/Tião Carreiro & Pardinho - Rio Preto de Luto.mp3
+944:Sertaneja/Tião Carreiro & Pardinho - Boi Sete Ouro.mp3
+945:Sertaneja/Tião Carreiro & Pardinho - Preto Inocente.mp3
+946:Sertaneja/Tião Carreiro & Pardinho - Boi Cigano.mp3
+947:Sertaneja/Tião Carreiro & Pardinho - Exemplo de humildade.mp3
+948:Sertaneja/Tião Carreiro & Pardinho - Pousada de boiadeiro.mp3
+949:Sertaneja/Tião Carreiro & Pardinho - Viola vermelha.mp3
+950:Sertaneja/Tião Carreiro & Pardinho - Herói sem medalha.mp3
+951:Sertaneja/Tião Carreiro & Pardinho - O milagre da vela.mp3
+952:Sertaneja/Tião Carreiro & Pardinho - Arreio de prata.mp3
+953:Sertaneja/Tião Carreiro & Pardinho - Fazenda Caioçara.mp3
+954:Sertaneja/Tião Carreiro & Pardinho - Dever do policial.mp3
+955:Sertaneja/Tião Carreiro & Pardinho - Saudosa vida de peão.mp3
+956:Sertaneja/Tião Carreiro & Pardinho - Mineiro do pé quente.mp3
+957:Sertaneja/Tião Carreiro & Pardinho - Boi veludo.mp3
+958:Sertaneja/Tião Carreiro & Pardinho - Rei do Pagode.mp3
+959:Sertaneja/Tonico & Tinoco - Tristeza do Jeca.mp3
+960:Sertaneja/Tonico e Tinoco - Chitãozinho e Xororó.mp3
+961:Sertaneja/Tião Carreiro e Pardinho - A vaca já foi p'ro brejo.mp3
+962:Sertaneja/Tião Carreiro e Pardinho - A mão do tempo.mp3
+963:Sertaneja/Tião Carreiro e Pardinho - Preto velho.mp3
+964:Sertaneja/Tião Carreiro e Pardinho - Aquarela Sertaneja.mp3
+965:Sertaneja/Tião Carreiro e Pardinho - Cavalo Enxuto.mp3
+966:Sertaneja/Tião Carreiro & Pardinho - Caçador.mp3
+967:Sertaneja/Milionário e José Rico - Sonho de um caminhoneiro.mp3
+968:Sertaneja/Flavio José - Filho do Dono.mp3
+969:Sertaneja/José Mendes - As Coisas do Meu Rincão.mp3
+970:Sertaneja/José Mendes - Churrasco.mp3
+971:Sertaneja/José Mendes - Rodeio de Vacaria.mp3
+972:Sertaneja/Milionário e José Rico - A Carta.mp3
+973:Sertaneja/Milionário e José Rico - Anjo loiro.mp3
+974:Sertaneja/Milionário e José Rico - Cabecinha no ombro.mp3
+975:Sertaneja/Milionário e José Rico - Decida.mp3
+976:Sertaneja/Milionário e José Rico - Majestade a Mulher.mp3
+977:Sertaneja/Milionário e José Rico - O último julgamento.mp3
+978:Sertaneja/Milionário e José Rico - Quem disse que esqueci.mp3
+979:Sertaneja/Milionário e José Rico - Vontade Dividida.mp3
+980:Sertaneja/Milionário e José Rico - Boneca Cobiçada.mp3
+981:Sertaneja/Milionário e José Rico - Caminheiro.mp3
+982:Sertaneja/Milionário e José Rico - Se Eu não Puder te Esquecer.mp3
+983:Sertaneja/Trio Parada Dura - Faz isso não paixão.mp3
+984:Sertaneja/Milionário e José Rico - Duas camisas.mp3
+985:Sertaneja/Milionário e José Rico - Estrada Da Vida.mp3
+986:Sertaneja/Grupo Minuano - O Casamento da Doralícia.mp3
+987:Sertaneja/Os Serranos - É Disso Que o Velho Gosta.mp3
+988:Sertaneja/Moreno e Moreninho - João Boiadeiro.mp3
+989:Sertaneja/Daniel - Fazenda São Francisco.mp3
+990:Sertaneja/Tião Carreiro e Pardinho - Rancho dos Ipês.mp3
+991:Sertaneja/Tião Carreiro e Pardinho - Rancho do vale.mp3
+992:Sertaneja/Tião Carreiro e Pardinho - Amargurado.mp3
+993:Sertaneja/Tonico e Tinoco - Chico Mineiro.mp3
+994:Sertaneja/Milionário e José Rico - Sessenta dias apaixonado.mp3
+995:Sertaneja/Tião Carreiro & Pardinho - A Fazenda.mp3
+996:Sertaneja/Di Paullo e Paulino - Ponto Final.mp3
+997:Sertaneja/Luis Gonzaga - Asa Branca.mp3
+998:Sertaneja/Luiz Gonzaga - Xote dos cabeludos.mp3
+999:Sertaneja/Teixeirinha - Cobra Sucuri.mp3
+1000:Sertaneja/Trio Parada Dura - Astro Rei.mp3
+1001:Sertaneja/Trio Parada Dura - Barra Pesada.mp3
+1002:Sertaneja/Trio Parada Dura - Fuscão Preto.mp3
+1003:Sertaneja/Trio Parada Dura - Luz da Minha Vida.mp3
+1004:Sertaneja/Trio Parada Dura - Passa Lá.mp3
+1005:Sertaneja/Tião Carreiro e Pardinho - Empreitada perigosa.mp3
+1006:Sertaneja/Chitãozinho Xororó - Fio de cabelo.mp3
+1007:Sertaneja/Victor & Léo - Deus e eu no sertão.mp3
+1008:Sertaneja/José Mendes - Roubei a Fazendeira.mp3
+1009:Sertaneja/Teixerinha - Gaúcho de Passo Fundo.mp3
+1010:Sertaneja/Iridio e Irineu - Bica D´Agua.mp3
+1011:Sertaneja/Trio Parada Dura - Castelo de Amor.mp3
+1012:Sertaneja/Trio Parada Dura - O Doutor E A Empregada.mp3
+1013:Sertaneja/Orquestra da Terra - Rei do gado.mp3
+1014:Sertaneja/Tião Carreiro e Pardinho - Rei do gado.mp3
+1015:Sertaneja/Abel & Caim - Rio de Lágrimas.mp3
+1016:Sertaneja/Eli Silva & Zé Goiano - Estranho no ninho.mp3
+1017:Sertaneja/Barreirito - Andorinha Mensageira.mp3
+1018:Sertaneja/Sérgio Reis - Panela Velha.mp3
+1019:Sertaneja/Sergio Reis - Filho Adotivo.mp3
+1020:Sertaneja/Tião Carreiro & Pardinho - Tristeza do jeca.mp3
+1021:Sertaneja/Tião Carreiro E Pardinho - Uma Coisa Puxa Outra.mp3
+1022:Sertaneja/Leandro & Leonardo - Rumo a Goiania.mp3
+1023:Sertaneja/Trio Parada Dura - Último Adeus.mp3
+1024:Sertaneja/Trio Parada Dura - Parede e Meia.mp3
+1025:Sertaneja/Tião Carreiro e Pardinho - Chora viola.mp3
+1026:Sertaneja/Tião Carreiro e Pardinho - A coisa tá feia.mp3
+1027:Sertaneja/Tião Carreiro & Pardinho - Encantos da natureza.mp3
+1028:Sertanejo universitário/02 Gusttavo lima só tem eu.mp3
+1029:Sertanejo universitário/03 Faixa 3_4.wma
+1030:Sertanejo universitário/09 jo+úo carreiro e capataz - +ë pra caba.mp3
+1031:Sertanejo universitário/17-eu te quero sim (part. maria cecilia & rodolfo.mp3
+1032:Sertanejo universitário/a chapa vai esquentar.mp3
+1033:Sertanejo universitário/Ai que dó   Thaeme  Thiago   Clip Oficial.mp3
+1034:Sertanejo universitário/amo noite e dia   - jorge e mateus.mp3
+1035:Sertanejo universitário/Batimentos - Henrique & Juliano - EstiloDUB.mp3
+1036:Sertanejo universitário/Bruninho  Davi   Onde Nasce o Sol (part Jorge  Mateus).mp3
+1037:Sertanejo universitário/Bruninho  Davi   Se namorar fosse bom [ VÍDEO OFICIAL ].mp3
+1038:Sertanejo universitário/Bruninho  Davi   Smirnofy   Hit verão 2013 (LETRA).mp3
+1039:Sertanejo universitário/Brunna e Mateus   Tanto Faz [ao vivo].mp3
+1040:Sertanejo universitário/Bruno & Barreto - Eu quero e rolo.mp3
+1041:Sertanejo universitário/Bruno e Barretto - Farra, Pinga e Foguete.mp3
+1042:Sertanejo universitário/Ce Topa   Luan Santana (DVD O Nosso Tempo é Hoje) - Cópia.mp3
+1043:Sertanejo universitário/Colo Colo   João Bosco e Vinicius part Aviões do Forró   DVD A FESTA - Cópia.mp3
+1044:Sertanejo universitário/Cristiano Araújo   Caso Indefinido (Oficial) - Cópia.mp3
+1045:Sertanejo universitário/Cristiano Araújo   Mente pra mim (  Musica 2012 ) - Cópia.mp3
+1046:Sertanejo universitário/Daniel   Poeira Da EstradaDia De VisitaFazenda São Francisco PartZé Camillo(DVD Raizes) DBK.mp3
+1047:Sertanejo universitário/Daniel  Almir Sater   Ando devagar.mp3
+1048:Sertanejo universitário/DANIEL MEU REINO ENCANTADO CD COMPLETO VOL 3.mp3
+1049:Sertanejo universitário/Gusttavo Lima - Espetinho (O Embaixador The Legacy)(MP3_160K)_1.mp3
+1050:Sertanejo universitário/Mayck e Lyan   Os Mió.mp3
+1051:Sertanejo universitário/Mayck e Lyan   Patricinha (Lançamento top 2012).mp3
+1052:Sertanejo universitário/Mayck e Lyan   Pout pourri Tião Carreiro.mp3
+1053:Sertanejo universitário/Mayck e Lyan   Quem Dá Carinho é Pai e Mãe.mp3
+1054:Sertanejo universitário/Zé Neto e Cristiano - ESQUECE O MUNDO LÁ FORA - _E(MP3_160K).mp3
+1055:Sertanejo universitário/04 Faixa 4_3.wma
+1056:Sertanejo universitário/05 Faixa 5_3.wma
+1057:Sertanejo universitário/09 Faixa 9_001.wma
+1058:Sertanejo universitário/02 Faixa 2_3.wma
+1059:Sertanejo universitário/02 Faixa 2A.wma
+1060:Sertanejo universitário/03 Faixa 3D.wma
+1061:Sertanejo universitário/04 Faixa.wma
+1062:Sertanejo universitário/05 Faixa.wma
+1063:Sertanejo universitário/08 Faixa 8_001.wma
+1064:Sertanejo universitário/09 Faixa 9.wma
+1065:Sertanejo universitário/12 Faixa 12.wma
+1066:Sertanejo universitário/A loira do carro branco   Luan Santana.mp3
+1067:Sertanejo universitário/10 Faixa 10_001.wma
+1068:Sertanejo universitário/Gabriel Diniz - Jenifer (Clipe Oficial).mp3
+1069:Sertanejo universitário/Zé Neto e Cristiano - LARGADO ÀS TRAÇAS - Zé Neto(MP3_160K).mp3
+1070:Sertanejo universitário/Zé Neto e Cristiano - MULHER MARAVILHA - _EsqueceO(MP3_160K).mp3
+1071:Sertanejo universitário/Zé Neto e Cristiano - NOTIFICAÇÃO PREFERIDA - _Esq(MP3_160K).mp3
+1072:Sertanejo universitário/Zé Neto e Cristiano - ONTEM ERA EU - _EsqueceOMund(MP3_160K).mp3
+1073:Sertanejo universitário/Zé Neto e Cristiano - AMOR À PRIMEIRA ESQUINA - _E(MP3_160K).mp3
+1074:Sertanejo universitário/Bruno e Leandro   Tirando onda de fusquinha (Clipe Oficial).mp3
+1075:Sertanejo universitário/Bruninho  Davi   Cê é Loco [ VIDEO OFICIAL ].mp3
+1076:Sertanejo universitário/20 michel teló - humilde residência.mp3
+1077:Sertanejo universitário/Henrique e Juliano - QUEM PEGOU_ PEGOU - DVD Menos(MP3_160K).mp3
+1078:Sertanejo universitário/A Bela e o Fera   Munhoz e Mariano   Clip oficial.mp3
+1079:Sertanejo universitário/Henrique e Juliano - 5 KM - DVD O Céu Explica Tudo(MP3_160K).mp3
+1080:Sertanejo universitário/Henrique e Juliano - AQUELA PESSOA - DVD O Céu Exp(MP3_160K).mp3
+1081:Sertanejo universitário/Henrique e Juliano - MEU AMOR - DVD O Céu Explica(MP3_160K).mp3
+1082:Sertanejo universitário/Henrique e Juliano - NA BOA - DVD O Céu Explica Tu(MP3_160K).mp3
+1083:Sertanejo universitário/Henrique e Juliano - NA HORA DA RAIVA - DVD Novas(MP3_160K).mp3
+1084:Sertanejo universitário/Henrique e Juliano - Pra Que Juízo (DVD Ao vivo em(MP3_160K).mp3
+1085:Sertanejo universitário/Henrique e Juliano - VIDINHA DE BALADA - DVD O Céu(MP3_128K).mp3
+1086:Sertanejo universitário/CHAPEUZINHO VERMELHO   DANIEL DURAN (LANÇAMENTO 2014)[1] - Cópia.mp3
+1087:Sertanejo universitário/01 Faixa 1.wma
+1088:Sertanejo universitário/04 Faixa 4.wma
+1089:Sertanejo universitário/05 Faixa 5.wma
+1090:Sertanejo universitário/06 Faixa.wma
+1091:Sertanejo universitário/07 Faixa 7_001.wma
+1092:Sertanejo universitário/07 Faixa 7_3.wma
+1093:Sertanejo universitário/08 Faixa 8_4.wma
+1094:Sertanejo universitário/11 Faixa 11_001.wma
+1095:Sertanejo universitário/11 Faixa 11_3.wma
+1096:Sertanejo universitário/12 Faixa 12_4.wma
+1097:Sertanejo universitário/As mina pira   Gusttavo Lima    Villa Mix Brasília (Oficial).mp3
+1098:Toque/Ahrix - Nova [NCS].mp3
+1099:Toque/Alan Walker - Fade [NCS].mp3
+1100:Toque/Brady Hoffman - Opus.mp3
+1101:Toque/DJ Snake - Middle ft. Bipolar Sunshine.mp3
+1102:Toque/Dylan Sitts - JuiceBox.mp3
+1103:Toque/Herb Alpert - Spanish Flea.mp3
+1104:Toque/Hey Beautiful_00.amr
+1105:Toque/Hino do Império Brasileiro.mp3
+1106:Toque/Kevin MacLeod - Monkeys Spinning Monkeys.mp3
+1107:Toque/Kevin MacLeod - Sneaky Snitch.mp3
+1108:Toque/La Caution - Thé à la menthe(CSGO bhop song).mp3
+1109:Toque/Microsoft - Windows XP Installation Music.mp3
+1110:Toque/Mission Impossible - Film_001.mid
+1111:Toque/OMFG - HELLO (NCS) .mp3
+1112:Toque/Silent Partner - Spring In My Step.mp3
+1113:Toque/BCS - Nokia x Better Call Saul.m4a
+1114:Toque/pixies - where is my mind piano.mp3
+1115:Toque/ODESZA - A Moment Apart.mp3
+1116:Toque/Phaeleh - Afterglow (feat. Soundmouse).mp3
+1117:Toque/01 Faixa 1.wma
+1118:Toque/02 Faixa 2.wma
+1119:Toque/03 Faixa 3.wma
+1120:Toque/04 Faixa 4.wma
+1121:Toque/05 Faixa 5.wma
+1122:Toque/06 Faixa 6.wma
+1123:Toque/07 Faixa 7.wma
+1124:Toque/08 Faixa 8.wma
+1125:Toque/09 Faixa 9.wma
+1126:Toque/10 Faixa 10.wma
+1127:Toque/11 Faixa 11.wma
+1128:Toque/12 Faixa 12.wma
+1129:Toque/13 Faixa 13.wma
+1130:Toque/14 Faixa 14.wma
+1131:Toque/15 Faixa 15.wma
+1132:Toque/16 Faixa 16.wma
+1133:Toque/01 Para Que Miras.wma
+1134:Toque/02 Torito y Carnaval de Wataquita.wma
+1135:Toque/03 Pisqa Pacha Watakuna.wma
+1136:Toque/04 Hilda da Linda.wma
+1137:Toque/05 Kusi Malku.wma
+1138:Toque/06 Solis Challay.wma
+1139:Toque/07 Vals del Uncuentro.wma
+1140:Toque/08 Poncho Rosado.wma
+1141:Toque/09 Cusi Chuncho.wma
+1142:Toque/10 Medley- Aquarela Andina-Canaval de Cabanilla-Waychenita-Pollera Verde.wma
+1143:Toque/11 Phallchay.wma
+1144:Toque/12 Umina.wma
+1145:Toque/13 Kh'ellu T'Ika.wma
+1146:Toque/Ulisses Rocha - Rindo da saudade.mp3
+1147:Toque/Piano Fantasia - Song for Denise (Maxi Version).mp3
+1148:Toque/Jean-Claude Borelly - Dolannes-Melodie.mp3
+1149:Toque/Harold Faltermeyer - Axel F.mp3
+1150:Toque/Andrew - DONT CRY FOR ME ARGENTINA.wma
+1151:Toque/02 LOVER HURTS.wma
+1152:Toque/03 My Hert Will Go On.wma
+1153:Toque/04 IT BETHERE.wma
+1154:Toque/05 Have You Ever Really Loved A Woman.wma
+1155:Toque/06 Lady.wma
+1156:Toque/08 Without You.wma
+1157:Toque/09 Only You.wma
+1158:Toque/10 Everthyng I Do It For You.wma
+1159:Toque/11 Sueno Contigo.wma
+1160:Toque/12 Take My Breath Away.wma
+1161:Toque/13 Tango To Evora.wma
+1162:Toque/14 AMANDOTE.wma
+1163:Toque/Snail's House - Hot Milk.mp3
+1164:Toque/Surf Mesa - ily (i love you baby) (feat. Emilee).mp3
+1165:Toque/The Magnetic Sounds - Wigwam.mp3
+1166:Toque/Thao Nguyen Xanh - Sad Romance.mp3
+1167:Toque/Flawed Mangoes - Dramamine.mp3
+1168:Toque/Enya - Boadicea.mp3
+1169:Toque/RUDE - Eternal Youth.mp3
+1170:Toque/Nino Rosso - Il Silenzio.mp3
+1171:Toque/Alan Walker - Spectre [NCS].mp3
+1172:Toque/Mac DeMarco - Chamber of Reflection.mp3
+1173:Toque/Nujabes - aruarian dance.mp3
+1174:Toque/Force of Nature - just forget.mp3
+1175:Toque/Darude - Sandstorm.mp3
+1176:Toque/Shibayan Records - Tiny Little Adiantum.mp3
+1177:Toque/Jason Farnham - Get Outside!.mp3
+1178:Toque/Jingle Punks - Good Starts.mp3
+1179:Toque/Silent Partner - Blue Skies.mp3
+1180:Toque/Silent Partner - Sad Past.mp3
+1181:Toque/Vibe Tracks - About That Oldie.mp3
+1182:Trilha sonora/20th Century Boys - Bob Lennon.mp3
+1183:Trilha sonora/Berserk - Gats.mp3
+1184:Trilha sonora/Berserk - My Brother Dragon Slayer.mp3
+1185:Trilha sonora/Bioshock Infinite - Girls Just Want to Have Fun.mp3
+1186:Trilha sonora/Clint Mansell - Lux Aeterna.mp3
+1187:Trilha sonora/Cyberpunk 2077 - Johnny Silverhand Theme.mp3
+1188:Trilha sonora/Cyberpunk 2077 - Night City.mp3
+1189:Trilha sonora/Death Note - L's Theme.mp3
+1190:Trilha sonora/Death Note - Low of Solipsism.mp3
+1191:Trilha sonora/Devil May Cry 3 - Devils Never Cry.mp3
+1192:Trilha sonora/Devil May Cry 5 - Devil Trigger.mp3
+1193:Trilha sonora/Eminence in the Shadow - In Time of War.mp3
+1194:Trilha sonora/Far Cry 5 - Keep Your Rifle by Your Side (Choir Version).mp3
+1195:Trilha sonora/Fullmetal Alchemist - Lapis Philosophorum.mp3
+1196:Trilha sonora/God of War - God of War.mp3
+1197:Trilha sonora/God of War 2 - The End Begins.mp3
+1198:Trilha sonora/Initial D - Running in The 90s.mp3
+1199:Trilha sonora/Kavinsky - Nightcall.mp3
+1200:Trilha sonora/meganeko - The Cyber Grind.mp3
+1201:Trilha sonora/Metal Gear Rising Revengeance - It Has To Be This Way.mp3
+1202:Trilha sonora/Miami Nights 1984 - Running In The 80's.mp3
+1203:Trilha sonora/Mio Honda - Step! (ステップ！) .mp3
+1204:Trilha sonora/Naruto - Sadness and Sorrow.mp3
+1205:Trilha sonora/One Piece - Nekomamushi .mp3
+1206:Trilha sonora/One Piece - Overtaken.mp3
+1207:Trilha sonora/One Piece - ビンクスの酒 (Binks No Sake).mp3
+1208:Trilha sonora/Persona 4 - It's Going Down Now.mp3
+1209:Trilha sonora/Persona 5 - Last Surprise.mp3
+1210:Trilha sonora/Persona 5 - Life Will Change.mp3
+1211:Trilha sonora/Persona 5 - Take Over.mp3
+1212:Trilha sonora/Puss in boots 2 - Death’s Whistle.mp3
+1213:Trilha sonora/Rick and Morty - Evil Morty Theme Song (Trap Remix).mp3
+1214:Trilha sonora/Ron Wasserman - Go Go Power Rangers.mp3
+1215:Trilha sonora/SawanoHiroyuki - DARK ARIA ＜LV2＞.mp3
+1216:Trilha sonora/Snoop Dogg - Riders On The Storm (feat. The Doors).mp3
+1217:Trilha sonora/Sonic Frontiers - Undefeatable (feat. Kellin Quinn).mp3
+1218:Trilha sonora/Tengen Toppa Gurren Lagann - Libera Me From Hell (Piano cover).mp3
+1219:Trilha sonora/Tengen Toppa Gurren Lagann - Libera Me From Hell.mp3
+1220:Trilha sonora/Teriyaki Boyz - Tokyo Drift.mp3
+1221:Trilha sonora/The Good, The Bad And The Ugly - Main Title.mp3
+1222:Trilha sonora/The Good, The Bad And The Ugly - The Ecstasy Of Gold.mp3
+1223:Trilha sonora/Top Gear - Title.mp3
+1224:Trilha sonora/Top Gear - Track 1 .mp3
+1225:Trilha sonora/X Files - Theme.mp3
+1226:Trilha sonora/Chirin no Suzu - Main theme.mp3
+1227:Trilha sonora/GTA San Andreas - Theme .mp3
+1228:Trilha sonora/Yakuza 0 - Friday Night.mp3
+1229:Trilha sonora/Persona 5 - The Whims of Fate.mp3
+1230:Trilha sonora/Kana Hanazawa - Renai Circulation.mp3
+1231:Trilha sonora/Vangelis - Conquest of paradise.mp3
+1232:Trilha sonora/A Summer Place - Theme (Percy Faith version).mp3
+1233:Trilha sonora/College & Electric Youth - A Real Hero.mp3
+1234:Trilha sonora/Adventure Time - Island Song.mp3
+1235:Trilha sonora/ROUND TABLE featuring Nino - Let Me Be With You.mp3
+1236:Trilha sonora/Majestic Violin feat. Landon Bassier - Aria Math - String Cover.mp3
+1237:Trilha sonora/Ilmari Hakkola - Building Contraptions.mp3
+1238:Trilha sonora/Berserk - Forces.mp3
+1239:Trilha sonora/Little Barrie - Better Call Saul Theme (Extended).mp3
+1240:Trilha sonora/Shoko Nakagawa - Sorairo Days.mp3
+1241:Trilha sonora/Black Lagoon  - El Sol se Recuesta.mp3
+1242:Trilha sonora/Michael Wyckoff - Bone Theme.mp3
+1243:Trilha sonora/Michael Wyckoff - Opera De Ossium (feat. Tim Na & Hadrian McQuaig).mp3
+1244:Trilha sonora/Michael Wyckoff - Who Am I.mp3
+1245:Trilha sonora/Devil May Cry 5 - Bury the Light.mp3
+1246:Trilha sonora/Cage The Elephant - Ain't No Rest For the Wicked.mp3
+1247:Trilha sonora/Cyberpunk 2077 - Chippin’  (Refused).mp3
+1248:Trilha sonora/Clannad - Dango Daikazoku.mp3
+1249:Trilha sonora/Clannad - Shining in the Sky.mp3
+1250:Trilha sonora/The Seatbelts - Tank!.mp3
+1251:Trilha sonora/Cuphead - Don't Deal With The Devil.mp3
+1252:Trilha sonora/Cuphead - Floral Fury.mp3
+1253:Trilha sonora/Cuphead - Die House.mp3
+1254:Trilha sonora/Cyberpunk 2077 - Who's Ready for Tomorrow.mp3
+1255:Trilha sonora/Cyberpunk 2077 - Been Good To Know Ya.mp3
+1256:Trilha sonora/Rezodrone - KILL THE MESSENGER.mp3
+1257:Trilha sonora/Rezodrone - REAKTION.mp3
+1258:Trilha sonora/Cyberpunk 2077 - I REALLY WANT TO STAY AT YOUR HOUSE.mp3
+1259:Trilha sonora/Rezodrone - Resist and Disorder.mp3
+1260:Trilha sonora/Dawid Podsiadło - Let You Down.mp3
+1261:Trilha sonora/Yoann Laulan - Clocktower.mp3
+1262:Trilha sonora/Dead Cells - Prisoner's Awakening.mp3
+1263:Trilha sonora/Doom - Harbinger.mp3
+1264:Trilha sonora/Fall Out Boy - Immortals.mp3
+1265:Trilha sonora/GRIS OST - Gris, Pt. 2.mp3
+1266:Trilha sonora/Half Life 2 - Triage At Dawn.mp3
+1267:Trilha sonora/Half Life Alyx - Thirty Seven After Six.mp3
+1268:Trilha sonora/Imagine Dragons - Warriors.mp3
+1269:Trilha sonora/Initial D  - Deja Vu.mp3
+1270:Trilha sonora/Initial D - Gas Gas Gas.mp3
+1271:Trilha sonora/Katana 0  - Hit the Floor.mp3
+1272:Trilha sonora/Prey - “Everything Is Going to Be Ok”.mp3
+1273:Trilha sonora/Bleach - Clavar La Espada.mp3
+1274:Trilha sonora/Casey Edwards & Victor Borba - Fire Inside.mp3
+1275:Trilha sonora/Casey Edwards & Victor Borba - Vacant Surrender.mp3
+1276:Trilha sonora/Doki Doki Literature Club - Your Reality.mp3
+1277:Trilha sonora/Mick Gordon - Rip & Tear.mp3
+1278:Trilha sonora/Doom - At Doom's Gate.mp3
+1279:Trilha sonora/Mick Gordon - BFG Division 2020.mp3
+1280:Trilha sonora/Mick Gordon - The Super Gore Nest.mp3
+1281:Trilha sonora/Mick Gordon - The Only Thing They Fear Is You.mp3
+1282:Trilha sonora/Mick Gordon - Meathook.mp3
+1283:Trilha sonora/Mick Gordon - Final Sin - Sandy City.mp3
+1284:Trilha sonora/Mick Gordon - At Eternal's Gate.mp3
+1285:Trilha sonora/Mick Gordon - Main Theme.mp3
+1286:Trilha sonora/Elden Ring - Theme.mp3
+1287:Trilha sonora/Don Toliver feat. Doja Cat - Lose My Mind.mp3
+1288:Trilha sonora/Chris Stapleton - Bad as I Used to Be.mp3
+1289:Trilha sonora/FAIRY TAIL - メインテーマ (Main Theme).mp3
+1290:Trilha sonora/Nobuo Uematsu - One-Winged Angel .mp3
+1291:Trilha sonora/The Living Tombstone - Five Nights at Freddy's.mp3
+1292:Trilha sonora/Evan Call, Evan Call, Evan Call - Time Flows Ever Onward (Short Ver.).mp3
+1293:Trilha sonora/Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai - Fukashigi no Carte.mp3
+1294:Trilha sonora/Warsaw Philharmonic Orchestra & Choir - Trisha's Lullaby.mp3
+1295:Trilha sonora/Kelly Bailey - Nuclear Mission Jam.mp3
+1296:Trilha sonora/Half Life 2 - CP Violation.mp3
+1297:Trilha sonora/Valve - Something Secret Steers Us .mp3
+1298:Trilha sonora/Valve - Vortal Combat.mp3
+1299:Trilha sonora/Kelly Bailey - Sector Sweep.mp3
+1300:Trilha sonora/Mike Morasky - Ending Triumph (Extended Remix).mp3
+1301:Trilha sonora/Halo  - Halo Theme Mjolnir Mix.mp3
+1302:Trilha sonora/Martin O'Donnel - One Final Effort.mp3
+1303:Trilha sonora/Halo  - Halo.mp3
+1304:Trilha sonora/Halo  - Overture.mp3
+1305:Trilha sonora/Helldivers 2 - A Cup Of Liber-Tea.mp3
+1306:Trilha sonora/Christopher Larkin - Hornet.mp3
+1307:Trilha sonora/Christopher Larkin - Mantis Lords.mp3
+1308:Trilha sonora/Christopher Larkin - City of Tears.mp3
+1309:Trilha sonora/Christopher Larkin - Sealed Vessel.mp3
+1310:Trilha sonora/Christopher Larkin - The Grimm Troupe.mp3
+1311:Trilha sonora/Christopher Larkin - Daughter of Hallownest.mp3
+1312:Trilha sonora/Christopher Larkin - Sisters of Battle.mp3
+1313:Trilha sonora/Christopher Larkin - Bilewater.mp3
+1314:Trilha sonora/Christopher Larkin - Choral Chambers.mp3
+1315:Trilha sonora/Christopher Larkin - Cogwork Dancers.mp3
+1316:Trilha sonora/Christopher Larkin - Cogwork Core.mp3
+1317:Trilha sonora/Christopher Larkin - Skarrsinger Karmelita.mp3
+1318:Trilha sonora/Hans Zimmer - No Time For Caution.mp3
+1319:Trilha sonora/JoJo's Bizarre Adventure - Vento d'oro.mp3
+1320:Trilha sonora/Yann Tiersen - Comptine d'un autre été, l'après-midi.mp3
+1321:Trilha sonora/Michael Giacchino  - Medal Of Honor.mp3
+1322:Trilha sonora/Metal Gear Rising Revengeance - Rules of Nature.mp3
+1323:Trilha sonora/Metal Gear Rising Revengeance - The Only Thing I Know For Real.mp3
+1324:Trilha sonora/Metal Gear Rising Revengeance - The Stains of Time.mp3
+1325:Trilha sonora/Metal Gear Rising Revengeance -  A Stranger I Remain.mp3
+1326:Trilha sonora/Graeme Cornies, Jamie Christopherson - I'm My Own Master Now.mp3
+1327:Trilha sonora/Metal Gear Rising Revengeance - Collective Consciousness.mp3
+1328:Trilha sonora/C418 - Subwoofer Lullaby.mp3
+1329:Trilha sonora/C418 - Moog City.mp3
+1330:Trilha sonora/C418 - Minecraft.mp3
+1331:Trilha sonora/C418 - Wet Hands.mp3
+1332:Trilha sonora/C418  - Sweden.mp3
+1333:Trilha sonora/My Friend Pedro - Battlejuice.mp3
+1334:Trilha sonora/Neon Genesis Evangelion - A Cruel Angel's Thesis .mp3
+1335:Trilha sonora/SQUARE ENIX MUSIC - Shadowlord.mp3
+1336:Trilha sonora/Nier Automata - 遺サレタ場所⧸斜光 .mp3
+1337:Trilha sonora/NieR Automata - Amusement Park.mp3
+1338:Trilha sonora/NieR Automata - Beatiful Song.mp3
+1339:Trilha sonora/J'Nique Nicole - The Weight of the World.mp3
+1340:Trilha sonora/MONOGATARI Series - Platinum Disco.mp3
+1341:Trilha sonora/Oppenheimer - Can You Hear The Music.mp3
+1342:Trilha sonora/Andrew Prahlow - Timber Hearth.mp3
+1343:Trilha sonora/Andrew Prahlow - Outer Wilds.mp3
+1344:Trilha sonora/Andrew Prahlow - Travelers.mp3
+1345:Trilha sonora/Andrew Prahlow - End Times.mp3
+1346:Trilha sonora/Persona 5 - Beneath the Mask.mp3
+1347:Trilha sonora/Persona 5 - Aria Of The Soul .mp3
+1348:Trilha sonora/Persona 5 - Rivers In the Desert.mp3
+1349:Trilha sonora/Persona 5 - Colors Flying High.mp3
+1350:Trilha sonora/Undertale - Megalovania (Acoustic cover).mp3
+1351:Trilha sonora/Undertale - Sans (Acoustic cover).mp3
+1352:Trilha sonora/Undertale - Asgore (Acoustic Cover).mp3
+1353:Trilha sonora/Pokémon HeartGold & SoulSilver - National Park.mp3
+1354:Trilha sonora/Portal 2 - Turret Wife Serenade.mp3
+1355:Trilha sonora/Portal 2 - Reconstructing More Science.mp3
+1356:Trilha sonora/Portal 2 - Machiavellian Bach.mp3
+1357:Trilha sonora/Portal 2 - The Part Where He Kills You.mp3
+1358:Trilha sonora/Portal 2 - Caroline Deleted.mp3
+1359:Trilha sonora/Portal 2 - Cara Mia Addio.mp3
+1360:Trilha sonora/Portal 2 - Want You Gone.mp3
+1361:Trilha sonora/Woody Jackson - (Theme From) Red Dead Redemption.mp3
+1362:Trilha sonora/José González - Far Away.mp3
+1363:Trilha sonora/Jamie Lidell - Compass (Red Dead on Arrival version).mp3
+1364:Trilha sonora/Ashtar Command - Deadman’s Gun.mp3
+1365:Trilha sonora/Mili - Rightfully.mp3
+1366:Trilha sonora/Amit Trivedi - Dosti.mp3
+1367:Trilha sonora/Daniel Olsén - Sayonara Wild Heart.mp3
+1368:Trilha sonora/Daniel Olsén - Begin Again.mp3
+1369:Trilha sonora/Daniel Olsén - Mine.mp3
+1370:Trilha sonora/Daniel Olsén - Inside.mp3
+1371:Trilha sonora/Daniel Olsén - Wild Hearts Never Die.mp3
+1372:Trilha sonora/Daniel Olsén - Clair de lune.mp3
+1373:Trilha sonora/Anna Hon - We Shall Sail Together .mp3
+1374:Trilha sonora/Sea of Thieves - Bosun Bill.mp3
+1375:Trilha sonora/Teenage Mutant Ninja Turtles  - Teenage Mutant Ninja Turtles Theme Song .mp3
+1376:Trilha sonora/Knight Rider - Theme.mp3
+1377:Trilha sonora/Re-Logic - Overworld Day.mp3
+1378:Trilha sonora/Re-Logic - The Journey Begins.mp3
+1379:Trilha sonora/Skyrim - Skyrim Theme.mp3
+1380:Trilha sonora/GTA IV - Soviet Connection.mp3
+1381:Trilha sonora/The Alchemist & Oh No - We Were Set Up.mp3
+1382:Trilha sonora/Woody Jackson - American Venom.mp3
+1383:Trilha sonora/David Ferguson - The Housebuilding Song.mp3
+1384:Trilha sonora/Valve - Guard Down.mp3
+1385:Trilha sonora/Portal - Still Alive.mp3
+1386:Trilha sonora/Alex Giudici - Portal 2 - Reconstructing More Science (Alex Giudi.mp3
+1387:Trilha sonora/Sea of Thieves - The Summoning.mp3
+1388:Trilha sonora/The Tale of the Princess Kaguya - The Procession of Celestial Beings.mp3
+1389:Trilha sonora/ Kan. R. Gao, Laura Shigihara - For River (Johnny's Version).mp3
+1390:Trilha sonora/ROUND TABLE featuring Nino - Groovin' Magic.mp3
+1391:Trilha sonora/Lifeformed - Memories of Memories.mp3
+1392:Trilha sonora/Yuru Camp ost - Solo Camper.mp3
+1393:Trilha sonora/Konobakuen - JUMP IN.mp3
+1394:Trilha sonora/KONOSUBA 3 - あの日のままのぼくら (KONOSUBA 3 Ending).mp3
+1395:Trilha sonora/Evan Call - Time Flows Ever Onward.mp3
+1396:Trilha sonora/Evan Call feat. Alina Lesnik - Zoltraak.mp3
+1397:Trilha sonora/Heaven Pierce Her - ORDER.mp3
+1398:Trilha sonora/Heaven Pierce Her - Dune Eternal.mp3
+1399:Trilha sonora/Heaven Pierce Her - Altars of Apostasy.mp3
+1400:Trilha sonora/Heaven Pierce Her - The Fire Is Gone.mp3
+1401:Trilha sonora/Heaven Pierce Her - Into the Fire.mp3
+1402:Trilha sonora/Heaven Pierce Her - Clastle Vein.mp3
+1403:Trilha sonora/Heaven Pierce Her - Versus.mp3
+1404:Trilha sonora/KEYGEN CHURCH - Tenebre Rosso Sangue (ULTRAKILL P-2 Theme #1).mp3
+1405:Trilha sonora/Heaven Pierce Her - War Without Reason.mp3
+1406:Trilha sonora/Undertale - Ruins.mp3
+1407:Trilha sonora/Undertale - Death by Glamour.mp3
+1408:Trilha sonora/Undertale - Undertale.mp3
+1409:Trilha sonora/Yakuza Ost - Baka Mitai.mp3
+1410:Trilha sonora/The Legend of Zelda - Kakariko Village.mp3
+1411:Trilha sonora/Mrs. GREEN APPLE  - インフェルノ（Inferno).mp3
+1412:Trilha sonora/お願いマッスル.mp3
+1413:Trilha sonora/Joe Hisaishi - Merry-Go-Round of Life.mp3
+1414:Trilha sonora/Nichijou  - Koigokoro wa Dangan mo Yawarakakusuru.mp3
+1415:Trilha sonora/平沢進 - Sign-2.mp3
+1416:Trilha sonora/糸奇はな - 環-cycle-.mp3
+1417:Trilha sonora/Fullmetal Alchemist - Main Theme.mp3
+1418:Trilha sonora/Puella Magi Madoka Magica - Sis Puella Magica!.mp3
+playlist_end

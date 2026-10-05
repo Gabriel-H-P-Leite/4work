@@ -33,7 +33,8 @@ ShellRoot {
 	LazyLoader { active: true; component: Notifications {} }
 	LazyLoader { active: true; component: Wallpaper {} }
 	LazyLoader { id: launcherLoader; active: false; component: Launcher {} }
+	function toggleLauncher() { launcherLoader.active = !launcherLoader.active }
 	LazyLoader { active: true; component: VolumeOsd {} }
 	LazyLoader { active: true; component: MusicOsd {} }
-	function toggleLauncher() { launcherLoader.active = !launcherLoader.active }
+	LazyLoader { active: true; component: Splash {} }
 }
