@@ -16,7 +16,7 @@ hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"
 ---------
 
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("quickshell ipc call toggleLauncher onTriggered"), { release = true })
---restart quickshell
+--toggle quickshell
 hl.bind(vars.mainMod .. " + T", hl.dsp.exec_cmd("pkill quickshell || quickshell"), { release = true })
 --clipboard
 hl.bind(vars.mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | qsmenu 'Área de transferência' | cliphist decode | wl-copy"))

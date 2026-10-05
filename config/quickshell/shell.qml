@@ -41,17 +41,30 @@ ShellRoot {
 	property string dmenuFifo: ""
 	readonly property bool dmenuMode: dmenuFifo !== ""
 
-	FileView { id: dmenuFile; blockLoading: true }
+	// Lê o arquivo de itens antes de abrir. É assíncrono: o FileView devolvia o
+	// conteúdo do arquivo anterior quando o caminho mudava, e o menu abria com a lista velha.
+	Process {
+		id: dmenuReader
+		property string fifo: ""
+		property string prompt: ""
+		stdout: StdioCollector {
+			onStreamFinished: {
+				root.dmenuItems = text.split("\n").filter(l => l !== "")
+				root.dmenuPrompt = dmenuReader.prompt
+				root.dmenuFifo = dmenuReader.fifo
+				launcherLoader.active = true
+			}
+		}
+	}
 
 	IpcHandler {
 		target: "launcher"
 		function dmenu(itemsFile: string, fifo: string, prompt: string): string {
 			root.dmenuFinish("")   // cancela um dmenu anterior que ainda estiver esperando
-			dmenuFile.path = itemsFile
-			root.dmenuItems = dmenuFile.text().split("\n").filter(l => l !== "")
-			root.dmenuPrompt = prompt
-			root.dmenuFifo = fifo
-			launcherLoader.active = true
+			dmenuReader.fifo = fifo
+			dmenuReader.prompt = prompt
+			dmenuReader.command = ["cat", itemsFile]
+			dmenuReader.running = true
 			return ""
 		}
 	}

@@ -82,8 +82,8 @@ case "${1:-}" in
 		hyprctl dispatch "hl.dsp.window.pin({ window = \"address:$id\" })" > /dev/null
 		notify-send -e -t 2000 "Janela fixada"
 	;;
-	*)
-		menus $(printf "1: atualizar o sistema\n2: baixar áudio/vídeo\n3: ir pra uma janela\n4: fixar uma janela" |  qsmenu "Opções" | cut -d ":" -f 1) 
-		exit 1
+		*)
+		escolha=$(printf "1: atualizar o sistema\n2: baixar áudio/vídeo\n3: ir pra uma janela\n4: fixar uma janela\n" | qsmenu "Opções" | cut -d ":" -f 1)
+		[ -n "$escolha" ] && exec menus "$escolha"
 	;;
 esac

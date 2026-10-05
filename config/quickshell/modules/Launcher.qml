@@ -37,7 +37,15 @@ PanelWindow {
 	}
 
 	// fechou sem escolher (Esc, atalho de novo...): avisa o script pra ele não ficar esperando
-	Component.onDestruction: root.dmenuFinish("")
+	// fifo do dmenu que ESTE launcher está mostrando. Se o launcher antigo for destruído
+	// depois que o próximo dmenu já abriu, ele não pode cancelar o novo.
+	property string myFifo: ""
+	Component.onCompleted: myFifo = root.dmenuFifo   // valor fixo, não binding
+	Connections {
+		target: root
+		function onDmenuFifoChanged() { if (root.dmenuFifo !== "") launcher.myFifo = root.dmenuFifo }
+	}
+	Component.onDestruction: if (launcher.myFifo !== "" && root.dmenuFifo === launcher.myFifo) root.dmenuFinish("")
 
 	// se um dmenu chegar com o launcher já aberto, limpa a busca
 	Connections {
