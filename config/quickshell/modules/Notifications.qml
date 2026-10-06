@@ -8,11 +8,11 @@ import Quickshell.Services.Notifications
 Scope {
 	id: notifs
 	property color textColor: "white"
-	property string fontFamily: root.iconFont
-	property int fontSize: 18
+	property string iconFont: root.iconFont
+	property int iconSize: 18
 
 	property int popupTimeout: 5000   // ms, quando o app não define tempo
-	property int cardWidth: 380
+	property int cardWidth: 400
 	property var arrivals: ({})       // ids que ainda devem aparecer como popup
 
 	// ---------- Servidor (substitui o swaync) ----------
