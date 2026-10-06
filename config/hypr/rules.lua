@@ -6,8 +6,12 @@ hl.layer_rule({match={namespace="wofi"},blur=true,ignore_alpha= 0.1,})
 hl.workspace_rule({ workspace = "special:audio", on_created_empty = "pavucontrol" })
 hl.workspace_rule({ workspace = "special:musica", on_created_empty = "kitty rmpc " })
 --DISPLAYS
-hl.workspace_rule({ workspace = "r[1-5]", monitor = vars.monitor1, default = true })
-hl.workspace_rule({ workspace = "r[6-10]", monitor = vars.monitor2, default = true })
+for i = 1, 5 do
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor1, default = (i == 1) })
+end
+for i = 6, 10 do
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor2, default = (i == 6) })
+end
 
 hl.window_rule({
     name  = "fix-xwayland-drags",
