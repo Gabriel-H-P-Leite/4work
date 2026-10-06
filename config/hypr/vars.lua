@@ -1,9 +1,11 @@
 local M = {}
 --DISPLAYS
-M.monitor1 = "DP-1"
+M.monitor1 = "desc:LG Electronics LG AIO 24V 0x01010101"
 M.resolution1 = "1920x1080@75"
-M.monitor2 = "HDMI-A-1"
-M.resolution2 = "1280x720@60"
+M.monitor2 = "HDMI"
+M.resolution2 = "1440x900@60"
+M.monitor3 = "HDMI-A-1"
+M.resolution3 = "1280x720@60"
 --BINDS
 M.mainMod = "SUPER"
 --DEFAULTS

@@ -4,6 +4,7 @@
 *.sql
 *.sqlite
 
+config/Thunar/accels.scm
 config/mpd/database
 config/mpd/log
 config/mpd/pid
