@@ -11,6 +11,13 @@ hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("quickshell ipc call music next"))
 hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"))
 hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"))
 
+--volume
+for _, tecla in ipairs({ "XF86AudioPlay", "XF86AudioPause" }) do
+	hl.bind(tecla, hl.dsp.exec_cmd("quickshell ipc call music playPause"))
+end
+hl.bind("CTRL + " .. vars.mainMod .. " + W", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
+hl.bind("CTRL + " .. vars.mainMod .. " + S", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
+
 ---------
 --MENUS--
 ---------
@@ -44,9 +51,8 @@ hl.bind(vars.mainMod .. " + SHIFT + F", function()
 	local p = io.popen("hyprctl hyprsunset temperature")
 	local saida = p and p:read("*a") or ""
 	if p then p:close() end
-
 	local atual = tonumber(saida:match("%d+")) or 6000
-	local nova = atual <= 3000 and 6000 or 3000
+	local nova = atual <= 4000 and 6000 or 4000
 	hl.exec_cmd("hyprctl hyprsunset temperature " .. nova)
 end)
 --------
