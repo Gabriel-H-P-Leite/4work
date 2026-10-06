@@ -15,8 +15,8 @@ hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"
 for _, tecla in ipairs({ "XF86AudioPlay", "XF86AudioPause" }) do
 	hl.bind(tecla, hl.dsp.exec_cmd("quickshell ipc call music playPause"))
 end
-hl.bind("CTRL + " .. vars.mainMod .. " + W", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
-hl.bind("CTRL + " .. vars.mainMod .. " + S", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
+hl.bind("CTRL + " .. vars.mainMod .. " + W", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
+hl.bind("CTRL + " .. vars.mainMod .. " + S", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
 
 ---------
 --MENUS--

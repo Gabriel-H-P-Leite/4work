@@ -9,7 +9,7 @@ for i = 1, 5 do
 	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor1, default = (i == 1) })
 end
 for i = 6, 10 do
-	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor2, default = (i == 6) })
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor3, default = (i == 6) })
 end
 
 hl.window_rule({
