@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Wayland
+import Quickshell.Widgets
 import Quickshell.Services.Mpris
 
 Scope {
@@ -20,6 +21,14 @@ Scope {
 	property bool hasTrack: !!(player && player.trackTitle)
 	property bool volumeOk: player ? player.volumeSupported : false
 	property real volume: (player && player.volumeSupported && !isNaN(player.volume)) ? player.volume : 0
+	property string artUrl: ""
+
+	// limpa e recoloca o endereço: força a Image a ler o arquivo de novo
+	// mesmo quando o player repete o mesmo caminho pra músicas diferentes
+	function refreshArt() {
+		osd.artUrl = ""
+		Qt.callLater(() => osd.artUrl = osd.player ? osd.player.trackArtUrl : "")
+	}
 
 	function trigger() {
 		if (!osd.armed || !osd.hasTrack) return
@@ -33,12 +42,15 @@ Scope {
 		function onTrackTitleChanged() { osd.trigger() }
 		function onPlaybackStateChanged() { osd.trigger() }
 		function onVolumeChanged() { osd.trigger() }
+		function onTrackArtUrlChanged() { osd.refreshArt() }
+		function onUniqueIdChanged() { osd.refreshArt() }
 	}
 
 	// evita o OSD piscar quando o shell sobe ou o player aparece/troca
 	onPlayerChanged: {
 		osd.armed = false
 		armTimer.restart()
+		osd.refreshArt()
 	}
 	Timer { id: armTimer; interval: 1500; running: true; onTriggered: osd.armed = true }
 	Timer { id: hideTimer; interval: osd.hideMs; onTriggered: osd.shown = false }
@@ -68,7 +80,7 @@ Scope {
 			border.color: root.border
 			anchors.horizontalCenter: parent.horizontalCenter
 
-			// entra subindo e com fade, sai descendo
+			// animação
 			opacity: osd.shown ? 1 : 0
 			y: osd.shown ? 0 : 18
 			scale: osd.shown ? 1 : 0.95
@@ -76,28 +88,47 @@ Scope {
 			Behavior on y { NumberAnimation { duration: 220; easing.type: Easing.OutCubic } }
 			Behavior on scale { NumberAnimation { duration: 220; easing.type: Easing.OutCubic } }
 
-			Text {
-				id: icon
-				opacity: 0.1
+			// capa do álbum com o play/pause por cima
+			ClippingRectangle {
+				id: cover
 				anchors.left: parent.left
-				anchors.leftMargin: 16
+				anchors.leftMargin: 10
 				anchors.verticalCenter: parent.verticalCenter
-				width: 24
-				horizontalAlignment: Text.AlignHCenter
-				text: osd.playing ? "󰐊" : "󰏤"
-				color: root.text
-				font.family: root.iconFont
-				font.pixelSize: 20
+				width: 50
+				height: 50
+				radius: 12
+				color: Qt.rgba(1, 1, 1, 0.1) 
+				Image {
+					id: art
+					anchors.fill: parent
+					source: osd.artUrl
+					sourceSize: Qt.size(100, 100)
+					fillMode: Image.PreserveAspectCrop
+					asynchronous: true
+					// alguns players reaproveitam o mesmo arquivo pra capas diferentes
+					cache: false
+					opacity: status === Image.Ready ? 1 : 0
+					Behavior on opacity { NumberAnimation { duration: 200 } }
+				}
+				Text {
+					id: icon
+					anchors.centerIn: parent
+					text: osd.playing ? "󰐊" : "󰏤"
+					color: "white"
+					opacity: art.status === Image.Ready ? 0.3 : 0.3
+					font.family: root.iconFont
+					style: Text.Outline
+					styleColor: Qt.rgba(0, 0, 0, 0.3)
+					font.pixelSize: 22
+				}
 			}
-
 			Column {
-				anchors.left: icon.right
+				anchors.left: cover.right
 				anchors.leftMargin: 12
 				anchors.right: parent.right
 				anchors.rightMargin: 16
 				anchors.verticalCenter: parent.verticalCenter
 				spacing: 1
-
 				Text {
 					width: parent.width
 					elide: Text.ElideRight
@@ -120,7 +151,6 @@ Scope {
 					height: 14
 					spacing: 8
 					visible: osd.volumeOk
-
 					Text {
 						anchors.verticalCenter: parent.verticalCenter
 						width: 10
@@ -136,7 +166,6 @@ Scope {
 						height: 6
 						radius: 3
 						color: Qt.rgba(1, 1, 1, 0.15)
-
 						Rectangle {
 							height: parent.height
 							radius: parent.radius
