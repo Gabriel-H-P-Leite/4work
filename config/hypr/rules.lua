@@ -6,10 +6,13 @@ hl.workspace_rule({ workspace = "special:audio", on_created_empty = "pavucontrol
 hl.workspace_rule({ workspace = "special:musica", on_created_empty = "kitty rmpc " })
 --DISPLAYS
 for i = 1, 5 do
-	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor1, default = (i == 1) })
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor1, default = true })
+end
+for i = 1, 5 do
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor2, default = true })
 end
 for i = 6, 10 do
-	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor3, default = (i == 6) })
+	hl.workspace_rule({ workspace = tostring(i), monitor = vars.monitor3, default = true })
 end
 
 hl.window_rule({
