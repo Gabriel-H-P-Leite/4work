@@ -78,6 +78,7 @@ Scope {
 
 			Text {
 				id: icon
+				opacity: 0.1
 				anchors.left: parent.left
 				anchors.leftMargin: 16
 				anchors.verticalCenter: parent.verticalCenter
@@ -113,7 +114,6 @@ Scope {
 					font.family: root.fontFamily
 					font.pixelSize: 12
 				}
-
 				// barra de volume do player
 				Row {
 					width: parent.width
@@ -125,7 +125,7 @@ Scope {
 						anchors.verticalCenter: parent.verticalCenter
 						width: 10
 						horizontalAlignment: Text.AlignLeft
-						text: "󰝚"
+						text: "󰕾"
 						color: root.text
 						font.family: root.fontFamily
 						font.pixelSize: 11
