@@ -199,9 +199,8 @@ Scope {
 				}
 			}
 			ClippingRectangle {
-				anchors.verticalCenter: parent.verticalCenter
-				width: parent.width 
-				height: parent.height
+				id: progress
+				anchors.fill: parent
 				radius: parent.radius
 				color: "transparent"
 				Rectangle {
