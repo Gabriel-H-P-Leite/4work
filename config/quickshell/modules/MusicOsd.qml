@@ -23,8 +23,7 @@ Scope {
 	property real volume: (player && player.volumeSupported && !isNaN(player.volume)) ? player.volume : 0
 	property string artUrl: ""
 	// progresso da música de 0 a 1 (recalculado quando o positionChanged() é emitido)
-	property bool progressOk: player ? (player.positionSupported && player.lengthSupported && player.length > 0) : false
-	property real progress: progressOk ? Math.max(0, Math.min(1, player.position / player.length)) : 0
+	property real progress: Math.max(0, Math.min(1, player.position / player.length))
 	 
 	// limpa e recoloca o endereço: força a Image a ler o arquivo de novo
 	// mesmo quando o player repete o mesmo caminho pra músicas diferentes
@@ -64,7 +63,7 @@ Scope {
 	// só enquanto o OSD está na tela e a música está tocando
 	Timer {
 		running: osd.shown && osd.playing
-		interval: 250
+		interval: 200
 		repeat: true
 		onTriggered: osd.player.positionChanged()
 	}
@@ -212,7 +211,6 @@ Scope {
 					color: Qt.rgba(0, 0, 0, 0.1)
 					Behavior on width { NumberAnimation { duration: 50 ; easing.type: Easing.OutCubic } }
 				}
-				
 			}
 		}
 	}
