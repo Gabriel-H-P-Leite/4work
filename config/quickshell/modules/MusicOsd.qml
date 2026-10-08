@@ -22,7 +22,10 @@ Scope {
 	property bool volumeOk: player ? player.volumeSupported : false
 	property real volume: (player && player.volumeSupported && !isNaN(player.volume)) ? player.volume : 0
 	property string artUrl: ""
-
+	// progresso da música de 0 a 1 (recalculado quando o positionChanged() é emitido)
+	property bool progressOk: player ? (player.positionSupported && player.lengthSupported && player.length > 0) : false
+	property real progress: progressOk ? Math.max(0, Math.min(1, player.position / player.length)) : 0
+	 
 	// limpa e recoloca o endereço: força a Image a ler o arquivo de novo
 	// mesmo quando o player repete o mesmo caminho pra músicas diferentes
 	function refreshArt() {
@@ -34,6 +37,7 @@ Scope {
 		if (!osd.armed || !osd.hasTrack) return
 		osd.shown = true
 		hideTimer.restart()
+		if (osd.player) osd.player.positionChanged()
 	}
 
 	// aparece quando troca a música, o play/pause ou o volume do player muda
@@ -55,6 +59,15 @@ Scope {
 	Timer { id: armTimer; interval: 1500; running: true; onTriggered: osd.armed = true }
 	Timer { id: hideTimer; interval: osd.hideMs; onTriggered: osd.shown = false }
 
+	
+	// o Quickshell não atualiza a posição sozinho: pede uma leitura nova
+	// só enquanto o OSD está na tela e a música está tocando
+	Timer {
+		running: osd.shown && osd.playing
+		interval: 250
+		repeat: true
+		onTriggered: osd.player.positionChanged()
+	}
 	PanelWindow {
 		id: win
 		WlrLayershell.namespace: "qs-music-osd"
@@ -185,6 +198,21 @@ Scope {
 						font.pixelSize: 11
 					}
 				}
+			}
+			ClippingRectangle {
+				anchors.verticalCenter: parent.verticalCenter
+				width: parent.width 
+				height: parent.height
+				radius: parent.radius
+				color: "transparent"
+				Rectangle {
+					height: parent.height
+					radius: parent.radius
+					width: parent.width * osd.progress
+					color: Qt.rgba(0, 0, 0, 0.1)
+					Behavior on width { NumberAnimation { duration: 50 ; easing.type: Easing.OutCubic } }
+				}
+				
 			}
 		}
 	}

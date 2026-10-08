@@ -58,9 +58,9 @@ PanelWindow {
 		horizontalAlignment: Text.AlignHCenter
 		wrapMode: Text.WordWrap
 		text: splash.current
-		color: Qt.rgba(1, 1, 1, 0.85)
+		color: Qt.rgba(1, 1, 1, 1)
 		style: Text.Outline
-		styleColor: Qt.rgba(0, 0, 0, 0.5)
+		styleColor: Qt.rgba(0, 0, 0, 1)
 		font.family: root.fontFamily
 		font.pixelSize: splash.fontSize
 		font.italic: true
