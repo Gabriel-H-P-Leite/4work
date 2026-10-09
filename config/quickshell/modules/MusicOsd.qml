@@ -28,11 +28,11 @@ Scope {
 	Process {
 		id: mpcProc
 		command: ["mpc", "status", "%percenttime%"]
-		stdout: StdioCollector { onStreamFinished: progresso = (parseInt(this.text) || 0) / 100 }
+		stdout: StdioCollector { onStreamFinished: osd.progresso = (parseInt(this.text) || 0) / 100 }
 	}
 	Timer {
 		interval: 1000
-		running: osd.shown && player.dbusName.includes("mpd") 
+		running: osd.shown && !!osd.player && osd.player.dbusName.includes("mpd")
 		repeat: true
 		triggeredOnStart: true
 		onTriggered: mpcProc.running = true
@@ -57,7 +57,11 @@ Scope {
 		function onPlaybackStateChanged() { osd.trigger() }
 		function onVolumeChanged() { osd.trigger() }
 		function onTrackArtUrlChanged() { osd.refreshArt() }
-		function onUniqueIdChanged() { osd.refreshArt() }
+		function onUniqueIdChanged() {
+			osd.refreshArt()
+			osd.progresso = 0
+			mpcProc.running = true
+		}
 	}
 
 	// evita o OSD piscar quando o shell sobe ou o player aparece/troca
@@ -65,6 +69,7 @@ Scope {
 		osd.armed = false
 		armTimer.restart()
 		osd.refreshArt()
+		osd.progresso = 0
 	}
 	Timer { id: armTimer; interval: 1500; running: true; onTriggered: osd.armed = true }
 	Timer { id: hideTimer; interval: osd.hideMs; onTriggered: osd.shown = false }
@@ -112,8 +117,8 @@ Scope {
 					height: parent.height
 					radius: parent.radius
 					width: parent.width * osd.progresso
-					color: Qt.rgba(0, 0, 0, 0.1)
-					Behavior on width { NumberAnimation { duration: 50 ; easing.type: Easing.OutCubic } }
+					color: Qt.rgba(1, 1, 1, 0.1)
+					Behavior on width { NumberAnimation { duration: 1000; easing.type: Easing.Linear } }
 				}
 			}
 			// capa do álbum com o play/pause por cima
