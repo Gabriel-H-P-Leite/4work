@@ -1,5 +1,6 @@
 import QtQuick
 import Quickshell
+import Quickshell.Io
 import Quickshell.Wayland
 import Quickshell.Widgets
 import Quickshell.Services.Mpris
@@ -22,23 +23,33 @@ Scope {
 	property bool volumeOk: player ? player.volumeSupported : false
 	property real volume: (player && player.volumeSupported && !isNaN(player.volume)) ? player.volume : 0
 	property string artUrl: ""
-	// progresso da música de 0 a 1 (recalculado quando o positionChanged() é emitido)
-	property real progress: Math.max(0, Math.min(1, player.position / player.length))
-	 
+	
+	property real progresso: 0
+	Process {
+		id: mpcProc
+		command: ["mpc", "status", "%percenttime%"]
+		stdout: StdioCollector { onStreamFinished: progresso = (parseInt(this.text) || 0) / 100 }
+	}
+	Timer {
+		interval: 1000
+		running: osd.shown && player.dbusName.includes("mpd") 
+		repeat: true
+		triggeredOnStart: true
+		onTriggered: mpcProc.running = true
+	}
+
 	// limpa e recoloca o endereço: força a Image a ler o arquivo de novo
 	// mesmo quando o player repete o mesmo caminho pra músicas diferentes
 	function refreshArt() {
 		osd.artUrl = ""
 		Qt.callLater(() => osd.artUrl = osd.player ? osd.player.trackArtUrl : "")
 	}
-
 	function trigger() {
 		if (!osd.armed || !osd.hasTrack) return
 		osd.shown = true
 		hideTimer.restart()
 		if (osd.player) osd.player.positionChanged()
 	}
-
 	// aparece quando troca a música, o play/pause ou o volume do player muda
 	Connections {
 		target: osd.player
@@ -57,16 +68,7 @@ Scope {
 	}
 	Timer { id: armTimer; interval: 1500; running: true; onTriggered: osd.armed = true }
 	Timer { id: hideTimer; interval: osd.hideMs; onTriggered: osd.shown = false }
-
 	
-	// o Quickshell não atualiza a posição sozinho: pede uma leitura nova
-	// só enquanto o OSD está na tela e a música está tocando
-	Timer {
-		running: osd.shown && osd.playing
-		interval: 200
-		repeat: true
-		onTriggered: osd.player.positionChanged()
-	}
 	PanelWindow {
 		id: win
 		WlrLayershell.namespace: "qs-music-osd"
@@ -100,6 +102,20 @@ Scope {
 			Behavior on y { NumberAnimation { duration: 220; easing.type: Easing.OutCubic } }
 			Behavior on scale { NumberAnimation { duration: 220; easing.type: Easing.OutCubic } }
 
+			//Progresso mpd
+			ClippingRectangle {
+				id: progressBar
+				anchors.fill: parent
+				radius: parent.radius
+				color: "transparent"
+				Rectangle {
+					height: parent.height
+					radius: parent.radius
+					width: parent.width * osd.progresso
+					color: Qt.rgba(0, 0, 0, 0.1)
+					Behavior on width { NumberAnimation { duration: 50 ; easing.type: Easing.OutCubic } }
+				}
+			}
 			// capa do álbum com o play/pause por cima
 			ClippingRectangle {
 				id: cover
@@ -196,19 +212,6 @@ Scope {
 						font.family: root.fontFamily
 						font.pixelSize: 11
 					}
-				}
-			}
-			ClippingRectangle {
-				id: progress
-				anchors.fill: parent
-				radius: parent.radius
-				color: "transparent"
-				Rectangle {
-					height: parent.height
-					radius: parent.radius
-					width: parent.width * osd.progress
-					color: Qt.rgba(0, 0, 0, 0.1)
-					Behavior on width { NumberAnimation { duration: 50 ; easing.type: Easing.OutCubic } }
 				}
 			}
 		}
