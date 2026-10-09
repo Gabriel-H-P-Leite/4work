@@ -8,8 +8,8 @@ hl.bind("CTRL + ALT + E", hl.dsp.workspace.toggle_special("musica"))
 hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
 hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("quickshell ipc call music previous"))
 hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("quickshell ipc call music next"))
-hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"))
-hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"))
+hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"), { repeating = true })
+hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"), { repeating = true })
 
 --volume
 for _, tecla in ipairs({ "XF86AudioPlay", "XF86AudioPause" }) do

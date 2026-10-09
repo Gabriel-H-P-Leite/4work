@@ -12,7 +12,6 @@ if pgrep -x "Hyprland" > /dev/null ; then
 	export TERM=xterm-kitty   
 	export QT_IM_MODULE=fcitx
 	export XMODIFIERS=@im=fcitx
-	alias hyexec="hyprctl dispatch exec"
 	alias ssh="kitty +kitten ssh"	
 	## synth-shell-prompt.sh
 	if [ -f /home/$user/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
