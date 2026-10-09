@@ -31,7 +31,7 @@ Scope {
 		stdout: StdioCollector { onStreamFinished: osd.progresso = (parseInt(this.text) || 0) / 100 }
 	}
 	Timer {
-		interval: 1000
+		interval: 200
 		running: osd.shown && !!osd.player && osd.player.dbusName.includes("mpd")
 		repeat: true
 		triggeredOnStart: true
@@ -118,7 +118,7 @@ Scope {
 					radius: parent.radius
 					width: parent.width * osd.progresso
 					color: Qt.rgba(1, 1, 1, 0.1)
-					Behavior on width { NumberAnimation { duration: 1000; easing.type: Easing.Linear } }
+					Behavior on width { NumberAnimation { duration: 200; easing.type: Easing.Linear } }
 				}
 			}
 			// capa do álbum com o play/pause por cima
