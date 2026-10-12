@@ -4,8 +4,48 @@ application/yaml=org.xfce.mousepad.desktop;
 text/markdown=org.xfce.mousepad.desktop;
 text/x-qml=org.xfce.mousepad.desktop;
 text/plain=org.xfce.mousepad.desktop;
+application/json=org.xfce.mousepad.desktop;
+application/toml=org.xfce.mousepad.desktop;
+application/xml=org.xfce.mousepad.desktop;
+application/x-shellscript=org.xfce.mousepad.desktop;
+application/x-yaml=org.xfce.mousepad.desktop;
+text/csv=org.xfce.mousepad.desktop;
+text/css=org.xfce.mousepad.desktop;
+text/xml=org.xfce.mousepad.desktop;
+text/x-log=org.xfce.mousepad.desktop;
+text/x-makefile=org.xfce.mousepad.desktop;
+text/x-python=org.xfce.mousepad.desktop;
+text/x-csrc=org.xfce.mousepad.desktop;
+text/x-chdr=org.xfce.mousepad.desktop;
+text/x-c++src=org.xfce.mousepad.desktop;
+text/x-diff=org.xfce.mousepad.desktop;
+text/x-patch=org.xfce.mousepad.desktop;
 
 [Default Applications]
+# Texto e código
+text/plain=org.xfce.mousepad.desktop;
+text/markdown=org.xfce.mousepad.desktop;
+application/yaml=org.xfce.mousepad.desktop;
+application/x-yaml=org.xfce.mousepad.desktop;
+application/json=org.xfce.mousepad.desktop;
+application/toml=org.xfce.mousepad.desktop;
+application/xml=org.xfce.mousepad.desktop;
+application/x-shellscript=org.xfce.mousepad.desktop;
+text/x-lua=org.xfce.mousepad.desktop;
+text/x-qml=org.xfce.mousepad.desktop;
+text/csv=org.xfce.mousepad.desktop;
+text/css=org.xfce.mousepad.desktop;
+text/xml=org.xfce.mousepad.desktop;
+text/x-log=org.xfce.mousepad.desktop;
+text/x-makefile=org.xfce.mousepad.desktop;
+text/x-python=org.xfce.mousepad.desktop;
+text/x-csrc=org.xfce.mousepad.desktop;
+text/x-chdr=org.xfce.mousepad.desktop;
+text/x-c++src=org.xfce.mousepad.desktop;
+text/x-diff=org.xfce.mousepad.desktop;
+text/x-patch=org.xfce.mousepad.desktop;
+
+# Imagens
 image/jpeg=imv-dir.desktop;
 image/png=imv-dir.desktop;
 image/gif=imv-dir.desktop;
@@ -14,4 +54,53 @@ image/svg+xml=imv-dir.desktop;
 image/bmp=imv-dir.desktop;
 image/tiff=imv-dir.desktop;
 image/avif=imv-dir.desktop;
+image/heic=imv-dir.desktop;
+image/heif=imv-dir.desktop;
+image/jp2=imv-dir.desktop;
+image/vnd.microsoft.icon=imv-dir.desktop;
+
+# Documentos
+application/pdf=org.pwmt.zathura.desktop;
+application/epub+zip=org.pwmt.zathura.desktop;
+application/oxps=org.pwmt.zathura.desktop;
+application/vnd.ms-xpsdocument=org.pwmt.zathura.desktop;
+application/x-cbz=org.pwmt.zathura.desktop;
+application/vnd.comicbook+zip=org.pwmt.zathura.desktop;
+
+# Vídeo
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/webm=mpv.desktop;
+video/quicktime=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/ogg=mpv.desktop;
+video/x-flv=mpv.desktop;
+video/3gpp=mpv.desktop;
+video/mp2t=mpv.desktop;
+video/x-ms-wmv=mpv.desktop;
+
+# Áudio
+audio/mpeg=mpv.desktop;
+audio/flac=mpv.desktop;
+audio/x-flac=mpv.desktop;
+audio/ogg=mpv.desktop;
+audio/x-vorbis+ogg=mpv.desktop;
+audio/x-opus+ogg=mpv.desktop;
+audio/opus=mpv.desktop;
+audio/wav=mpv.desktop;
+audio/x-wav=mpv.desktop;
+audio/aac=mpv.desktop;
+audio/mp4=mpv.desktop;
+audio/x-m4a=mpv.desktop;
+audio/webm=mpv.desktop;
+audio/x-matroska=mpv.desktop;
+audio/x-ms-wma=mpv.desktop;
+audio/x-mpegurl=mpv.desktop;
+audio/x-scpls=mpv.desktop;
+
+# Arquivos e sistema
+inode/directory=thunar.desktop;
+x-scheme-handler/terminal=kitty.desktop;
 x-scheme-handler/discord=vesktop.desktop
+
