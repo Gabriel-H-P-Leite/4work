@@ -48,7 +48,9 @@ hl.bind(vars.mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("foto='OCR' ; slurp | gr
 --notification
 hl.bind(vars.mainMod .. " + N", hl.dsp.exec_cmd("quickshell ipc call notifications toggle"))
 --screenshot
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("screenshot=~/Imagens/Screenshots/$(date +'ArchLinux_%Y-%m-%d_%H:%M:%S.png') ; slurp | grim -g - $screenshot ; echo $screenshot | wl-copy"))
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd([[
+	f=~/Imagens/Screenshots/ArchLinux_$(date +'%Y-%m-%d_%H:%M:%S').png
+	area=$(slurp) && grim -g "$area" "$f" && wl-copy --type image/png < "$f" && notify-send -e -t 1500 -i "$f" "Screenshot copiada" "$f"]]))
 --filter
 hl.bind(vars.mainMod .. " + SHIFT + F", function()
 	local p = io.popen("hyprctl hyprsunset temperature")

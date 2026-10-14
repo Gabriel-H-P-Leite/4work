@@ -251,7 +251,7 @@ Scope {
 					// some sozinho; pausa com o mouse em cima; críticas ficam até fechar
 					Timer {
 						running: pop.visible && !pop.critical && !pop.hovered
-						interval: pop.modelData.expireTimeout > 0 ? pop.modelData.expireTimeout * 1000 : notifs.popupTimeout
+						interval: pop.modelData.expireTimeout > 0 ? pop.modelData.expireTimeout : notifs.popupTimeout
 						onTriggered: pop.hide()
 					}
 				}
