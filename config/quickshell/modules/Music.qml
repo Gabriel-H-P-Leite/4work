@@ -1,5 +1,4 @@
 import QtQuick
-import Quickshell
 import Quickshell.Io
 import Quickshell.Services.Mpris
 
@@ -80,7 +79,7 @@ Rectangle {
 			clip: true
 			width: hover.hovered ? implicitWidth + 6 : 0
 			opacity: hover.hovered ? 1 : 0
-			Behavior on width { NumberAnimation { duration: 150; easing.type: Easing.OutCubic } }
+			Behavior on width { NumberAnimation { duration: 150; easing.type: Easing.Linear } }
 			Behavior on opacity { NumberAnimation { duration: 150 } }
 
 			CtrlButton {
