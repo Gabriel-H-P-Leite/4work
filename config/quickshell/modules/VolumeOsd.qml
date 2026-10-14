@@ -17,7 +17,7 @@ Scope {
 
 	function volumeIcon() {
 		let v = osd.volume * 100
-		if (osd.muted) return ""
+		if (osd.muted) return "󰖁"
 		if (v < 10) return "󰕿"
 		if (v < 51) return "󰖀"
 		return "󰕾"

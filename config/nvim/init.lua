@@ -1,20 +1,15 @@
---NVIM config
-vim.wo.wrap = false
-vim.wo.number = true  
-vim.opt.relativenumber = true
-vim.opt.smartindent = true
-vim.g.have_nerd_font = true
+-- Opções e atalhos antes dos plugins (o leader precisa existir antes do lazy carregar)
+require("config.options")
+require("config.keymaps")
 
---LAZY configuração dos plugins 
+-- Plugins
 require("config.lazy")
---LSP server
-require'lspconfig'.pyright.setup{}
-vim.cmd [[
-	highlight Normal guibg=none
-	highlight NonText guibg=none
-	highlight Normal ctermbg=none
-	highlight NonText ctermbg=none
-]]
 
---TEMA BARRA
-require ('config.cyber')
+-- Fundo transparente. No autocmd, pra ser reaplicado se um tema for carregado depois.
+local function transparente()
+	for _, grupo in ipairs({ "Normal", "NormalNC", "NonText", "SignColumn", "EndOfBuffer" }) do
+		vim.api.nvim_set_hl(0, grupo, { bg = "none" })
+	end
+end
+vim.api.nvim_create_autocmd("ColorScheme", { callback = transparente })
+transparente()
