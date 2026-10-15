@@ -13,13 +13,13 @@ hl.config({
 	decoration = {
 		blur = {
 			enabled = true,
-			size = 10,
+			size = 7,
 			passes = 2,
 			vibrancy = 0,
 		},
 		shadow = {
 			enabled = true,
-			range = 100,
+			range = 70,
 			render_power = 2,
 			color = "rgba(010101c3)",
 			offset = "0 0",
