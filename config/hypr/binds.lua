@@ -4,6 +4,7 @@ local vars = require("vars")
 --MUSIC--
 ----------
 
+hl.bind("CTRL + SHIFT + E", hl.dsp.exec_cmd("pkill mpd-mpris || mpd-mpris"), { release = true })
 hl.bind("CTRL + ALT + E", hl.dsp.workspace.toggle_special("musica"))
 hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
 hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("quickshell ipc call music previous"))
