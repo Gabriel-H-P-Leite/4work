@@ -46,7 +46,7 @@ else
 	#Texto
 	sudo pacman -S $flags neovim mousepad zathura zathura-pdf-mupdf 
 	#Midia
-	sudo pacman -S $flags playerctl mpd mpc mpd-mpris rmpc mpv imv libheif libjpeg-turbo libpng libtiff dav1d ffmpeg openjpeg2 rav1e svt-av1
+	sudo pacman -S $flags playerctl mpd mpc mpd-mpris rmpc mpv mpv-mpris imv libheif libjpeg-turbo libpng libtiff dav1d ffmpeg openjpeg2 rav1e svt-av1
 	#CLI
 	sudo pacman -S $flags fastfetch btop awk less libnotify yt-dlp ffmpeg cliphist wl-clipboard unzip github-cli flatpak tesseract-data-eng jq grim slurp tree-sitter-cli pyright
 	#Fontes
