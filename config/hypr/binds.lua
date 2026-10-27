@@ -12,16 +12,19 @@ hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("quickshell ipc call music next"))
 hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"), { repeating = true })
 hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"), { repeating = true })
 
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("quickshell ipc call music previous"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("quickshell ipc call music next"))
+
 --volume
-for _, tecla in ipairs({ "XF86AudioPlay", "XF86AudioPause" }) do
-	hl.bind(tecla, hl.dsp.exec_cmd("quickshell ipc call music playPause"))
-end
 hl.bind("CTRL + " .. vars.mainMod .. " + W", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
 hl.bind("CTRL + " .. vars.mainMod .. " + S", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
 
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { repeating = false })
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
+
 ---------
 --MENUS--
 ---------

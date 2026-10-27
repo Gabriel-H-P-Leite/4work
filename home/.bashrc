@@ -1,5 +1,6 @@
 #!/bin/bash
 alias neofetch="fastfetch"
+alias dommit="git commit -am $(date +'%Y-%m-%d_%H:%M:%S') && git push"
 export EDITOR=nvim
 export VISUAL=nvim
 #se logado no tty1
