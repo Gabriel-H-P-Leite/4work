@@ -1,6 +1,6 @@
 #!/bin/bash
 alias neofetch="fastfetch"
-alias dommit="git commit -am $(date +'%Y-%m-%d_%H:%M:%S') && git push"
+alias dommit="git commit -am $(date +'%Y-%m-%d_%H:%M:%S')"
 export EDITOR=nvim
 export VISUAL=nvim
 #se logado no tty1
@@ -31,3 +31,6 @@ if pgrep -x "Hyprland" > /dev/null ; then
 		source /home/$user/.config/synth-shell/better-history.sh
 	fi
 fi
+
+# opencode
+export PATH=/home/user/.opencode/bin:$PATH
