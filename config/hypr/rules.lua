@@ -35,28 +35,26 @@ hl.window_rule({
     match = { class = "^(python)$" },
     border_size = 1,
 	border_color = "rgba(ffffffff)",
-    rounding = 100,
+    rounding = 0,
 	no_shadow = true,
 	no_blur = true,
-	float = true,
-	pin = true
+	float = true
 })
 --WORKSPACE
 local workspace_programs = {
-    ["special:audio"] = {"pavucontrol"},
-    ["special:musica"] = {"kitty rmpc"}
+	["special:audio"]  = { "pavucontrol" },
+	["special:musica"] = { "kitty rmpc" },
 }
+
 hl.on("workspace.created", function(ws)
-    if ws.is_empty then return end
+	local program = workspace_programs[ws.name]
+	if not program then return end
 
-    local program = workspace_programs[ws.name]
-    if program == nil then return end
+	local cmd = program[1]
+	-- regras extras opcionais na segunda posição, ex: { "pavucontrol", { float = true } }
+	local rules = {}
+	for k, v in pairs(program[2] or {}) do rules[k] = v end
+	rules.workspace = ws.name .. " silent"
 
-    local cmd, rules = table.unpack(program)
-    -- shallow-copy the rules table so we can add the workspace to it
-    local rules2 = {}
-    for k, v in rules do rules2[k] = v end
-    rules2.workspace = ws.name .. " silent"
-    -- run it!
-    hl.exec_cmd(cmd, rules2)
+	hl.dispatch(hl.dsp.exec_cmd(cmd, rules))
 end)
