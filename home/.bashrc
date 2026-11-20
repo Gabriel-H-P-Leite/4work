@@ -1,6 +1,7 @@
 #!/bin/bash
 alias neofetch="fastfetch"
 alias dommit="git commit -am $(date +'%Y-%m-%d_%H:%M:%S')"
+alias imv="env -u WAYLAND_DISPLAY imv"  # imv-wayland quebrado com Mesa 26.3.1, usa X11
 export EDITOR=nvim
 export VISUAL=nvim
 #se logado no tty1
@@ -34,3 +35,5 @@ fi
 
 # opencode
 export PATH=/home/user/.opencode/bin:$PATH
+
+. "$HOME/.local/bin/env"

@@ -15,7 +15,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("mpd ; sleep 20 ; mpd-mpris")
 	hl.exec_cmd("sleep 20 ; mpc repeat on && mpc random on && mpc consume on")
 	hl.exec_cmd("hyprsunset")
-	hl.exec_cmd("quickshell")
+	hl.exec_cmd("qsh")
 end)
 --CURSOR
 hl.env("XCURSOR_SIZE", "24")

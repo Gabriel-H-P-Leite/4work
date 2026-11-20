@@ -25,7 +25,7 @@ sudo rm -rf $apagar
 cd 4work/
 ln -rsf config/* ../
 #links em bin
-sudo ln -rsf scripts/qsmenu /bin/
+sudo ln -rsf scripts/qsmenu scripts/qsh /bin/
 #links em home
 rm -f ~/.bashrc ~/.profile
 ln -rsf home/.bashrc home/.profile ~/

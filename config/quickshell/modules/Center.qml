@@ -90,7 +90,8 @@ PanelWindow {
 							IconImage {
 								required property var modelData
 								implicitSize: 15
-								source: center.appIcon(modelData)
+								// DesktopEntries carrega em segundo plano: refaz o ícone quando a lista de apps chegar
+								source: { DesktopEntries.applications.values; return center.appIcon(modelData) }
 								// janela focada mais forte que as outras
 								opacity: modelData.activated ? 1 : (ws.isFocused ? 0.75 : 0.5)
 							}

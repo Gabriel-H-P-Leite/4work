@@ -12,7 +12,7 @@ cat > "$items"
 mkfifo "$fifo"
 
 # se o Quickshell não estiver rodando, sai em vez de ficar esperando pra sempre
-quickshell ipc call launcher dmenu "$items" "$fifo" "${1:-}" > /dev/null || exit 1
+qsh ipc launcher dmenu "$items" "$fifo" "${1:-}" > /dev/null || exit 1
 
 IFS= read -r escolha < "$fifo"
 [ -n "$escolha" ] || exit 1

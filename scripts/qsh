@@ -1,0 +1,92 @@
+#!/bin/bash
+# Gerencia o Quickshell com temas (configs diferentes).
+#
+#   qsh                         inicia o tema salvo (não faz nada se já estiver rodando)
+#   qsh tema                    mostra o tema atual e os disponíveis
+#   qsh tema <nome>             troca de tema e reinicia (ex: qsh tema cyber / qsh tema padrao)
+#   qsh toggle                  liga/desliga a barra
+#   qsh ipc <alvo> <função> …   manda um comando IPC pra instância que estiver rodando,
+#                               seja qual for o tema (ex: qsh ipc music next)
+#
+# Temas: "padrao" é ~/.config/quickshell, qualquer outro nome é a subpasta
+# ~/.config/quickshell/<nome> que tenha um shell.qml.
+
+base="${XDG_CONFIG_HOME:-$HOME/.config}/quickshell"
+state="${XDG_STATE_HOME:-$HOME/.local/state}/qsh"
+temafile="$state/tema"
+
+tema_atual() {
+	local t
+	t=$(cat "$temafile" 2>/dev/null)
+	echo "${t:-padrao}"
+}
+
+caminho() {
+	if [ "$1" = "padrao" ]; then echo "$base"; else echo "$base/$1"; fi
+}
+
+temas() {
+	echo padrao
+	for d in "$base"/*/; do
+		[ -f "$d/shell.qml" ] && basename "$d"
+	done
+}
+
+# pid da instância rodando (qualquer tema)
+instancia() {
+	quickshell list --all --json 2>/dev/null | grep -o '"pid": *[0-9]*' | head -n1 | grep -o '[0-9]*$'
+}
+
+iniciar() {
+	local p
+	p=$(caminho "$(tema_atual)")
+	if [ ! -f "$p/shell.qml" ]; then
+		echo "tema '$(tema_atual)' não existe, usando o padrão" >&2
+		p="$base"
+	fi
+	setsid -f quickshell -p "$p" > /dev/null 2>&1
+}
+
+parar() {
+	local pid
+	while pid=$(instancia) && [ -n "$pid" ]; do
+		kill "$pid" 2>/dev/null
+		# espera sair pra não sobrar duas barras
+		for _ in $(seq 20); do kill -0 "$pid" 2>/dev/null || break; sleep 0.1; done
+		kill -0 "$pid" 2>/dev/null && kill -9 "$pid"
+	done
+}
+
+case "${1:-}" in
+	"")
+		[ -n "$(instancia)" ] || iniciar
+		;;
+	tema)
+		if [ -z "${2:-}" ]; then
+			echo "atual: $(tema_atual)"
+			echo "disponíveis: $(temas | tr '\n' ' ')"
+			exit 0
+		fi
+		if [ "$2" != "padrao" ] && [ ! -f "$base/$2/shell.qml" ]; then
+			echo "tema '$2' não encontrado. disponíveis: $(temas | tr '\n' ' ')" >&2
+			exit 1
+		fi
+		mkdir -p "$state"
+		echo "$2" > "$temafile"
+		parar
+		iniciar
+		;;
+	toggle)
+		if [ -n "$(instancia)" ]; then parar; else iniciar; fi
+		;;
+	ipc)
+		shift
+		pid=$(instancia)
+		[ -n "$pid" ] || { echo "quickshell não está rodando" >&2; exit 1; }
+		exec quickshell ipc --pid "$pid" call "$@"
+		;;
+	*)
+		sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'
+		exit 1
+		;;
+esac

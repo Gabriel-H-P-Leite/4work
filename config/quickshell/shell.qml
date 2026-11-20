@@ -76,4 +76,5 @@ ShellRoot {
 	LazyLoader { active: true; component: VolumeOsd {} }
 	LazyLoader { active: true; component: MusicOsd {} }
 	LazyLoader { active: true; component: Splash {} }
+	LazyLoader { active: true; component: Lockscreen {} }
 }

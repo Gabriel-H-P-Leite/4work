@@ -103,4 +103,9 @@ audio/x-scpls=mpv.desktop;
 inode/directory=thunar.desktop;
 x-scheme-handler/terminal=kitty.desktop;
 x-scheme-handler/discord=vesktop.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
 

@@ -6,16 +6,16 @@ local vars = require("vars")
 
 hl.bind("CTRL + SHIFT + E", hl.dsp.exec_cmd("pkill mpd-mpris || mpd-mpris"), { release = true })
 hl.bind("CTRL + ALT + E", hl.dsp.workspace.toggle_special("musica"))
-hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
-hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("quickshell ipc call music previous"))
-hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("quickshell ipc call music next"))
-hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("quickshell ipc call music volumeUp"), { repeating = true })
-hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("quickshell ipc call music volumeDown"), { repeating = true })
+hl.bind("CTRL + ALT + Space", hl.dsp.exec_cmd("qsh ipc music playPause"))
+hl.bind("CTRL + ALT + A", hl.dsp.exec_cmd("qsh ipc music previous"))
+hl.bind("CTRL + ALT + D", hl.dsp.exec_cmd("qsh ipc music next"))
+hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("qsh ipc music volumeUp"), { repeating = true })
+hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("qsh ipc music volumeDown"), { repeating = true })
 
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("quickshell ipc call music playPause"))
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("quickshell ipc call music previous"))
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("quickshell ipc call music next"))
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("qsh ipc music playPause"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("qsh ipc music playPause"))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("qsh ipc music previous"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("qsh ipc music next"))
 
 --volume
 hl.bind("CTRL + " .. vars.mainMod .. " + W", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
@@ -29,9 +29,9 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_
 --MENUS--
 ---------
 
-hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("quickshell ipc call toggleLauncher onTriggered"), { release = true })
+hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("qsh ipc toggleLauncher onTriggered"), { release = true })
 --toggle quickshell
-hl.bind(vars.mainMod .. " + T", hl.dsp.exec_cmd("pkill quickshell || quickshell"), { release = true })
+hl.bind(vars.mainMod .. " + T", hl.dsp.exec_cmd("qsh toggle"), { release = true })
 --clipboard
 hl.bind(vars.mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | qsmenu 'Área de transferência' | cliphist decode | wl-copy"))
 --focus
@@ -41,8 +41,8 @@ hl.bind("ALT + T", hl.dsp.exec_cmd(vars.menu .." 4"))
 --menus
 hl.bind(vars.mainMod .. " + X", hl.dsp.exec_cmd(vars.menu))
 --wallpaper
-hl.bind(vars.mainMod .. " + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper next"))
-hl.bind(vars.mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("quickshell ipc call wallpaper random"))
+hl.bind(vars.mainMod .. " + W", hl.dsp.exec_cmd("qsh ipc wallpaper next"))
+hl.bind(vars.mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("qsh ipc wallpaper random"))
 --ocr
 hl.bind(vars.mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("foto='OCR' ; slurp | grim -g - /tmp/$foto.png ; tesseract /tmp/$foto.png /tmp/$foto txt ; cat /tmp/$foto.txt | wl-copy"))
 
@@ -50,7 +50,9 @@ hl.bind(vars.mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("foto='OCR' ; slurp | gr
 --UTILITY--
 -----------
 --notification
-hl.bind(vars.mainMod .. " + N", hl.dsp.exec_cmd("quickshell ipc call notifications toggle"))
+hl.bind(vars.mainMod .. " + N", hl.dsp.exec_cmd("qsh ipc notifications toggle"))
+--lock screen (DVD)
+hl.bind(vars.mainMod .. " + CTRL + L", hl.dsp.exec_cmd("qsh ipc lockscreen lock"))
 --screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd([[
 	f=~/Imagens/Screenshots/ArchLinux_$(date +'%Y-%m-%d_%H:%M:%S').png
